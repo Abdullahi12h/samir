@@ -1,0 +1,108 @@
+[
+  {
+    "_id": "699de8f807656ad1325d5443",
+    "examId": {
+      "_id": "699de8e5b5593006b41cf9c3",
+      "skillId": "699db51edd7bd6ee5018484b",
+      "classId": "699db548dd7bd6ee50184852",
+      "date": "2026-02-25T00:00:00.000Z",
+      "type": "Monthly Exam",
+      "status": "Open",
+      "createdAt": "2026-02-24T18:07:33.750Z",
+      "updatedAt": "2026-02-24T18:41:12.387Z",
+      "__v": 0
+    },
+    "studentId": {
+      "_id": "699dbc92dd7bd6ee501848f5",
+      "user": null,
+      "enrollmentNo": "EN-655339",
+      "classId": "699db548dd7bd6ee50184852",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699db51edd7bd6ee5018484b",
+      "registrationFee": "Standard",
+      "amount": 23,
+      "totalPaid": 23,
+      "status": "Active",
+      "createdAt": "2026-02-24T14:58:26.555Z",
+      "updatedAt": "2026-02-25T10:58:02.495Z",
+      "__v": 0
+    },
+    "marksObtained": 89,
+    "createdAt": "2026-02-24T18:07:52.934Z",
+    "updatedAt": "2026-02-25T08:01:38.780Z",
+    "__v": 0
+  },
+  {
+    "_id": "699de8f807656ad1325d5444",
+    "examId": {
+      "_id": "699de8e5b5593006b41cf9c3",
+      "skillId": "699db51edd7bd6ee5018484b",
+      "classId": "699db548dd7bd6ee50184852",
+      "date": "2026-02-25T00:00:00.000Z",
+      "type": "Monthly Exam",
+      "status": "Open",
+      "createdAt": "2026-02-24T18:07:33.750Z",
+      "updatedAt": "2026-02-24T18:41:12.387Z",
+      "__v": 0
+    },
+    "studentId": {
+      "_id": "699dbd2ddd7bd6ee50184960",
+      "user": null,
+      "enrollmentNo": "EN-116184",
+      "classId": "699db548dd7bd6ee50184852",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699db51edd7bd6ee5018484b",
+      "registrationFee": "Standard",
+      "amount": 10,
+      "totalPaid": 0,
+      "status": "Active",
+      "createdAt": "2026-02-24T15:01:01.163Z",
+      "updatedAt": "2026-02-24T15:01:01.163Z",
+      "__v": 0
+    },
+    "marksObtained": 23,
+    "createdAt": "2026-02-24T18:07:52.967Z",
+    "updatedAt": "2026-02-25T08:01:38.796Z",
+    "__v": 0
+  },
+  {
+    "_id": "699ef3098da3d91a15d4fdf3",
+    "studentId": {
+      "_id": "699ef28a41807a202a086f54",
+      "user": {
+        "_id": "699ef28a41807a202a086f52",
+        "name": "nadiifo"
+      },
+      "enrollmentNo": "EN-897334",
+      "classId": "699d93ba7eee030369a8918f",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Standard",
+      "amount": 22,
+      "motherName": "xaawo",
+      "totalPaid": 18,
+      "photo": "/uploads/file-1772024458674.png",
+      "age": 23,
+      "plainPassword": "12345678",
+      "status": "Active",
+      "createdAt": "2026-02-25T13:00:58.976Z",
+      "updatedAt": "2026-02-25T14:46:34.574Z",
+      "__v": 0
+    },
+    "examId": {
+      "_id": "699de858b5593006b41cf943",
+      "skillId": "699d93627eee030369a89152",
+      "classId": "699d93ba7eee030369a8918f",
+      "date": "2026-02-24T00:00:00.000Z",
+      "type": "Monthly Exam",
+      "status": "Open",
+      "createdAt": "2026-02-24T18:05:12.507Z",
+      "updatedAt": "2026-02-25T13:04:16.955Z",
+      "__v": 0
+    },
+    "__v": 0,
+    "createdAt": "2026-02-25T13:03:05.445Z",
+    "marksObtained": 78,
+    "updatedAt": "2026-02-25T13:03:05.445Z"
+  }
+]

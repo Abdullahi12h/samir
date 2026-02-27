@@ -1,0 +1,11 @@
+﻿[dotenv@17.3.1] injecting env (3) from .env -- tip: ΓÜÖ∩╕Å  write to custom object with { processEnv: myObject }
+Found 2 users matching 'nadiifo'
+
+USER: _id=699eee2d41807a202a086c42, name=nadiifo, role=Admin
+STUDENT RECORDS for this user: 0
+
+USER: _id=699ef28a41807a202a086f52, name=nadiifo, role=Student
+STUDENT RECORDS for this user: 1
+  Student _id=699ef28a41807a202a086f54, Enrollment=EN-897334, Class=699d93ba7eee030369a8918f
+  RESULTS linked by StudentID (699ef28a41807a202a086f54): 1
+    - Result _id=699ef3098da3d91a15d4fdf3, Marks=78

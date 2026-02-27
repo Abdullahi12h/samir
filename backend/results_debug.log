@@ -1,0 +1,2066 @@
+[2026-02-25T15:12:07.034Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:12:07.056Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:12:07.085Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:12:07.085Z] [getResults] Returning 1 results
+[2026-02-25T15:12:07.102Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:12:07.117Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:12:07.142Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:12:07.143Z] [getResults] Returning 1 results
+[2026-02-25T15:12:11.939Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:12:11.950Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:12:11.990Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:12:11.992Z] [getResults] Returning 1 results
+[2026-02-25T15:12:12.031Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:12:12.047Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:12:12.076Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:12:12.078Z] [getResults] Returning 1 results
+[2026-02-25T15:12:42.660Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T15:12:42.706Z] [getResults] Found 3 results for query {}
+[2026-02-25T15:12:42.708Z] [getResults] Returning 3 results
+[2026-02-25T15:12:42.748Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T15:12:42.830Z] [getResults] Found 3 results for query {}
+[2026-02-25T15:12:42.832Z] [getResults] Returning 3 results
+[2026-02-25T15:13:03.333Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T15:13:03.358Z] [getResults] Found 3 results for query {}
+[2026-02-25T15:13:03.360Z] [getResults] Returning 3 results
+[2026-02-25T15:13:08.468Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:13:08.478Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:13:08.513Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:13:08.515Z] [getResults] Returning 1 results
+[2026-02-25T15:13:08.543Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:13:08.555Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:13:08.595Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:13:08.597Z] [getResults] Returning 1 results
+[2026-02-25T15:14:19.767Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:14:19.779Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:14:19.817Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:14:19.819Z] [getResults] Returning 1 results
+[2026-02-25T15:14:19.850Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:14:19.865Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:14:19.901Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:14:19.904Z] [getResults] Returning 1 results
+[2026-02-25T15:17:42.449Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:17:42.489Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:17:42.599Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:17:42.602Z] [getResults] Returning 1 results
+[2026-02-25T15:17:42.660Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:17:42.686Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:17:42.737Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:17:42.739Z] [getResults] Returning 1 results
+[2026-02-25T15:17:55.224Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:17:55.239Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:17:55.308Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:17:55.310Z] [getResults] Returning 1 results
+[2026-02-25T15:17:55.412Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:17:55.427Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:17:55.510Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:17:55.518Z] [getResults] Returning 1 results
+[2026-02-25T15:18:23.827Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:18:23.840Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:18:23.883Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:18:23.885Z] [getResults] Returning 1 results
+[2026-02-25T15:18:23.928Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:18:23.947Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:18:23.986Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:18:23.988Z] [getResults] Returning 1 results
+[2026-02-25T15:37:05.282Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:37:05.311Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:37:05.348Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:37:05.350Z] [getResults] Returning 1 results
+[2026-02-25T15:37:05.386Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:37:05.409Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:37:05.462Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:37:05.464Z] [getResults] Returning 1 results
+[2026-02-25T15:37:09.833Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:37:09.847Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:37:09.918Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:37:09.921Z] [getResults] Returning 1 results
+[2026-02-25T15:37:09.964Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:37:09.977Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:37:10.020Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:37:10.024Z] [getResults] Returning 1 results
+[2026-02-25T15:40:02.996Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:40:03.010Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:40:03.025Z] [getResults] Found 0 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:40:03.028Z] [getResults] Returning 0 results
+[2026-02-25T15:40:03.057Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:40:03.071Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:40:03.088Z] [getResults] Found 0 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:40:03.091Z] [getResults] Returning 0 results
+[2026-02-25T15:40:06.289Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:40:06.296Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:40:06.307Z] [getResults] Found 0 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:40:06.309Z] [getResults] Returning 0 results
+[2026-02-25T15:40:06.333Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:40:06.349Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:40:06.366Z] [getResults] Found 0 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:40:06.368Z] [getResults] Returning 0 results
+[2026-02-25T15:40:40.476Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:40:40.485Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:40:40.527Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:40:40.529Z] [getResults] Returning 1 results
+[2026-02-25T15:40:40.558Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:40:40.570Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:40:40.603Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:40:40.605Z] [getResults] Returning 1 results
+[2026-02-25T15:41:18.401Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:41:18.423Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:41:18.479Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:41:18.481Z] [getResults] Returning 1 results
+[2026-02-25T15:41:18.528Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:41:18.545Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:41:18.583Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:41:18.585Z] [getResults] Returning 1 results
+[2026-02-25T15:46:32.279Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:46:32.336Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:46:32.339Z] [getResults] Returning 4 results
+[2026-02-25T15:46:32.375Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:46:32.456Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:46:32.459Z] [getResults] Returning 4 results
+[2026-02-25T15:46:37.298Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:46:37.326Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:46:37.327Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T15:46:37.328Z] [getResults] Returning 2 results
+[2026-02-25T15:47:04.700Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:47:04.709Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:47:04.744Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:47:04.746Z] [getResults] Returning 1 results
+[2026-02-25T15:47:04.783Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:47:04.804Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:47:04.839Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:47:04.841Z] [getResults] Returning 1 results
+[2026-02-25T15:47:45.161Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:47:45.169Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:47:45.208Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:47:45.210Z] [getResults] Returning 1 results
+[2026-02-25T15:47:45.249Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T15:47:45.267Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T15:47:45.315Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T15:47:45.317Z] [getResults] Returning 1 results
+[2026-02-25T15:47:54.455Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:47:54.508Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:47:54.510Z] [getResults] Returning 4 results
+[2026-02-25T15:47:54.542Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:47:54.607Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:47:54.623Z] [getResults] Returning 4 results
+[2026-02-25T15:48:21.085Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:48:21.138Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:48:21.141Z] [getResults] Returning 4 results
+[2026-02-25T15:48:21.180Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:48:21.240Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:48:21.242Z] [getResults] Returning 4 results
+[2026-02-25T15:48:35.035Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:48:35.058Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:48:35.059Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T15:48:35.061Z] [getResults] Returning 2 results
+[2026-02-25T15:49:40.339Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:49:40.390Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:49:40.392Z] [getResults] Returning 4 results
+[2026-02-25T15:49:40.440Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:49:40.513Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:49:40.516Z] [getResults] Returning 4 results
+[2026-02-25T15:49:42.865Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:49:42.895Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:49:42.897Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T15:49:42.899Z] [getResults] Returning 2 results
+[2026-02-25T15:50:33.459Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:50:33.512Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:50:33.515Z] [getResults] Returning 4 results
+[2026-02-25T15:50:33.549Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:50:33.623Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:50:33.625Z] [getResults] Returning 4 results
+[2026-02-25T15:50:37.526Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:50:37.555Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:50:37.556Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T15:50:37.557Z] [getResults] Returning 2 results
+[2026-02-25T15:50:39.221Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:50:39.284Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:50:39.286Z] [getResults] Returning 4 results
+[2026-02-25T15:50:39.322Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T15:50:39.403Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:50:39.405Z] [getResults] Returning 4 results
+[2026-02-25T15:54:28.309Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:54:28.315Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:54:28.347Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:54:28.350Z] [getResults] Returning 1 results
+[2026-02-25T15:54:28.375Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:54:28.390Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:54:28.428Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:54:28.430Z] [getResults] Returning 1 results
+[2026-02-25T15:54:31.505Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:54:31.515Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:54:31.556Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:54:31.558Z] [getResults] Returning 1 results
+[2026-02-25T15:54:31.600Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T15:54:31.620Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T15:54:31.667Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T15:54:31.672Z] [getResults] Returning 1 results
+[2026-02-25T15:54:53.452Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T15:54:53.497Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:54:53.500Z] [getResults] Returning 4 results
+[2026-02-25T15:54:53.531Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T15:54:53.598Z] [getResults] Found 4 results for query {}
+[2026-02-25T15:54:53.601Z] [getResults] Returning 4 results
+[2026-02-25T16:28:31.498Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T16:28:31.571Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:28:31.573Z] [getResults] Returning 4 results
+[2026-02-25T16:28:31.621Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T16:28:31.698Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:28:31.700Z] [getResults] Returning 4 results
+[2026-02-25T16:31:13.978Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:31:13.987Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:31:14.033Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:31:14.035Z] [getResults] Returning 1 results
+[2026-02-25T16:31:14.076Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:31:14.088Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:31:14.128Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:31:14.130Z] [getResults] Returning 1 results
+[2026-02-25T16:31:22.078Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:31:22.087Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:31:22.115Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:31:22.117Z] [getResults] Returning 1 results
+[2026-02-25T16:31:22.147Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:31:22.158Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:31:22.196Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:31:22.198Z] [getResults] Returning 1 results
+[2026-02-25T16:49:52.775Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T16:49:52.787Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T16:49:52.828Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T16:49:52.831Z] [getResults] Returning 1 results
+[2026-02-25T16:49:52.878Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T16:49:52.900Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T16:49:52.946Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T16:49:52.948Z] [getResults] Returning 1 results
+[2026-02-25T16:49:58.839Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T16:49:58.853Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T16:49:58.901Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T16:49:58.903Z] [getResults] Returning 1 results
+[2026-02-25T16:49:58.937Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T16:49:58.951Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T16:49:58.977Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T16:49:58.979Z] [getResults] Returning 1 results
+[2026-02-25T16:51:04.244Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T16:51:04.302Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:51:04.304Z] [getResults] Returning 4 results
+[2026-02-25T16:51:04.327Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T16:51:04.382Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:51:04.384Z] [getResults] Returning 4 results
+[2026-02-25T16:51:50.789Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T16:51:50.838Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:51:50.840Z] [getResults] Returning 4 results
+[2026-02-25T16:51:50.883Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T16:51:50.943Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:51:50.944Z] [getResults] Returning 4 results
+[2026-02-25T16:52:04.319Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:52:04.328Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:52:04.358Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:52:04.360Z] [getResults] Returning 1 results
+[2026-02-25T16:52:04.400Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:52:04.413Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:52:04.446Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:52:04.448Z] [getResults] Returning 1 results
+[2026-02-25T16:52:10.902Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:52:10.916Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:52:10.964Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:52:10.967Z] [getResults] Returning 1 results
+[2026-02-25T16:52:10.992Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:52:11.001Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:52:11.032Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:52:11.033Z] [getResults] Returning 1 results
+[2026-02-25T16:52:29.368Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:52:29.466Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:52:29.468Z] [getResults] Returning 4 results
+[2026-02-25T16:52:29.515Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:52:29.581Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:52:29.583Z] [getResults] Returning 4 results
+[2026-02-25T16:52:42.102Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:52:42.132Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:52:42.133Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T16:52:42.134Z] [getResults] Returning 2 results
+[2026-02-25T16:52:46.942Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:52:46.973Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:52:46.974Z] [getResults] Returning 4 results
+[2026-02-25T16:52:54.123Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:52:54.153Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:52:54.155Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T16:52:54.157Z] [getResults] Returning 2 results
+[2026-02-25T16:53:58.302Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:53:58.323Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:53:58.324Z] [getResults] Returning 4 results
+[2026-02-25T16:58:43.981Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T16:58:43.995Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T16:58:44.018Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T16:58:44.029Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T16:58:44.034Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T16:58:44.036Z] [getResults] Returning 1 results
+[2026-02-25T16:58:44.062Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T16:58:44.063Z] [getResults] Returning 1 results
+[2026-02-25T16:58:51.459Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:58:51.498Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:58:51.499Z] [getResults] Returning 4 results
+[2026-02-25T16:58:51.538Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T16:58:51.602Z] [getResults] Found 4 results for query {}
+[2026-02-25T16:58:51.603Z] [getResults] Returning 4 results
+[2026-02-25T17:03:08.726Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:03:08.790Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:03:08.792Z] [getResults] Returning 4 results
+[2026-02-25T17:03:08.834Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:03:08.943Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:03:08.946Z] [getResults] Returning 4 results
+[2026-02-25T17:03:12.576Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:03:12.694Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:03:12.698Z] [getResults] Filtering by classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:03:12.700Z] [getResults] Returning 2 results
+[2026-02-25T17:07:24.556Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:07:24.615Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:07:24.625Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:07:24.626Z] [getResults] Returning 2 results
+[2026-02-25T17:07:28.060Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:07:28.102Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:07:28.119Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:07:28.122Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:07:28.124Z] [getResults] Returning 2 results
+[2026-02-25T17:19:30.157Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T17:19:30.180Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T17:19:30.238Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T17:19:30.240Z] [getResults] Returning 1 results
+[2026-02-25T17:19:30.280Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T17:19:30.295Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T17:19:30.331Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T17:19:30.333Z] [getResults] Returning 1 results
+[2026-02-25T17:22:51.911Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:22:51.961Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:22:51.962Z] [getResults] Returning 4 results
+[2026-02-25T17:22:51.990Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:22:52.058Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:22:52.060Z] [getResults] Returning 4 results
+[2026-02-25T17:22:54.319Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:22:54.348Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:22:54.350Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:22:54.351Z] [getResults] Returning 2 results
+[2026-02-25T17:22:56.928Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:22:56.954Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:22:56.955Z] [getResults] Filtering by specific classId: 699db548dd7bd6ee50184852
+[2026-02-25T17:22:56.956Z] [getResults] Returning 2 results
+[2026-02-25T17:23:05.295Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:23:05.319Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:23:05.319Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:23:05.321Z] [getResults] Returning 2 results
+[2026-02-25T17:23:08.312Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:23:08.342Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:23:08.343Z] [getResults] Filtering by specific classId: 699db548dd7bd6ee50184852
+[2026-02-25T17:23:08.345Z] [getResults] Returning 2 results
+[2026-02-25T17:23:11.055Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:23:11.079Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:23:11.080Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:23:11.082Z] [getResults] Returning 2 results
+[2026-02-25T17:28:41.747Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:28:41.906Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:28:41.921Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:28:41.923Z] [getResults] Returning 2 results
+[2026-02-25T17:28:41.941Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:28:41.977Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:28:41.990Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:28:41.992Z] [getResults] Returning 2 results
+[2026-02-25T17:28:45.828Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:28:45.848Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:28:45.856Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:28:45.858Z] [getResults] Returning 2 results
+[2026-02-25T17:28:47.837Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:28:47.859Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:28:47.867Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:28:47.868Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:28:47.870Z] [getResults] Returning 2 results
+[2026-02-25T17:28:50.305Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:28:50.339Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:28:50.346Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:28:50.348Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:28:50.350Z] [getResults] Returning 2 results
+[2026-02-25T17:29:11.394Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:29:11.478Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:29:11.495Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:29:11.497Z] [getResults] Returning 2 results
+[2026-02-25T17:29:11.561Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:29:11.643Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:29:11.670Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:29:11.672Z] [getResults] Returning 2 results
+[2026-02-25T17:29:41.828Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T17:29:41.843Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T17:29:41.885Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T17:29:41.887Z] [getResults] Returning 1 results
+[2026-02-25T17:29:41.918Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T17:29:41.934Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T17:29:41.970Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T17:29:41.972Z] [getResults] Returning 1 results
+[2026-02-25T17:41:02.268Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:41:02.365Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:02.368Z] [getResults] Returning 4 results
+[2026-02-25T17:41:02.415Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:41:02.486Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:02.488Z] [getResults] Returning 4 results
+[2026-02-25T17:41:05.188Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:41:05.237Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:05.239Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:41:05.251Z] [getResults] Returning 2 results
+[2026-02-25T17:41:08.234Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:41:08.322Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:08.324Z] [getResults] Filtering by specific classId: 699db548dd7bd6ee50184852
+[2026-02-25T17:41:08.327Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:41:08.329Z] [getResults] Returning 2 results
+[2026-02-25T17:41:11.385Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:41:11.437Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:11.439Z] [getResults] Filtering by specific classId: 699db548dd7bd6ee50184852
+[2026-02-25T17:41:11.440Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:41:11.442Z] [getResults] Returning 2 results
+[2026-02-25T17:41:13.985Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T17:41:14.059Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:14.061Z] [getResults] Filtering by specific classId: 699db548dd7bd6ee50184852
+[2026-02-25T17:41:14.063Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:41:14.065Z] [getResults] Returning 2 results
+[2026-02-25T17:41:58.468Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:41:58.527Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:41:58.549Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:41:58.550Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:41:58.558Z] [getResults] Returning 0 results
+[2026-02-25T17:42:01.567Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:42:01.733Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:42:01.752Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:42:01.755Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:42:01.758Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:42:01.762Z] [getResults] Returning 0 results
+[2026-02-25T17:42:03.465Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T17:42:03.520Z] [getResults] Found 4 results for query {}
+[2026-02-25T17:42:03.544Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-25T17:42:03.546Z] [getResults] Filtering by specific classId: 699d93ba7eee030369a8918f
+[2026-02-25T17:42:03.547Z] [getResults] Filtering by specific skillId: 699db51edd7bd6ee5018484b
+[2026-02-25T17:42:03.549Z] [getResults] Returning 0 results
+[2026-02-25T19:01:20.647Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:20.742Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:20.780Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:20.783Z] [getResults] Returning 0 results
+[2026-02-25T19:01:20.850Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:20.926Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:20.956Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:20.958Z] [getResults] Returning 0 results
+[2026-02-25T19:01:23.450Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:23.560Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:23.599Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:23.603Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-25T19:01:23.605Z] [getResults] Returning 0 results
+[2026-02-25T19:01:25.302Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:25.403Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:25.428Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:25.431Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-25T19:01:25.433Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-25T19:01:25.435Z] [getResults] Returning 0 results
+[2026-02-25T19:01:27.216Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:27.298Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:27.330Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:27.333Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-25T19:01:27.335Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-25T19:01:27.337Z] [getResults] Returning 0 results
+[2026-02-25T19:01:40.824Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:40.900Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:40.919Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:40.921Z] [getResults] Returning 0 results
+[2026-02-25T19:01:40.969Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-25T19:01:41.032Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:01:41.047Z] [getResults] Filtered to 0 results based on Teacher assigned classes
+[2026-02-25T19:01:41.049Z] [getResults] Returning 0 results
+[2026-02-25T19:03:26.012Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T19:03:26.098Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:03:26.101Z] [getResults] Returning 4 results
+[2026-02-25T19:03:26.170Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T19:03:26.282Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:03:26.284Z] [getResults] Returning 4 results
+[2026-02-25T19:03:30.034Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T19:03:30.087Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:03:30.089Z] [getResults] Returning 4 results
+[2026-02-25T19:03:32.679Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T19:03:32.816Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:03:32.818Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-25T19:03:32.820Z] [getResults] Returning 0 results
+[2026-02-25T19:03:35.091Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-25T19:03:35.139Z] [getResults] Found 4 results for query {}
+[2026-02-25T19:03:35.140Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-25T19:03:35.142Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-25T19:03:35.143Z] [getResults] Returning 0 results
+[2026-02-25T19:11:43.846Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T19:11:43.857Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T19:11:43.897Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T19:11:43.899Z] [getResults] Returning 1 results
+[2026-02-25T19:11:43.935Z] [getResults] START - User: 699ef28a41807a202a086f52, Role: Student
+[2026-02-25T19:11:43.946Z] [getResults] Student found: 699ef28a41807a202a086f54
+[2026-02-25T19:11:43.980Z] [getResults] Found 1 results for query {"studentId":"699ef28a41807a202a086f54"}
+[2026-02-25T19:11:43.982Z] [getResults] Returning 1 results
+[2026-02-25T19:37:39.129Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T19:37:39.141Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T19:37:39.181Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T19:37:39.183Z] [getResults] Returning 1 results
+[2026-02-25T19:37:39.226Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-25T19:37:39.243Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-25T19:37:39.271Z] [getResults] Found 1 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-25T19:37:39.274Z] [getResults] Returning 1 results
+[2026-02-26T02:26:03.137Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:26:03.251Z] [getResults] Found 4 results for query {}
+[2026-02-26T02:26:03.255Z] [getResults] Returning 4 results
+[2026-02-26T02:26:03.333Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:26:03.435Z] [getResults] Found 4 results for query {}
+[2026-02-26T02:26:03.437Z] [getResults] Returning 4 results
+[2026-02-26T02:28:50.035Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:28:50.124Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:28:50.151Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:28:50.154Z] [getResults] Returning 2 results
+[2026-02-26T02:28:50.228Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:28:50.351Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:28:50.403Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:28:50.406Z] [getResults] Returning 2 results
+[2026-02-26T02:28:53.423Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:28:53.498Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:28:53.530Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:28:53.532Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:28:53.545Z] [getResults] Returning 1 results
+[2026-02-26T02:28:58.428Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:28:58.514Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:28:58.534Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:28:58.536Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:28:58.538Z] [getResults] Returning 1 results
+[2026-02-26T02:29:03.408Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:29:03.481Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:29:03.503Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:29:03.506Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:29:03.509Z] [getResults] Returning 1 results
+[2026-02-26T02:29:07.980Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:29:08.041Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:29:08.062Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:29:08.064Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:29:08.067Z] [getResults] Returning 1 results
+[2026-02-26T02:29:27.579Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:29:27.652Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:29:27.669Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:29:27.671Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:29:27.674Z] [getResults] Returning 1 results
+[2026-02-26T02:29:51.720Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:29:51.774Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:29:51.788Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:29:51.789Z] [getResults] Returning 2 results
+[2026-02-26T02:29:51.943Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:29:52.006Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:29:52.029Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:29:52.032Z] [getResults] Returning 2 results
+[2026-02-26T02:30:02.791Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:30:02.850Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:30:02.865Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:30:02.867Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:30:02.870Z] [getResults] Returning 1 results
+[2026-02-26T02:30:07.794Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:30:07.867Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:30:07.889Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:30:07.891Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:30:07.894Z] [getResults] Returning 1 results
+[2026-02-26T02:30:10.834Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:30:10.878Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:30:10.905Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:30:10.907Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:30:10.909Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:30:10.912Z] [getResults] Returning 1 results
+[2026-02-26T02:33:02.494Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:02.665Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:02.666Z] [getResults] Returning 5 results
+[2026-02-26T02:33:02.744Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:02.908Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:02.911Z] [getResults] Returning 5 results
+[2026-02-26T02:33:20.944Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:21.070Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:21.072Z] [getResults] Returning 5 results
+[2026-02-26T02:33:21.218Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:21.427Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:21.429Z] [getResults] Returning 5 results
+[2026-02-26T02:33:23.473Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:23.616Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:23.619Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:33:23.627Z] [getResults] Returning 1 results
+[2026-02-26T02:33:25.216Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:25.380Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:25.383Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:33:25.387Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:33:25.392Z] [getResults] Returning 1 results
+[2026-02-26T02:33:27.033Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:27.205Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:27.208Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:33:27.210Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:33:27.213Z] [getResults] Returning 1 results
+[2026-02-26T02:33:29.880Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:30.019Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:30.021Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:33:30.023Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:33:30.027Z] [getResults] Returning 1 results
+[2026-02-26T02:33:32.753Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:32.899Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:32.902Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:33:32.907Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:33:32.911Z] [getResults] Returning 1 results
+[2026-02-26T02:33:35.177Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:33:35.368Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:33:35.372Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:33:35.376Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:33:35.381Z] [getResults] Returning 1 results
+[2026-02-26T02:34:03.298Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:34:03.346Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:34:03.480Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:34:03.482Z] [getResults] Returning 2 results
+[2026-02-26T02:34:03.607Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:34:03.662Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:34:03.843Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:34:03.846Z] [getResults] Returning 2 results
+[2026-02-26T02:34:06.249Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:34:06.278Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:34:06.445Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:34:06.447Z] [getResults] Returning 2 results
+[2026-02-26T02:34:06.581Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:34:06.638Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:34:06.817Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:34:06.819Z] [getResults] Returning 2 results
+[2026-02-26T02:35:21.898Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:22.196Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:22.264Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:22.266Z] [getResults] Returning 2 results
+[2026-02-26T02:35:22.361Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:22.494Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:22.597Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:22.602Z] [getResults] Returning 2 results
+[2026-02-26T02:35:23.699Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:23.867Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:23.927Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:23.930Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:23.950Z] [getResults] Returning 1 results
+[2026-02-26T02:35:25.773Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:25.902Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:25.943Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:25.946Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:35:25.948Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:25.952Z] [getResults] Returning 1 results
+[2026-02-26T02:35:27.350Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:27.467Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:27.504Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:27.506Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:35:27.508Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:27.510Z] [getResults] Returning 1 results
+[2026-02-26T02:35:29.530Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:29.653Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:29.685Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:29.687Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:35:29.689Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:29.691Z] [getResults] Returning 1 results
+[2026-02-26T02:35:32.525Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:32.647Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:32.688Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:32.690Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:35:32.693Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:32.695Z] [getResults] Returning 1 results
+[2026-02-26T02:35:38.431Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:38.552Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:38.588Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:38.590Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:35:38.592Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:38.595Z] [getResults] Returning 1 results
+[2026-02-26T02:35:42.293Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:42.465Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:42.521Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:42.524Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:42.526Z] [getResults] Returning 1 results
+[2026-02-26T02:35:45.216Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:35:45.349Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:35:45.396Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:35:45.399Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:35:45.401Z] [getResults] Returning 1 results
+[2026-02-26T02:37:18.779Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:37:18.829Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:37:18.954Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:37:18.956Z] [getResults] Returning 2 results
+[2026-02-26T02:37:19.034Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:37:19.059Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:37:19.156Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:37:19.159Z] [getResults] Returning 2 results
+[2026-02-26T02:37:22.988Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:37:23.022Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:37:23.147Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:37:23.149Z] [getResults] Returning 2 results
+[2026-02-26T02:37:23.219Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T02:37:23.254Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T02:37:23.358Z] [getResults] Found 2 results for query {"studentId":"699f179a5a8fc9433342ffb7"}
+[2026-02-26T02:37:23.361Z] [getResults] Returning 2 results
+[2026-02-26T02:39:53.832Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:39:53.913Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:39:53.915Z] [getResults] Returning 5 results
+[2026-02-26T02:39:53.972Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:39:54.073Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:39:54.075Z] [getResults] Returning 5 results
+[2026-02-26T02:39:58.249Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:39:58.353Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:39:58.356Z] [getResults] Returning 5 results
+[2026-02-26T02:40:04.668Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:04.727Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:04.728Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:40:04.732Z] [getResults] Returning 1 results
+[2026-02-26T02:40:06.687Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:06.776Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:06.779Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:40:06.781Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:40:06.784Z] [getResults] Returning 1 results
+[2026-02-26T02:40:08.588Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:08.658Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:08.660Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:40:08.662Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:40:08.665Z] [getResults] Returning 1 results
+[2026-02-26T02:40:28.107Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:28.205Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:28.208Z] [getResults] Returning 5 results
+[2026-02-26T02:40:28.277Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:28.363Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:28.365Z] [getResults] Returning 5 results
+[2026-02-26T02:40:34.466Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:34.554Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:34.559Z] [getResults] Returning 5 results
+[2026-02-26T02:40:34.646Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:34.756Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:34.758Z] [getResults] Returning 5 results
+[2026-02-26T02:40:41.519Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:41.592Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:41.595Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:40:41.598Z] [getResults] Returning 1 results
+[2026-02-26T02:40:43.542Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:43.605Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:43.608Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:40:43.611Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:40:43.615Z] [getResults] Returning 1 results
+[2026-02-26T02:40:45.278Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:40:45.389Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:45.392Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:40:45.395Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:40:45.398Z] [getResults] Returning 1 results
+[2026-02-26T02:40:55.984Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:40:56.074Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:56.146Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:40:56.150Z] [getResults] Returning 2 results
+[2026-02-26T02:40:56.255Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:40:56.421Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:56.478Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:40:56.481Z] [getResults] Returning 2 results
+[2026-02-26T02:40:58.641Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:40:58.757Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:58.791Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:40:58.794Z] [getResults] Returning 2 results
+[2026-02-26T02:40:58.903Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:40:59.003Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:40:59.056Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:40:59.059Z] [getResults] Returning 2 results
+[2026-02-26T02:41:05.249Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:41:05.400Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:41:05.454Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:41:05.458Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:41:05.462Z] [getResults] Returning 1 results
+[2026-02-26T02:41:07.430Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:41:07.598Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:41:07.646Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:41:07.650Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:41:07.653Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:41:07.657Z] [getResults] Returning 1 results
+[2026-02-26T02:41:09.449Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:41:09.625Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:41:09.677Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:41:09.679Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:41:09.681Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:41:09.684Z] [getResults] Returning 1 results
+[2026-02-26T02:41:13.553Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:41:13.653Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:41:13.712Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:41:13.715Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:41:13.718Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:41:13.721Z] [getResults] Returning 1 results
+[2026-02-26T02:41:17.817Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:41:17.958Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:41:18.020Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:41:18.024Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:41:18.027Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:41:18.031Z] [getResults] Returning 1 results
+[2026-02-26T02:54:54.552Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:54:54.730Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:54:54.733Z] [getResults] Returning 5 results
+[2026-02-26T02:54:54.848Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:54:55.051Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:54:55.054Z] [getResults] Returning 5 results
+[2026-02-26T02:54:57.555Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:54:57.730Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:54:57.735Z] [getResults] Returning 5 results
+[2026-02-26T02:55:02.713Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:55:02.886Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:02.888Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:02.892Z] [getResults] Returning 1 results
+[2026-02-26T02:55:04.783Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:55:04.930Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:04.934Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:55:04.937Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:04.940Z] [getResults] Returning 1 results
+[2026-02-26T02:55:06.857Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:55:07.013Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:07.017Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:55:07.021Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:07.024Z] [getResults] Returning 1 results
+[2026-02-26T02:55:09.251Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T02:55:09.385Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:09.388Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:55:09.390Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:09.393Z] [getResults] Returning 1 results
+[2026-02-26T02:55:18.187Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:18.498Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:18.537Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:18.540Z] [getResults] Returning 2 results
+[2026-02-26T02:55:18.694Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:18.718Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:18.857Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:18.889Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:18.925Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:18.927Z] [getResults] Returning 2 results
+[2026-02-26T02:55:18.944Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:18.947Z] [getResults] Returning 2 results
+[2026-02-26T02:55:20.527Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:20.681Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:20.731Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:20.734Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:20.739Z] [getResults] Returning 1 results
+[2026-02-26T02:55:22.127Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:22.250Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:22.319Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:22.322Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:55:22.325Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:22.329Z] [getResults] Returning 1 results
+[2026-02-26T02:55:23.956Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:24.094Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:24.127Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:24.129Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:55:24.131Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:24.133Z] [getResults] Returning 1 results
+[2026-02-26T02:55:27.336Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:55:27.443Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:55:27.492Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:55:27.494Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T02:55:27.497Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T02:55:27.500Z] [getResults] Returning 1 results
+[2026-02-26T02:56:10.445Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:56:10.547Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:56:10.615Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:56:10.619Z] [getResults] Returning 2 results
+[2026-02-26T02:56:10.732Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:56:10.814Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:56:10.864Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:56:10.922Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:56:10.925Z] [getResults] Returning 2 results
+[2026-02-26T02:56:10.973Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:56:11.037Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:56:11.040Z] [getResults] Returning 2 results
+[2026-02-26T02:56:13.235Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:56:13.372Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:56:13.422Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:56:13.424Z] [getResults] Returning 2 results
+[2026-02-26T02:56:20.003Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:56:20.295Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:56:20.337Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:56:20.339Z] [getResults] Returning 2 results
+[2026-02-26T02:56:24.351Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T02:56:24.485Z] [getResults] Found 5 results for query {}
+[2026-02-26T02:56:24.530Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T02:56:24.533Z] [getResults] Returning 2 results
+[2026-02-26T03:05:03.862Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T03:05:03.886Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T03:05:03.939Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:03.942Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:03.946Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:03.948Z] [getResults] Filtered to 0 results after strict subject validation
+[2026-02-26T03:05:03.951Z] [getResults] Returning 0 results
+[2026-02-26T03:05:04.013Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T03:05:04.037Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T03:05:04.096Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:04.099Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:04.102Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:04.105Z] [getResults] Filtered to 0 results after strict subject validation
+[2026-02-26T03:05:04.108Z] [getResults] Returning 0 results
+[2026-02-26T03:05:21.590Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:21.692Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:21.695Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:21.697Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:21.699Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:21.701Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:21.703Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:21.705Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:21.726Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T03:05:21.800Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:21.885Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:21.916Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:21.920Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:21.923Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:21.927Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:21.931Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:21.934Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:21.938Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:21.992Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T03:05:22.093Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:22.095Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:22.098Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:22.100Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:22.103Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:22.105Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:22.108Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:22.138Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T03:05:22.142Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T03:05:22.145Z] [getResults] Result 699fb8708da3d91a15d4fdf6 subject 699f468ae5aef9ba6401e6a1 does not match target 699f4676e5aef9ba6401e695
+[2026-02-26T03:05:22.148Z] [getResults] Returning 0 results
+[2026-02-26T03:05:29.833Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:29.930Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:29.932Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:29.934Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:29.937Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:29.939Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:29.942Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:29.944Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:29.972Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T03:05:29.975Z] [getResults] Filtering by specific subjectId: 699f468ae5aef9ba6401e6a1
+[2026-02-26T03:05:29.977Z] [getResults] Returning 1 results
+[2026-02-26T03:05:32.582Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:32.649Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:32.651Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:32.653Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:32.656Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:32.658Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:32.660Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:32.662Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:32.686Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T03:05:32.688Z] [getResults] Filtering by specific subjectId: 699f4681e5aef9ba6401e69b
+[2026-02-26T03:05:32.690Z] [getResults] Result 699fb8708da3d91a15d4fdf6 subject 699f468ae5aef9ba6401e6a1 does not match target 699f4681e5aef9ba6401e69b
+[2026-02-26T03:05:32.692Z] [getResults] Returning 0 results
+[2026-02-26T03:05:35.251Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:35.322Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:35.325Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:35.327Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:35.329Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:35.330Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:35.332Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:35.334Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:35.354Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T03:05:35.357Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T03:05:35.360Z] [getResults] Result 699fb8708da3d91a15d4fdf6 subject 699f468ae5aef9ba6401e6a1 does not match target 699f4676e5aef9ba6401e695
+[2026-02-26T03:05:35.362Z] [getResults] Returning 0 results
+[2026-02-26T03:05:40.066Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:05:40.127Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:05:40.130Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:05:40.131Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:05:40.133Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:05:40.135Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:05:40.138Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:05:40.140Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:05:40.160Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T03:05:40.162Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T03:05:40.164Z] [getResults] Result 699fb8708da3d91a15d4fdf6 subject 699f468ae5aef9ba6401e6a1 does not match target 699f4676e5aef9ba6401e695
+[2026-02-26T03:05:40.167Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T03:05:40.168Z] [getResults] Returning 0 results
+[2026-02-26T03:33:41.004Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T03:33:41.106Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:33:41.110Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:33:41.113Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:33:41.116Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:33:41.120Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:33:41.123Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:33:41.126Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:33:41.129Z] [getResults] Returning 1 results
+[2026-02-26T03:33:41.203Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T03:33:41.306Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:33:41.308Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:33:41.311Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:33:41.313Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:33:41.314Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:33:41.317Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:33:41.319Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:33:41.321Z] [getResults] Returning 1 results
+[2026-02-26T03:36:11.657Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:36:11.726Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:36:11.729Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:36:11.732Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:36:11.734Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:36:11.736Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:36:11.738Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:36:11.748Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:36:11.796Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T03:36:11.939Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:36:12.020Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:36:12.023Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:36:12.026Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:36:12.029Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:36:12.032Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:36:12.036Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:36:12.038Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:36:12.083Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T03:36:12.274Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T03:36:12.386Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:36:12.388Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T03:36:12.391Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T03:36:12.393Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T03:36:12.395Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:36:12.397Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:36:12.399Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:36:12.420Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T03:36:12.423Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T03:36:12.425Z] [getResults] Result 699fb8708da3d91a15d4fdf6 subject 699f468ae5aef9ba6401e6a1 does not match target 699f4676e5aef9ba6401e695
+[2026-02-26T03:36:12.428Z] [getResults] Returning 0 results
+[2026-02-26T03:45:40.940Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T03:45:40.945Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T03:45:40.959Z] [getResults] Found 3 total results. Pre-filtering for valid subjects...
+[2026-02-26T03:45:40.960Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T03:45:40.962Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T03:45:40.963Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T03:45:40.965Z] [getResults] Returning 1 results
+[2026-02-26T06:13:46.887Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T06:13:46.983Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T06:13:46.986Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T06:13:46.988Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T06:13:46.990Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T06:13:46.992Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T06:13:46.994Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T06:13:46.997Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T06:13:47.014Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T06:14:06.206Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T06:14:06.226Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T06:14:06.289Z] [getResults] Found 3 total results. Pre-filtering for valid subjects...
+[2026-02-26T06:14:06.293Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T06:14:06.296Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T06:14:06.299Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T06:14:06.301Z] [getResults] Returning 1 results
+[2026-02-26T07:32:48.497Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T07:32:48.575Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:32:48.578Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:32:48.580Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:32:48.582Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:32:48.586Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:32:48.589Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:32:48.592Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:32:48.595Z] [getResults] Returning 1 results
+[2026-02-26T07:33:08.530Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T07:33:08.590Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:33:08.592Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:33:08.594Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:33:08.596Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:33:08.598Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:33:08.600Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:33:08.602Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:33:08.604Z] [getResults] Returning 1 results
+[2026-02-26T07:33:14.735Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T07:33:14.812Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:33:14.815Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:33:14.816Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:33:14.818Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:33:14.820Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:33:14.821Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:33:14.823Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:33:14.825Z] [getResults] Returning 1 results
+[2026-02-26T07:33:41.163Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T07:33:41.229Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:33:41.231Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:33:41.233Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:33:41.235Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:33:41.237Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:33:41.239Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:33:41.241Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:33:41.243Z] [getResults] Returning 1 results
+[2026-02-26T07:41:09.560Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T07:41:09.576Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T07:41:09.610Z] [getResults] Found 3 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:41:09.613Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:41:09.615Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:41:09.617Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:41:09.620Z] [getResults] Returning 1 results
+[2026-02-26T07:41:19.289Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T07:41:19.299Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T07:41:19.333Z] [getResults] Found 3 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:41:19.335Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:41:19.337Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:41:19.339Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:41:19.340Z] [getResults] Returning 1 results
+[2026-02-26T07:41:48.183Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T07:41:48.239Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:41:48.242Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:41:48.243Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:41:48.245Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:41:48.247Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:41:48.249Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:41:48.252Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:41:48.254Z] [getResults] Returning 1 results
+[2026-02-26T07:42:09.731Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T07:42:09.850Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:42:09.852Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:42:09.855Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:42:09.857Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:42:09.860Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:42:09.863Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:42:09.865Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:42:09.877Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T07:42:19.254Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T07:42:19.324Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T07:42:19.327Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T07:42:19.329Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T07:42:19.331Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T07:42:19.334Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T07:42:19.337Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T07:42:19.339Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T07:42:19.356Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T08:48:26.848Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T08:48:26.932Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T08:48:26.935Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T08:48:26.938Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T08:48:26.940Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T08:48:26.943Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T08:48:26.945Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T08:48:26.948Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T08:48:26.951Z] [getResults] Returning 1 results
+[2026-02-26T08:49:05.381Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T08:49:05.451Z] [getResults] Found 6 total results. Pre-filtering for valid subjects...
+[2026-02-26T08:49:05.454Z] [getResults] Excluding result 699de8f807656ad1325d5443 - missing exam data or subject name
+[2026-02-26T08:49:05.456Z] [getResults] Excluding result 699de8f807656ad1325d5444 - missing exam data or subject name
+[2026-02-26T08:49:05.459Z] [getResults] Excluding result 699ef3098da3d91a15d4fdf3 - missing exam data or subject name
+[2026-02-26T08:49:05.462Z] [getResults] Excluding result 699f17f18da3d91a15d4fdf4 - missing exam data or subject name
+[2026-02-26T08:49:05.464Z] [getResults] Excluding result 699fafde8da3d91a15d4fdf5 - missing exam data or subject name
+[2026-02-26T08:49:05.466Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T08:49:05.468Z] [getResults] Returning 1 results
+[2026-02-26T09:09:03.751Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T09:09:03.903Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T09:09:03.906Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T09:09:03.923Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T09:09:06.634Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T09:09:06.664Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T09:09:06.667Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T09:09:06.674Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T09:09:06.675Z] [getResults] Filtering by specific subjectId: 699f468ae5aef9ba6401e6a1
+[2026-02-26T09:09:06.677Z] [getResults] Returning 1 results
+[2026-02-26T09:09:10.980Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T09:09:11.004Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T09:09:11.006Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T09:09:11.011Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T09:09:11.013Z] [getResults] Filtering by specific subjectId: 699f4681e5aef9ba6401e69b
+[2026-02-26T09:09:11.014Z] [getResults] Returning 0 results
+[2026-02-26T09:09:13.067Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T09:09:13.094Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T09:09:13.095Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T09:09:13.101Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T09:09:13.102Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T09:09:13.104Z] [getResults] Returning 1 results
+[2026-02-26T09:11:06.954Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T09:11:06.968Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T09:11:07.003Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T09:11:07.004Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T09:11:07.006Z] [getResults] Returning 2 results
+[2026-02-26T10:27:04.199Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T10:27:04.343Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:27:04.347Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:27:04.377Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T10:27:04.436Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T10:27:04.496Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:27:04.498Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:27:04.504Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T10:27:04.506Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T10:27:04.508Z] [getResults] Returning 1 results
+[2026-02-26T10:51:24.309Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T10:51:24.470Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:51:24.473Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:51:24.482Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T10:52:12.051Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T10:52:12.184Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:52:12.187Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:52:12.202Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T10:52:24.246Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T10:52:24.262Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T10:52:24.316Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:52:24.318Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:52:24.321Z] [getResults] Returning 2 results
+[2026-02-26T10:52:52.676Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T10:52:52.877Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:52:52.880Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:52:52.895Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T10:52:52.950Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T10:52:53.003Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T10:52:53.009Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T10:52:53.021Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T10:52:53.024Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T10:52:53.027Z] [getResults] Returning 1 results
+[2026-02-26T11:03:10.779Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T11:03:10.788Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T11:03:10.826Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:03:10.829Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:03:10.831Z] [getResults] Returning 2 results
+[2026-02-26T11:03:10.938Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:03:11.128Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:03:11.130Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:03:11.140Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:03:11.209Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:03:11.229Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:03:11.231Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:03:11.236Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T11:03:11.237Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T11:03:11.238Z] [getResults] Returning 1 results
+[2026-02-26T11:04:37.022Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:37.147Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:37.149Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:37.175Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:04:37.244Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:37.289Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:37.292Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:37.299Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T11:04:37.302Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T11:04:37.304Z] [getResults] Returning 1 results
+[2026-02-26T11:04:38.378Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:38.512Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:38.515Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:38.541Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:04:38.719Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:38.809Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:38.811Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:38.825Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:04:38.873Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:38.919Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:38.921Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:38.927Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T11:04:38.929Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T11:04:38.930Z] [getResults] Returning 1 results
+[2026-02-26T11:04:39.860Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:39.956Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:39.960Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:39.980Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:04:40.167Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:40.312Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:40.314Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:40.334Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:04:40.392Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:40.434Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:40.436Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:40.442Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T11:04:40.444Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T11:04:40.447Z] [getResults] Returning 1 results
+[2026-02-26T11:04:41.386Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:41.499Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:41.504Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:41.558Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:04:41.589Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:04:41.645Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:04:41.648Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:04:41.657Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T11:04:41.661Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T11:04:41.663Z] [getResults] Returning 1 results
+[2026-02-26T11:05:46.341Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:05:46.478Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:05:46.480Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:05:46.512Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T11:05:46.516Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T11:05:46.550Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T11:05:46.680Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:05:46.682Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:05:46.684Z] [getResults] Returning 2 results
+[2026-02-26T11:05:46.749Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T11:05:46.811Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:05:46.813Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:05:46.825Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-02-26T11:05:46.827Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T11:05:46.829Z] [getResults] Returning 1 results
+[2026-02-26T11:08:48.554Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T11:08:48.560Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T11:08:48.593Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:08:48.596Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:08:48.599Z] [getResults] Returning 2 results
+[2026-02-26T11:37:55.872Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T11:37:55.899Z] [getResults] Student found: 699f179a5a8fc9433342ffb7
+[2026-02-26T11:37:55.995Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T11:37:55.999Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T11:37:56.002Z] [getResults] Returning 2 results
+[2026-02-26T12:03:03.301Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:03:03.382Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:03:03.385Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-02-26T12:03:03.388Z] [getResults] Returning 2 results
+[2026-02-26T12:14:59.773Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:14:59.927Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:14:59.937Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:14:59.942Z] [getResults] Returning 1 results
+[2026-02-26T12:16:44.398Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:16:44.483Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:16:44.486Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:16:44.487Z] [getResults] Returning 1 results
+[2026-02-26T12:16:56.199Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:16:56.307Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:16:56.309Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:16:56.310Z] [getResults] Returning 1 results
+[2026-02-26T12:17:12.309Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:17:12.414Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:17:12.424Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:17:12.430Z] [getResults] Returning 1 results
+[2026-02-26T12:18:02.369Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:18:02.430Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:18:02.432Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:18:02.434Z] [getResults] Returning 1 results
+[2026-02-26T12:18:27.952Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:18:28.022Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:18:28.024Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:18:28.026Z] [getResults] Returning 1 results
+[2026-02-26T12:22:15.229Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:22:15.361Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:22:15.365Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:22:15.376Z] [getResults] Returning 1 results
+[2026-02-26T12:24:43.522Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:24:43.642Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:24:43.646Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:24:43.650Z] [getResults] Returning 1 results
+[2026-02-26T12:24:46.873Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:24:46.888Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:24:46.890Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:24:46.892Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T12:24:46.893Z] [getResults] Returning 1 results
+[2026-02-26T12:31:40.879Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:31:41.034Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:31:41.037Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:31:41.039Z] [getResults] Returning 1 results
+[2026-02-26T12:32:54.339Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:32:54.433Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:32:54.437Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:32:54.439Z] [getResults] Returning 1 results
+[2026-02-26T12:33:21.281Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:33:21.309Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:33:21.311Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:33:21.312Z] [getResults] Returning 1 results
+[2026-02-26T12:42:46.116Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:42:46.189Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:42:46.193Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:42:46.194Z] [getResults] Returning 1 results
+[2026-02-26T12:42:52.758Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:42:52.823Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:42:52.826Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:42:52.829Z] [getResults] Returning 1 results
+[2026-02-26T12:43:28.347Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:43:28.391Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:43:28.393Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:43:28.395Z] [getResults] Returning 1 results
+[2026-02-26T12:43:34.656Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:43:34.698Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:43:34.700Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:43:34.703Z] [getResults] Returning 1 results
+[2026-02-26T12:48:36.087Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:48:36.182Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:48:36.185Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:48:36.187Z] [getResults] Returning 1 results
+[2026-02-26T12:49:16.508Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:49:16.743Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:49:16.744Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:49:16.753Z] [getResults] Returning 1 results
+[2026-02-26T12:50:32.346Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:50:32.385Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:50:32.388Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:50:32.390Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T12:50:32.392Z] [getResults] Returning 1 results
+[2026-02-26T12:50:34.439Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:50:34.469Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:50:34.472Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:50:34.475Z] [getResults] Filtering by specific subjectId: 699f4681e5aef9ba6401e69b
+[2026-02-26T12:50:34.478Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T12:50:34.481Z] [getResults] Returning 0 results
+[2026-02-26T12:57:42.599Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T12:57:42.712Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T12:57:42.717Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T12:57:42.722Z] [getResults] Returning 1 results
+[2026-02-26T13:24:07.320Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:24:07.383Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:24:07.385Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:24:07.387Z] [getResults] Returning 1 results
+[2026-02-26T13:25:27.322Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:25:27.443Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:25:27.445Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:25:27.447Z] [getResults] Returning 1 results
+[2026-02-26T13:29:58.090Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:29:58.255Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:29:58.261Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:29:58.265Z] [getResults] Returning 1 results
+[2026-02-26T13:32:55.589Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:32:55.803Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:32:55.805Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:32:55.806Z] [getResults] Returning 1 results
+[2026-02-26T13:37:16.949Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:37:17.007Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:37:17.009Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:37:17.010Z] [getResults] Returning 1 results
+[2026-02-26T13:38:53.342Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:38:53.383Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:38:53.385Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:38:53.386Z] [getResults] Returning 1 results
+[2026-02-26T13:42:40.017Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:42:40.054Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:42:40.056Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:42:40.057Z] [getResults] Returning 1 results
+[2026-02-26T13:44:03.981Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:44:04.056Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:44:04.058Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:44:04.060Z] [getResults] Returning 1 results
+[2026-02-26T13:46:33.662Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:46:33.729Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:46:33.732Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:46:33.733Z] [getResults] Returning 1 results
+[2026-02-26T13:46:40.393Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:46:40.496Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:46:40.498Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:46:40.499Z] [getResults] Returning 1 results
+[2026-02-26T13:46:47.783Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:46:47.813Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:46:47.815Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:46:47.817Z] [getResults] Returning 1 results
+[2026-02-26T13:46:54.181Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:46:54.229Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:46:54.232Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:46:54.234Z] [getResults] Returning 1 results
+[2026-02-26T13:47:22.532Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:47:22.543Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:47:22.545Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:47:22.547Z] [getResults] Returning 1 results
+[2026-02-26T13:47:27.988Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:49:07.326Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:49:07.419Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:49:07.421Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:49:07.425Z] [getResults] Returning 1 results
+[2026-02-26T13:49:19.831Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:49:19.846Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:49:19.848Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:49:19.850Z] [getResults] Returning 1 results
+[2026-02-26T13:49:26.975Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:49:27.023Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:49:27.024Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:49:27.026Z] [getResults] Returning 1 results
+[2026-02-26T13:49:27.596Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:49:27.669Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:49:27.673Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:49:27.675Z] [getResults] Returning 1 results
+[2026-02-26T13:49:38.995Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:49:39.064Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:49:39.066Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:49:39.067Z] [getResults] Returning 1 results
+[2026-02-26T13:49:52.897Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:49:52.940Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:49:52.944Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:49:52.947Z] [getResults] Returning 1 results
+[2026-02-26T13:49:58.601Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:49:59.323Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:51:44.435Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:52:13.903Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T13:52:20.957Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:52:20.987Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:52:20.991Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:52:20.999Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T13:52:21.014Z] [getResults] Returning 1 results
+[2026-02-26T13:52:22.629Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T13:52:22.669Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T13:52:22.671Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T13:52:22.677Z] [getResults] Filtering by specific subjectId: 699f468ae5aef9ba6401e6a1
+[2026-02-26T13:52:22.679Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T13:52:22.680Z] [getResults] Returning 0 results
+[2026-02-26T14:00:14.813Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T14:00:14.853Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T14:00:14.855Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T14:00:14.856Z] [getResults] Returning 1 results
+[2026-02-26T14:02:43.645Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T14:02:43.776Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T14:02:43.777Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T14:02:43.784Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T14:02:47.538Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T14:02:47.560Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T14:02:47.562Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T14:02:47.569Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T14:02:47.570Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T14:02:47.571Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T14:02:47.573Z] [getResults] Returning 1 results
+[2026-02-26T14:02:52.350Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T14:02:52.372Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T14:02:52.375Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T14:02:52.381Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T14:02:52.382Z] [getResults] Filtering by specific subjectId: 699f4681e5aef9ba6401e69b
+[2026-02-26T14:02:52.383Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T14:02:52.384Z] [getResults] Returning 0 results
+[2026-02-26T14:02:54.609Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T14:02:54.664Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T14:02:54.666Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T14:02:54.673Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T14:02:54.675Z] [getResults] Filtering by specific subjectId: 699f468ae5aef9ba6401e6a1
+[2026-02-26T14:02:54.676Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T14:02:54.677Z] [getResults] Returning 0 results
+[2026-02-26T14:02:56.150Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T14:02:56.187Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T14:02:56.192Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T14:02:56.203Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-26T14:02:56.207Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T14:02:56.208Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T14:02:56.212Z] [getResults] Returning 1 results
+[2026-02-26T16:03:15.216Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T16:03:15.378Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:03:15.381Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:03:15.405Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T16:04:45.846Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:05:00.510Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:05:12.347Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:05:14.558Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:05:16.846Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:05:20.063Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:05:49.085Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:05:49.168Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:05:49.171Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:05:49.174Z] [getResults] Returning 1 results
+[2026-02-26T16:05:56.013Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:05:56.061Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:05:56.063Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:05:56.065Z] [getResults] Returning 1 results
+[2026-02-26T16:06:00.527Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:00.627Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:00.629Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:00.631Z] [getResults] Returning 1 results
+[2026-02-26T16:06:05.951Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:05.982Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:05.984Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:05.986Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T16:06:05.988Z] [getResults] Returning 1 results
+[2026-02-26T16:06:07.743Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:07.780Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:07.782Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:07.783Z] [getResults] Filtering by specific subjectId: 699f468ae5aef9ba6401e6a1
+[2026-02-26T16:06:07.785Z] [getResults] Returning 0 results
+[2026-02-26T16:06:10.031Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:10.070Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:10.072Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:10.076Z] [getResults] Filtering by specific subjectId: 699f4681e5aef9ba6401e69b
+[2026-02-26T16:06:10.078Z] [getResults] Returning 0 results
+[2026-02-26T16:06:11.991Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:12.047Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:12.052Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:12.055Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T16:06:12.058Z] [getResults] Returning 1 results
+[2026-02-26T16:06:19.316Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:19.343Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:19.345Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:19.347Z] [getResults] Returning 1 results
+[2026-02-26T16:06:22.673Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:22.731Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:22.733Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:22.736Z] [getResults] Returning 1 results
+[2026-02-26T16:06:26.886Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:26.935Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:26.938Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:26.940Z] [getResults] Returning 1 results
+[2026-02-26T16:06:33.256Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:33.324Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:33.328Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:33.331Z] [getResults] Returning 1 results
+[2026-02-26T16:06:36.089Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T16:06:36.135Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T16:06:36.137Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T16:06:36.140Z] [getResults] Returning 1 results
+[2026-02-26T16:07:05.162Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:07:10.243Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:07:16.528Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:07:33.997Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:07:34.870Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:07:36.407Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T16:07:37.081Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:19:18.690Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:19:19.842Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:19:23.994Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:21:53.776Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T17:21:53.832Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:21:53.835Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:21:53.839Z] [getResults] Returning 1 results
+[2026-02-26T17:22:39.394Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:22:52.423Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T17:22:52.476Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:22:52.479Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:22:52.481Z] [getResults] Returning 1 results
+[2026-02-26T17:22:58.565Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T17:22:58.601Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:22:58.603Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:22:58.605Z] [getResults] Returning 1 results
+[2026-02-26T17:23:07.891Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:23:07.942Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:23:07.945Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:23:07.947Z] [getResults] Returning 1 results
+[2026-02-26T17:23:54.619Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T17:23:54.662Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:23:54.665Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:23:54.667Z] [getResults] Returning 1 results
+[2026-02-26T17:30:38.789Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:30:46.186Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T17:30:46.240Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:30:46.243Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:30:46.244Z] [getResults] Returning 1 results
+[2026-02-26T17:42:58.645Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T17:42:58.735Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:42:58.739Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:42:58.753Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T17:43:08.577Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T17:43:08.630Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T17:43:08.632Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T17:43:08.643Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T17:46:36.015Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T17:47:39.615Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:00:46.880Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T18:00:46.930Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:00:46.932Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:00:46.945Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T18:22:26.133Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:22:26.216Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T18:22:26.323Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:22:26.325Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:22:26.339Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T18:25:26.323Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:25:43.146Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:25:50.693Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T18:25:50.832Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:25:50.835Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:25:50.837Z] [getResults] Returning 1 results
+[2026-02-26T18:25:58.649Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T18:25:58.701Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:25:58.704Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:25:58.706Z] [getResults] Returning 1 results
+[2026-02-26T18:26:10.704Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T18:26:10.760Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:26:10.764Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:26:10.784Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T18:26:35.351Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:26:35.401Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:26:35.403Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:26:35.405Z] [getResults] Returning 1 results
+[2026-02-26T18:31:39.466Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:31:39.550Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:31:39.553Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:31:39.555Z] [getResults] Returning 1 results
+[2026-02-26T18:31:39.790Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:31:39.902Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:31:39.904Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:31:39.907Z] [getResults] Returning 1 results
+[2026-02-26T18:31:40.943Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:31:40.997Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:31:40.999Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:31:41.003Z] [getResults] Returning 1 results
+[2026-02-26T18:31:41.136Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:31:41.195Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:31:41.197Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:31:41.199Z] [getResults] Returning 1 results
+[2026-02-26T18:43:50.504Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:43:50.555Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:43:50.557Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:43:50.559Z] [getResults] Returning 1 results
+[2026-02-26T18:43:51.885Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:43:51.932Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:43:51.933Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:43:51.935Z] [getResults] Returning 1 results
+[2026-02-26T18:44:05.967Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:44:06.050Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:44:06.052Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:44:06.055Z] [getResults] Returning 1 results
+[2026-02-26T18:44:09.229Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T18:44:09.294Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:44:09.296Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:44:09.300Z] [getResults] Returning 1 results
+[2026-02-26T18:51:53.004Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T18:51:53.122Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:51:53.124Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:51:53.126Z] [getResults] Returning 1 results
+[2026-02-26T18:55:29.761Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T18:55:29.823Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T18:55:29.825Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T18:55:29.827Z] [getResults] Returning 1 results
+[2026-02-26T19:29:09.983Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-26T19:29:10.063Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:29:10.068Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:29:10.106Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-26T19:34:39.078Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:34:39.145Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:34:39.147Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:34:39.150Z] [getResults] Returning 1 results
+[2026-02-26T19:34:41.219Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:34:41.281Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:34:41.284Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:34:41.287Z] [getResults] Returning 1 results
+[2026-02-26T19:34:41.504Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:34:41.541Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:34:41.544Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:34:41.545Z] [getResults] Returning 1 results
+[2026-02-26T19:34:42.636Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:34:42.697Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:34:42.699Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:34:42.701Z] [getResults] Returning 1 results
+[2026-02-26T19:34:42.820Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:34:42.864Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:34:42.866Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:34:42.867Z] [getResults] Returning 1 results
+[2026-02-26T19:39:54.779Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:39:54.879Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:39:54.886Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:39:54.891Z] [getResults] Returning 1 results
+[2026-02-26T19:39:55.192Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:39:55.290Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:39:55.292Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:39:55.293Z] [getResults] Returning 1 results
+[2026-02-26T19:39:56.426Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T19:39:56.480Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T19:39:56.482Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T19:39:56.483Z] [getResults] Returning 1 results
+[2026-02-26T20:17:23.900Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:17:23.968Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:17:23.971Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:17:23.973Z] [getResults] Returning 1 results
+[2026-02-26T20:17:25.121Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:17:25.170Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:17:25.171Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:17:25.173Z] [getResults] Returning 1 results
+[2026-02-26T20:17:27.637Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:17:27.697Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:17:27.699Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:17:27.701Z] [getResults] Returning 1 results
+[2026-02-26T20:17:33.439Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:17:33.545Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:17:33.548Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:17:33.549Z] [getResults] Returning 1 results
+[2026-02-26T20:17:44.119Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:17:44.183Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:17:44.185Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:17:44.187Z] [getResults] Returning 1 results
+[2026-02-26T20:17:55.837Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:17:55.855Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:22:12.002Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:22:12.078Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:22:12.080Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:22:12.082Z] [getResults] Returning 1 results
+[2026-02-26T20:22:26.463Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:22:26.541Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:22:26.544Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:22:26.547Z] [getResults] Returning 1 results
+[2026-02-26T20:22:44.068Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:22:44.086Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:22:44.323Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:22:44.342Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:23:24.028Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:23:24.123Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:23:24.125Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:23:24.127Z] [getResults] Returning 1 results
+[2026-02-26T20:23:29.063Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:23:29.114Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:23:29.117Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:23:29.120Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T20:23:29.123Z] [getResults] Returning 1 results
+[2026-02-26T20:23:31.612Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:23:31.660Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:23:31.662Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:23:31.666Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T20:23:31.672Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T20:23:31.676Z] [getResults] Returning 1 results
+[2026-02-26T20:23:33.880Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:23:33.923Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:23:33.924Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:23:33.926Z] [getResults] Filtering by specific subjectId: 699f468ae5aef9ba6401e6a1
+[2026-02-26T20:23:33.928Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T20:23:33.930Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T20:23:33.931Z] [getResults] Returning 0 results
+[2026-02-26T20:23:36.309Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:23:36.359Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:23:36.362Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:23:36.363Z] [getResults] Filtering by specific subjectId: 699f4681e5aef9ba6401e69b
+[2026-02-26T20:23:36.365Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T20:23:36.367Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T20:23:36.369Z] [getResults] Returning 0 results
+[2026-02-26T20:23:38.665Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:23:38.719Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:23:38.721Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:23:38.724Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-26T20:23:38.726Z] [getResults] Filtering by specific classId: 699f4664e5aef9ba6401e685
+[2026-02-26T20:23:38.728Z] [getResults] Filtering by specific skillId: 699f42e1d934f3dbb64adc2c
+[2026-02-26T20:23:38.730Z] [getResults] Returning 1 results
+[2026-02-26T20:25:26.679Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:25:26.754Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:25:26.758Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:25:26.761Z] [getResults] Returning 1 results
+[2026-02-26T20:26:06.656Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:26:06.709Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:26:06.711Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:26:06.713Z] [getResults] Returning 1 results
+[2026-02-26T20:26:13.706Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:26:13.757Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:26:13.761Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:26:13.765Z] [getResults] Returning 1 results
+[2026-02-26T20:26:53.982Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:26:54.026Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:26:54.028Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:26:54.031Z] [getResults] Returning 1 results
+[2026-02-26T20:27:07.708Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:27:07.753Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:27:07.755Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:27:07.756Z] [getResults] Returning 1 results
+[2026-02-26T20:27:33.598Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:27:33.659Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:27:33.662Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:27:33.665Z] [getResults] Returning 1 results
+[2026-02-26T20:30:20.272Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:30:20.286Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:30:44.139Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:30:44.198Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:30:44.200Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:30:44.201Z] [getResults] Returning 1 results
+[2026-02-26T20:33:05.452Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:33:05.519Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:33:05.523Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:33:05.525Z] [getResults] Returning 1 results
+[2026-02-26T20:33:17.689Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:33:17.711Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:33:36.259Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:33:36.296Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:33:36.298Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:33:36.300Z] [getResults] Returning 1 results
+[2026-02-26T20:33:40.872Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:33:40.928Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:33:40.931Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:33:40.934Z] [getResults] Returning 1 results
+[2026-02-26T20:33:45.844Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:33:45.861Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:33:59.976Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:34:00.048Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:34:00.051Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:34:00.054Z] [getResults] Returning 1 results
+[2026-02-26T20:34:01.813Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:34:01.868Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:34:01.870Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:34:01.872Z] [getResults] Returning 1 results
+[2026-02-26T20:34:02.956Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:34:03.046Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:34:03.050Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:34:03.052Z] [getResults] Returning 1 results
+[2026-02-26T20:34:03.206Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:34:03.269Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:34:03.271Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:34:03.273Z] [getResults] Returning 1 results
+[2026-02-26T20:39:01.125Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:39:01.200Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:39:01.203Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:39:01.205Z] [getResults] Returning 1 results
+[2026-02-26T20:39:55.110Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:39:55.158Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:39:55.159Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:39:55.160Z] [getResults] Returning 1 results
+[2026-02-26T20:47:50.649Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:47:50.802Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:47:50.804Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:47:50.806Z] [getResults] Returning 1 results
+[2026-02-26T20:47:55.972Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:47:56.055Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:47:56.059Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:47:56.062Z] [getResults] Returning 1 results
+[2026-02-26T20:48:02.124Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:48:02.154Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:48:32.576Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:48:32.649Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:48:32.651Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:48:32.654Z] [getResults] Returning 1 results
+[2026-02-26T20:52:35.579Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:52:35.734Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:52:35.737Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:52:35.739Z] [getResults] Returning 1 results
+[2026-02-26T20:52:37.844Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:52:37.939Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:52:37.942Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:52:37.945Z] [getResults] Returning 1 results
+[2026-02-26T20:55:22.624Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:55:22.717Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:22.721Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:22.724Z] [getResults] Returning 1 results
+[2026-02-26T20:55:29.025Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:55:29.105Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:29.109Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:29.112Z] [getResults] Returning 1 results
+[2026-02-26T20:55:33.508Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:33.597Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:33.600Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:33.604Z] [getResults] Returning 1 results
+[2026-02-26T20:55:36.202Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:36.285Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:36.289Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:36.292Z] [getResults] Returning 1 results
+[2026-02-26T20:55:38.036Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:38.116Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:38.118Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:38.120Z] [getResults] Returning 1 results
+[2026-02-26T20:55:53.584Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:53.646Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:53.650Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:53.652Z] [getResults] Returning 1 results
+[2026-02-26T20:55:54.830Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:54.901Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:54.904Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:54.906Z] [getResults] Returning 1 results
+[2026-02-26T20:55:55.942Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:56.000Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:56.004Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:56.007Z] [getResults] Returning 1 results
+[2026-02-26T20:55:56.952Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:57.046Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:57.049Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:57.052Z] [getResults] Returning 1 results
+[2026-02-26T20:55:57.310Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:55:57.375Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:55:57.378Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:55:57.380Z] [getResults] Returning 1 results
+[2026-02-26T20:57:00.247Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:57:00.272Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T20:57:27.919Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:57:27.990Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:57:27.992Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:57:27.993Z] [getResults] Returning 1 results
+[2026-02-26T20:57:29.331Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T20:57:29.421Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:57:29.425Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:57:29.427Z] [getResults] Returning 1 results
+[2026-02-26T20:57:36.167Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T20:57:36.228Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T20:57:36.231Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T20:57:36.233Z] [getResults] Returning 1 results
+[2026-02-26T21:00:05.312Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:05.394Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:05.397Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:05.399Z] [getResults] Returning 1 results
+[2026-02-26T21:00:19.221Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:19.289Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:19.291Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:19.294Z] [getResults] Returning 1 results
+[2026-02-26T21:00:20.452Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:20.574Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:20.578Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:20.580Z] [getResults] Returning 1 results
+[2026-02-26T21:00:20.870Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:20.968Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:20.971Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:20.975Z] [getResults] Returning 1 results
+[2026-02-26T21:00:25.220Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:25.317Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:25.320Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:25.322Z] [getResults] Returning 1 results
+[2026-02-26T21:00:35.659Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T21:00:35.708Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:35.711Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:35.714Z] [getResults] Returning 1 results
+[2026-02-26T21:00:39.736Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:39.803Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:39.805Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:39.807Z] [getResults] Returning 1 results
+[2026-02-26T21:00:47.785Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T21:00:47.851Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:47.853Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:47.856Z] [getResults] Returning 1 results
+[2026-02-26T21:00:51.865Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:00:51.918Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:00:51.920Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:00:51.922Z] [getResults] Returning 1 results
+[2026-02-26T21:02:09.636Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:02:09.678Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:02:09.684Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:02:09.691Z] [getResults] Returning 1 results
+[2026-02-26T21:03:11.798Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:03:11.866Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:03:11.869Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:03:11.871Z] [getResults] Returning 1 results
+[2026-02-26T21:03:12.939Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:03:13.032Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:03:13.034Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:03:13.036Z] [getResults] Returning 1 results
+[2026-02-26T21:03:39.106Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:03:39.126Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T21:03:51.441Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T21:03:51.536Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:03:51.540Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:03:51.543Z] [getResults] Returning 1 results
+[2026-02-26T21:03:56.729Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T21:03:56.776Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:03:56.779Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:03:56.781Z] [getResults] Returning 1 results
+[2026-02-26T21:04:00.971Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:04:00.992Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T21:04:02.307Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:04:02.324Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T21:04:03.632Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:04:03.664Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-26T21:07:21.922Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:07:21.983Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:07:21.985Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:07:21.987Z] [getResults] Returning 1 results
+[2026-02-26T21:07:27.342Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T21:07:27.413Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:07:27.417Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:07:27.420Z] [getResults] Returning 1 results
+[2026-02-26T21:07:33.217Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-26T21:07:33.269Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:07:33.272Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:07:33.275Z] [getResults] Returning 1 results
+[2026-02-26T21:07:37.188Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-26T21:07:37.247Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-26T21:07:37.249Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-26T21:07:37.251Z] [getResults] Returning 1 results
+[2026-02-27T06:23:28.749Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-27T06:23:28.854Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:23:28.857Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:23:28.874Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-02-27T06:23:28.949Z] [getResults] START - User: 699f18d7116d38b83f0c3244, Role: Teacher
+[2026-02-27T06:23:28.999Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:23:29.002Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:23:29.014Z] [getResults] Filtered to 1 results based on Teacher assigned classes
+[2026-02-27T06:23:29.016Z] [getResults] Filtering by specific subjectId: 699f4676e5aef9ba6401e695
+[2026-02-27T06:23:29.020Z] [getResults] Returning 1 results
+[2026-02-27T06:23:59.901Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:23:59.956Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:23:59.958Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:23:59.961Z] [getResults] Returning 1 results
+[2026-02-27T06:24:13.845Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-27T06:24:13.961Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:24:13.963Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:24:13.965Z] [getResults] Returning 1 results
+[2026-02-27T06:24:25.929Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-27T06:24:26.003Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:24:26.006Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:24:26.009Z] [getResults] Returning 1 results
+[2026-02-27T06:24:31.946Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:24:31.996Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:24:31.998Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:24:31.999Z] [getResults] Returning 1 results
+[2026-02-27T06:24:58.492Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:24:58.511Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-27T06:30:00.195Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:30:00.257Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:30:00.258Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:30:00.260Z] [getResults] Returning 1 results
+[2026-02-27T06:30:42.883Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:30:42.937Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:30:42.939Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:30:42.941Z] [getResults] Returning 1 results
+[2026-02-27T06:30:53.826Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-27T06:30:53.940Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:30:53.942Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:30:53.945Z] [getResults] Returning 1 results
+[2026-02-27T06:30:59.568Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-27T06:30:59.605Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:30:59.607Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:30:59.609Z] [getResults] Returning 1 results
+[2026-02-27T06:31:08.506Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:31:08.567Z] [getResults] Found 4 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:31:08.570Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:31:08.572Z] [getResults] Returning 1 results
+[2026-02-27T06:31:18.802Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-27T06:31:18.848Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T06:31:18.850Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T06:31:18.853Z] [getResults] Returning 1 results
+[2026-02-27T06:31:28.386Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T06:31:28.400Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-27T11:04:50.143Z] [getResults] START - User: 699f17995a8fc9433342ffb5, Role: Student
+[2026-02-27T11:04:50.204Z] [getResults] Student 699f179a5a8fc9433342ffb7 IS LOCKED. Returning empty results.
+[2026-02-27T13:25:18.013Z] [getResults] START - User: 699eee2d41807a202a086c42, Role: Admin
+[2026-02-27T13:25:18.208Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
+[2026-02-27T13:25:18.210Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-27T13:25:18.212Z] [getResults] Returning 1 results

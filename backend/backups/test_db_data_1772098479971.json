@@ -1,0 +1,745 @@
+{
+  "User": [
+    {
+      "_id": "699eead341807a202a086c00",
+      "name": "sumayo",
+      "username": "Abdullahi ",
+      "password": "$2b$10$oVpOrJazUq96927ECajVqewNb38TYLtz6x1vzKZt13kFDvJCwSJqW",
+      "role": "Admin",
+      "phone": "23456789",
+      "whatsapp": "12345678",
+      "createdAt": "2026-02-25T12:28:03.401Z",
+      "updatedAt": "2026-02-25T12:28:03.401Z",
+      "__v": 0
+    },
+    {
+      "_id": "699eee2d41807a202a086c42",
+      "name": "nadiifo",
+      "username": "nadiifo",
+      "password": "$2b$10$pKvJFd2C/RvYx960Y3zRGujo6QB3XloUo8orxdmkHUg3pqFvCcura",
+      "role": "Admin",
+      "phone": "23456789",
+      "whatsapp": "2345675",
+      "createdAt": "2026-02-25T12:42:21.645Z",
+      "updatedAt": "2026-02-25T12:42:21.645Z",
+      "__v": 0
+    },
+    {
+      "_id": "699ef28a41807a202a086f52",
+      "name": "nadiifo",
+      "username": "nafiso",
+      "password": "$2b$10$9e8Ox0Ir.NKfsh3/A.kxT.MqHQIXK88KZ0v8nrv/6tslc/MQJfy0.",
+      "role": "Student",
+      "phone": "23456",
+      "whatsapp": "23456789",
+      "createdAt": "2026-02-25T13:00:58.778Z",
+      "updatedAt": "2026-02-25T13:00:58.778Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f17995a8fc9433342ffb5",
+      "name": "Abdisalam Abdullahi Ali",
+      "username": "Abdisalan",
+      "password": "$2b$10$kJQXO0mW4mboRoTsFV18wug/nOEOoIQN.9rwwstM0it8zBTUc51JW",
+      "role": "Student",
+      "phone": "0615688534",
+      "whatsapp": "613213138",
+      "createdAt": "2026-02-25T15:39:06.013Z",
+      "updatedAt": "2026-02-26T02:27:05.866Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f18d7116d38b83f0c3244",
+      "name": "mohamed",
+      "username": "mohamed",
+      "password": "$2b$10$zcK5n23cauVM5R1FPD0fNe/a4BeXxjvL4fSTkwZt1f4Prs2W2IgLS",
+      "role": "Teacher",
+      "phone": "23455555",
+      "whatsapp": "54322123",
+      "createdAt": "2026-02-25T15:44:23.210Z",
+      "updatedAt": "2026-02-25T19:00:15.756Z",
+      "__v": 0
+    },
+    {
+      "_id": "699fc84ff3e2f17556567355",
+      "name": "Admin New",
+      "username": "admin_new",
+      "password": "$2b$10$SdVZ5H/1JQLOnUUnWNC9HexSzlT8Gr.OK2V1oLMd5RsutJ5.ygz2K",
+      "role": "Student",
+      "phone": "1234567890",
+      "whatsapp": "1234567890",
+      "createdAt": "2026-02-26T04:13:03.594Z",
+      "updatedAt": "2026-02-26T04:13:03.594Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc31",
+      "name": "Nasteexo Cali",
+      "username": "nasteexo1",
+      "password": "$2b$10$JqqXpvpM/VJbRKfZbd0MBuP50ltaJ1r8c1FyAwJ5vlCj/U2uDrp0S",
+      "role": "Student",
+      "phone": "252615111111",
+      "whatsapp": "252615111111",
+      "createdAt": "2026-02-26T06:57:12.307Z",
+      "updatedAt": "2026-02-26T06:57:12.307Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc37",
+      "name": "Xaawo Maxamed",
+      "username": "xaawo2",
+      "password": "$2b$10$rkU7lHvuaET3Dg1/OtdFzOWi.9i0kxL1wRHqV9bMrp6mV8M8IHdRW",
+      "role": "Student",
+      "phone": "252615222222",
+      "whatsapp": "252615222222",
+      "createdAt": "2026-02-26T06:57:12.440Z",
+      "updatedAt": "2026-02-26T06:57:12.440Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc3d",
+      "name": "Deeqa Axmed",
+      "username": "deeqa3",
+      "password": "$2b$10$DU8gOms1vmZcoqkWK5EQ5OR3W5pF5WHb0YTxXhVLV5Cflc5OIKWFe",
+      "role": "Student",
+      "phone": "252615333333",
+      "whatsapp": "252615333333",
+      "createdAt": "2026-02-26T06:57:12.547Z",
+      "updatedAt": "2026-02-26T06:57:12.547Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc43",
+      "name": "Nimco Jaamac",
+      "username": "nimco4",
+      "password": "$2b$10$78m3Y.8htdULXyR8iT9qLOWiJdEettuTHFRENhumUqk5ktlZPSwzq",
+      "role": "Student",
+      "phone": "252615444444",
+      "whatsapp": "252615444444",
+      "createdAt": "2026-02-26T06:57:12.651Z",
+      "updatedAt": "2026-02-26T06:57:12.651Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc49",
+      "name": "Hibaaq Ciise",
+      "username": "hibaaq5",
+      "password": "$2b$10$eMfvyViK2KwvKgeKwf6cbOsk1RpnHT91u.n4KdsxyGfSXiYI.xfS2",
+      "role": "Student",
+      "phone": "252615555555",
+      "whatsapp": "252615555555",
+      "createdAt": "2026-02-26T06:57:12.773Z",
+      "updatedAt": "2026-02-26T06:57:12.773Z",
+      "__v": 0
+    }
+  ],
+  "Student": [
+    {
+      "_id": "699ef28a41807a202a086f54",
+      "user": "699ef28a41807a202a086f52",
+      "enrollmentNo": "EN-897334",
+      "classId": "699d93ba7eee030369a8918f",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Standard",
+      "amount": 22,
+      "motherName": "xaawo",
+      "totalPaid": 18,
+      "photo": "/uploads/file-1772024458674.png",
+      "age": 23,
+      "plainPassword": "12345678",
+      "status": "Active",
+      "createdAt": "2026-02-25T13:00:58.976Z",
+      "updatedAt": "2026-02-25T14:46:34.574Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f179a5a8fc9433342ffb7",
+      "user": "699f17995a8fc9433342ffb5",
+      "enrollmentNo": "EN-626041",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "registrationFee": "Standard",
+      "amount": 23,
+      "motherName": "xaaawo abdi ali",
+      "totalPaid": 0,
+      "photo": "/uploads/file-1772033945865.jpeg",
+      "age": 23,
+      "plainPassword": "1234567",
+      "status": "Active",
+      "createdAt": "2026-02-25T15:39:06.263Z",
+      "updatedAt": "2026-02-26T02:27:06.104Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc34",
+      "user": "699feec86ddcf4311a0abc31",
+      "enrollmentNo": "EN-1001",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Paid",
+      "amount": 50,
+      "motherName": "Faadumo",
+      "totalPaid": 0,
+      "dateOfBirth": "2006-03-03T06:57:12.427Z",
+      "age": 20,
+      "status": "Graduated",
+      "createdAt": "2026-02-26T06:57:12.431Z",
+      "updatedAt": "2026-02-26T06:57:12.431Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc3a",
+      "user": "699feec86ddcf4311a0abc37",
+      "enrollmentNo": "EN-1002",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Paid",
+      "amount": 45,
+      "motherName": "Safiyo",
+      "totalPaid": 0,
+      "dateOfBirth": "2004-03-03T06:57:12.542Z",
+      "age": 22,
+      "status": "Graduated",
+      "createdAt": "2026-02-26T06:57:12.543Z",
+      "updatedAt": "2026-02-26T06:57:12.543Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc40",
+      "user": "699feec86ddcf4311a0abc3d",
+      "enrollmentNo": "EN-1003",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Paid",
+      "amount": 60,
+      "motherName": "Xaliimo",
+      "totalPaid": 0,
+      "dateOfBirth": "2005-03-03T06:57:12.647Z",
+      "age": 21,
+      "status": "Graduated",
+      "createdAt": "2026-02-26T06:57:12.648Z",
+      "updatedAt": "2026-02-26T06:57:12.648Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc46",
+      "user": "699feec86ddcf4311a0abc43",
+      "enrollmentNo": "EN-1004",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Paid",
+      "amount": 55,
+      "motherName": "Layla",
+      "totalPaid": 0,
+      "dateOfBirth": "2007-03-03T06:57:12.768Z",
+      "age": 19,
+      "status": "Graduated",
+      "createdAt": "2026-02-26T06:57:12.769Z",
+      "updatedAt": "2026-02-26T06:57:12.769Z",
+      "__v": 0
+    },
+    {
+      "_id": "699feec86ddcf4311a0abc4c",
+      "user": "699feec86ddcf4311a0abc49",
+      "enrollmentNo": "EN-1005",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "skillId": "699d93627eee030369a89152",
+      "registrationFee": "Paid",
+      "amount": 50,
+      "motherName": "Maryan",
+      "totalPaid": 0,
+      "dateOfBirth": "2003-03-04T06:57:12.891Z",
+      "age": 23,
+      "status": "Graduated",
+      "createdAt": "2026-02-26T06:57:12.892Z",
+      "updatedAt": "2026-02-26T06:57:12.892Z",
+      "__v": 0
+    }
+  ],
+  "Teacher": [
+    {
+      "_id": "699f18d7116d38b83f0c3246",
+      "user": "699f18d7116d38b83f0c3244",
+      "teacherId": "TCH-357236",
+      "subjects": [
+        "699f4676e5aef9ba6401e695",
+        "699f4681e5aef9ba6401e69b",
+        "699f468ae5aef9ba6401e6a1"
+      ],
+      "subjectId": "699f1a3e116d38b83f0c35bc",
+      "salary": 231,
+      "photo": "/uploads/file-1772034263079.jpeg",
+      "cv": "/uploads/file-1772034263096.pdf",
+      "address": "kx",
+      "educationLevel": "Master",
+      "specialization": "computer",
+      "experience": 3,
+      "gender": "Male",
+      "plainPassword": "12345678",
+      "skills": [
+        "699f42e1d934f3dbb64adc2c"
+      ],
+      "registrationDate": "2026-02-25T15:44:23.575Z",
+      "createdAt": "2026-02-25T15:44:23.577Z",
+      "updatedAt": "2026-02-25T19:00:15.985Z",
+      "__v": 2,
+      "classIds": [
+        "699f4664e5aef9ba6401e685"
+      ]
+    }
+  ],
+  "Class": [
+    {
+      "_id": "699f4664e5aef9ba6401e685",
+      "name": "BHA3",
+      "description": "basic",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "createdAt": "2026-02-25T18:58:44.801Z",
+      "updatedAt": "2026-02-25T18:58:44.801Z",
+      "__v": 0
+    }
+  ],
+  "Batch": [
+    {
+      "durationMonths": 1,
+      "isClosed": false,
+      "_id": "699d93e87eee030369a8919c",
+      "name": "batch 1aad ",
+      "classId": "65f2c1a8e4b0a123456789ab",
+      "createdAt": "2026-02-24T12:04:56.564Z",
+      "updatedAt": "2026-02-24T12:04:56.564Z",
+      "__v": 0,
+      "startDate": "2026-02-26T09:34:39.897Z"
+    }
+  ],
+  "Subject": [
+    {
+      "_id": "699f4676e5aef9ba6401e695",
+      "name": "Book1",
+      "classId": "699f4664e5aef9ba6401e685",
+      "createdAt": "2026-02-25T18:59:02.696Z",
+      "updatedAt": "2026-02-25T18:59:02.696Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f4681e5aef9ba6401e69b",
+      "name": "Book3",
+      "classId": "699f4664e5aef9ba6401e685",
+      "createdAt": "2026-02-25T18:59:13.281Z",
+      "updatedAt": "2026-02-25T18:59:13.281Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f468ae5aef9ba6401e6a1",
+      "name": "Book4",
+      "classId": "699f4664e5aef9ba6401e685",
+      "createdAt": "2026-02-25T18:59:22.432Z",
+      "updatedAt": "2026-02-25T18:59:22.432Z",
+      "__v": 0
+    }
+  ],
+  "Skill": [
+    {
+      "_id": "699d93627eee030369a89152",
+      "name": "cilaan ",
+      "category": "65f2c1a8e4b0a123456789ab",
+      "description": "waaa xirfada cilaan ",
+      "createdAt": "2026-02-24T12:02:42.472Z",
+      "updatedAt": "2026-02-24T12:02:42.472Z",
+      "__v": 0
+    },
+    {
+      "_id": "699db51edd7bd6ee5018484b",
+      "name": "computer",
+      "category": "699db50bdd7bd6ee5018483e",
+      "description": "we",
+      "createdAt": "2026-02-24T14:26:38.673Z",
+      "updatedAt": "2026-02-24T14:26:38.673Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f42e1d934f3dbb64adc2c",
+      "name": "Caafimad",
+      "category": "699f42ced934f3dbb64adc1d",
+      "description": "basic ",
+      "createdAt": "2026-02-25T18:43:45.301Z",
+      "updatedAt": "2026-02-25T18:43:45.301Z",
+      "__v": 0
+    }
+  ],
+  "SkillCategory": [
+    {
+      "_id": "699d939f7eee030369a8917e",
+      "name": "cilaan",
+      "description": "waaa barashad",
+      "createdAt": "2026-02-24T12:03:43.517Z",
+      "updatedAt": "2026-02-24T12:03:43.517Z",
+      "__v": 0
+    },
+    {
+      "_id": "699db50bdd7bd6ee5018483e",
+      "name": "computer",
+      "description": "waaa",
+      "createdAt": "2026-02-24T14:26:19.234Z",
+      "updatedAt": "2026-02-24T14:26:19.234Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f42ced934f3dbb64adc1d",
+      "name": "caafimad",
+      "description": "waa basic nersing",
+      "createdAt": "2026-02-25T18:43:26.116Z",
+      "updatedAt": "2026-02-25T18:43:26.116Z",
+      "__v": 0
+    }
+  ],
+  "Attendance": [
+    {
+      "_id": "699df33046dbf954a443c46f",
+      "classId": "699db548dd7bd6ee50184852",
+      "batchId": "699d93e87eee030369a8919c",
+      "date": "2026-02-23T21:00:00.000Z",
+      "records": [
+        {
+          "studentId": "699dbc92dd7bd6ee501848f5",
+          "status": "Absent",
+          "_id": "699df37d46dbf954a443c4de"
+        },
+        {
+          "studentId": "699dbd2ddd7bd6ee50184960",
+          "status": "Absent",
+          "_id": "699df37d46dbf954a443c4df"
+        }
+      ],
+      "createdAt": "2026-02-24T18:51:28.315Z",
+      "updatedAt": "2026-02-24T18:52:45.871Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f1947116d38b83f0c3282",
+      "classId": "699d93ba7eee030369a8918f",
+      "batchId": "699d93e87eee030369a8919c",
+      "date": "2026-02-24T21:00:00.000Z",
+      "records": [
+        {
+          "studentId": "699ef28a41807a202a086f54",
+          "status": "Absent",
+          "_id": "699f1947116d38b83f0c3283"
+        },
+        {
+          "studentId": "699f179a5a8fc9433342ffb7",
+          "status": "Present",
+          "_id": "699f1947116d38b83f0c3284"
+        }
+      ],
+      "createdAt": "2026-02-25T15:46:15.201Z",
+      "updatedAt": "2026-02-25T15:46:15.201Z",
+      "__v": 0
+    },
+    {
+      "_id": "699fb1d2959e3eb78932d950",
+      "classId": "699f4664e5aef9ba6401e685",
+      "batchId": "699d93e87eee030369a8919c",
+      "date": "2026-02-25T21:00:00.000Z",
+      "records": [
+        {
+          "studentId": "699f179a5a8fc9433342ffb7",
+          "status": "Present",
+          "_id": "699fb1d2959e3eb78932d951"
+        }
+      ],
+      "createdAt": "2026-02-26T02:37:06.065Z",
+      "updatedAt": "2026-02-26T02:37:06.065Z",
+      "__v": 0
+    }
+  ],
+  "Exam": [
+    {
+      "_id": "699de858b5593006b41cf943",
+      "skillId": "699d93627eee030369a89152",
+      "classId": "699d93ba7eee030369a8918f",
+      "date": "2026-02-24T00:00:00.000Z",
+      "type": "Monthly Exam",
+      "status": "Open",
+      "createdAt": "2026-02-24T18:05:12.507Z",
+      "updatedAt": "2026-02-25T15:54:48.385Z",
+      "__v": 0
+    },
+    {
+      "_id": "699de8e5b5593006b41cf9c3",
+      "skillId": "699db51edd7bd6ee5018484b",
+      "classId": "699db548dd7bd6ee50184852",
+      "date": "2026-02-25T00:00:00.000Z",
+      "type": "Monthly Exam",
+      "status": "Open",
+      "createdAt": "2026-02-24T18:07:33.750Z",
+      "updatedAt": "2026-02-25T16:51:01.409Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f474de5aef9ba64020263",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "classId": "699f4664e5aef9ba6401e685",
+      "date": "2026-02-25T00:00:00.000Z",
+      "type": "Final Exam",
+      "status": "Open",
+      "createdAt": "2026-02-25T19:02:37.249Z",
+      "updatedAt": "2026-02-25T19:02:37.249Z",
+      "__v": 0
+    },
+    {
+      "_id": "699fafa5959e3eb789309e38",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "classId": "699f4664e5aef9ba6401e685",
+      "date": "2026-02-26T00:00:00.000Z",
+      "type": "Test",
+      "status": "Open",
+      "createdAt": "2026-02-26T02:27:49.634Z",
+      "updatedAt": "2026-02-26T02:27:49.634Z",
+      "__v": 0
+    },
+    {
+      "_id": "699fb68e959e3eb78938cad4",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "classId": "699f4664e5aef9ba6401e685",
+      "date": "2026-02-26T00:00:00.000Z",
+      "type": "Monthly Exam",
+      "status": "Open",
+      "createdAt": "2026-02-26T02:57:18.959Z",
+      "updatedAt": "2026-02-26T02:57:18.959Z",
+      "__v": 0
+    },
+    {
+      "_id": "699fb85082c419189dc133a9",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "classId": "699f4664e5aef9ba6401e685",
+      "subjectId": "699f468ae5aef9ba6401e6a1",
+      "date": "2026-03-05T00:00:00.000Z",
+      "type": "Midterm",
+      "status": "Open",
+      "createdAt": "2026-02-26T03:04:48.847Z",
+      "updatedAt": "2026-02-26T03:04:48.847Z",
+      "__v": 0
+    }
+  ],
+  "Result": [
+    {
+      "midterm": 0,
+      "test": 0,
+      "final": 0,
+      "total": 0,
+      "_id": "699de8f807656ad1325d5443",
+      "examId": "699de8e5b5593006b41cf9c3",
+      "studentId": "699dbc92dd7bd6ee501848f5",
+      "marksObtained": 89,
+      "createdAt": "2026-02-24T18:07:52.934Z",
+      "updatedAt": "2026-02-25T08:01:38.780Z",
+      "__v": 0
+    },
+    {
+      "midterm": 0,
+      "test": 0,
+      "final": 0,
+      "total": 0,
+      "_id": "699de8f807656ad1325d5444",
+      "examId": "699de8e5b5593006b41cf9c3",
+      "studentId": "699dbd2ddd7bd6ee50184960",
+      "marksObtained": 23,
+      "createdAt": "2026-02-24T18:07:52.967Z",
+      "updatedAt": "2026-02-25T08:01:38.796Z",
+      "__v": 0
+    },
+    {
+      "midterm": 0,
+      "test": 0,
+      "final": 0,
+      "total": 0,
+      "_id": "699ef3098da3d91a15d4fdf3",
+      "studentId": "699ef28a41807a202a086f54",
+      "examId": "699de858b5593006b41cf943",
+      "__v": 0,
+      "createdAt": "2026-02-25T13:03:05.445Z",
+      "marksObtained": 100,
+      "updatedAt": "2026-02-25T15:40:33.634Z"
+    },
+    {
+      "midterm": 0,
+      "test": 0,
+      "final": 0,
+      "total": 0,
+      "_id": "699f17f18da3d91a15d4fdf4",
+      "examId": "699de858b5593006b41cf943",
+      "studentId": "699f179a5a8fc9433342ffb7",
+      "__v": 0,
+      "createdAt": "2026-02-25T15:40:33.646Z",
+      "marksObtained": 89,
+      "updatedAt": "2026-02-25T15:40:33.646Z"
+    },
+    {
+      "midterm": 0,
+      "test": 0,
+      "final": 0,
+      "total": 0,
+      "_id": "699fafde8da3d91a15d4fdf5",
+      "examId": "699f474de5aef9ba64020263",
+      "studentId": "699f179a5a8fc9433342ffb7",
+      "__v": 0,
+      "createdAt": "2026-02-26T02:28:46.864Z",
+      "marksObtained": 45,
+      "updatedAt": "2026-02-26T02:28:46.864Z"
+    },
+    {
+      "midterm": 0,
+      "test": 0,
+      "final": 0,
+      "total": 0,
+      "_id": "699fb8708da3d91a15d4fdf6",
+      "examId": "699fb85082c419189dc133a9",
+      "studentId": "699f179a5a8fc9433342ffb7",
+      "__v": 0,
+      "createdAt": "2026-02-26T03:05:20.228Z",
+      "marksObtained": 56,
+      "updatedAt": "2026-02-26T03:05:20.228Z"
+    },
+    {
+      "_id": "69a00daa8da3d91a15d4fdf7",
+      "skillId": "699f42e1d934f3dbb64adc2c",
+      "classId": "699f4664e5aef9ba6401e685",
+      "subjectId": "699f4676e5aef9ba6401e695",
+      "studentId": "699f179a5a8fc9433342ffb7",
+      "__v": 0,
+      "createdAt": "2026-02-26T09:08:58.657Z",
+      "final": 40,
+      "marksObtained": 100,
+      "midterm": 40,
+      "test": 20,
+      "total": 100,
+      "updatedAt": "2026-02-26T09:08:58.657Z"
+    }
+  ],
+  "Expense": [
+    {
+      "_id": "699dca84e907688dc2397ba4",
+      "title": "dayac tir",
+      "amount": 34,
+      "date": "2026-02-24T00:00:00.000Z",
+      "createdAt": "2026-02-24T15:57:56.370Z",
+      "updatedAt": "2026-02-24T15:57:56.370Z",
+      "__v": 0
+    }
+  ],
+  "Fee": [
+    {
+      "_id": "699ef28b41807a202a086f56",
+      "studentId": "699ef28a41807a202a086f54",
+      "amount": 22,
+      "status": "Paid",
+      "createdAt": "2026-02-25T13:00:59.017Z",
+      "updatedAt": "2026-02-25T13:00:59.017Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f179a5a8fc9433342ffb9",
+      "studentId": "699f179a5a8fc9433342ffb7",
+      "amount": 23,
+      "status": "Paid",
+      "createdAt": "2026-02-25T15:39:06.268Z",
+      "updatedAt": "2026-02-25T15:39:06.268Z",
+      "__v": 0
+    }
+  ],
+  "SalaryPayment": [
+    {
+      "_id": "699ed5ce0fa4a572fa4881f6",
+      "teacherId": "699dc87ce907688dc2397b86",
+      "amount": 12,
+      "paymentDate": "2026-02-25T10:58:22.830Z",
+      "period": "2026-02",
+      "status": "Paid",
+      "createdAt": "2026-02-25T10:58:22.846Z",
+      "updatedAt": "2026-02-25T10:58:22.846Z",
+      "__v": 0
+    },
+    {
+      "_id": "699ef7cf8a984b70ada64932",
+      "teacherId": "699df8e84e7de5af6b053ac3",
+      "amount": 23,
+      "paymentDate": "2026-02-25T13:23:27.604Z",
+      "period": "2026-02",
+      "status": "Paid",
+      "createdAt": "2026-02-25T13:23:27.628Z",
+      "updatedAt": "2026-02-25T13:23:27.628Z",
+      "__v": 0
+    },
+    {
+      "_id": "699ff9454709940a3926ea58",
+      "teacherId": "699f18d7116d38b83f0c3246",
+      "amount": 231,
+      "paymentDate": "2026-02-26T07:41:57.374Z",
+      "period": "2026-02",
+      "status": "Paid",
+      "createdAt": "2026-02-26T07:41:57.437Z",
+      "updatedAt": "2026-02-26T07:41:57.437Z",
+      "__v": 0
+    }
+  ],
+  "StudentPayment": [
+    {
+      "_id": "699ed5270fa4a572fa488127",
+      "studentId": "699dbc92dd7bd6ee501848f5",
+      "amount": 8,
+      "paymentDate": "2026-02-25T10:55:35.059Z",
+      "receiptNumber": "RCPT-9350595",
+      "createdAt": "2026-02-25T10:55:35.072Z",
+      "updatedAt": "2026-02-25T10:55:35.072Z",
+      "__v": 0
+    },
+    {
+      "_id": "699ed5ba0fa4a572fa4881de",
+      "studentId": "699dbc92dd7bd6ee501848f5",
+      "amount": 15,
+      "paymentDate": "2026-02-25T10:58:02.487Z",
+      "receiptNumber": "RCPT-08248737",
+      "createdAt": "2026-02-25T10:58:02.489Z",
+      "updatedAt": "2026-02-25T10:58:02.489Z",
+      "__v": 0
+    },
+    {
+      "_id": "699ef5528a984b70ada6481f",
+      "studentId": "699ef28a41807a202a086f54",
+      "amount": 12,
+      "paymentDate": "2026-02-25T13:12:50.130Z",
+      "receiptNumber": "RCPT-17013021",
+      "createdAt": "2026-02-25T13:12:50.148Z",
+      "updatedAt": "2026-02-25T13:12:50.148Z",
+      "__v": 0
+    },
+    {
+      "_id": "699ef81f8a984b70ada64953",
+      "studentId": "699ef28a41807a202a086f54",
+      "amount": 4,
+      "paymentDate": "2026-02-25T13:24:47.857Z",
+      "receiptNumber": "RCPT-88785767",
+      "createdAt": "2026-02-25T13:24:47.859Z",
+      "updatedAt": "2026-02-25T13:24:47.859Z",
+      "__v": 0
+    },
+    {
+      "_id": "699f0b4ad6fbd4603fc92292",
+      "studentId": "699ef28a41807a202a086f54",
+      "amount": 2,
+      "paymentDate": "2026-02-25T14:46:34.548Z",
+      "receiptNumber": "RCPT-79454833",
+      "createdAt": "2026-02-25T14:46:34.561Z",
+      "updatedAt": "2026-02-25T14:46:34.561Z",
+      "__v": 0
+    }
+  ]
+}
