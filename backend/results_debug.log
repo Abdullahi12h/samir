@@ -2112,3 +2112,5 @@
 [2026-02-28T11:44:40.037Z] [getFees] DB Query: {"month":2,"year":2026}
 [2026-02-28T11:50:37.698Z] [getFees] Query: {"month":"2","year":"2026"}
 [2026-02-28T11:50:37.700Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-02-28T18:48:20.230Z] [getFees] Query: {"month":"2","year":"2026"}
+[2026-02-28T18:48:20.233Z] [getFees] DB Query: {"month":2,"year":2026}
