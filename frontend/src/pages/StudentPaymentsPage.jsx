@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CreditCard, History, Search } from 'lucide-react';
+import { CreditCard, History, Search, Printer } from 'lucide-react';
 import api from '../utils/api';
 
 const StudentPaymentsPage = () => {
@@ -8,16 +8,34 @@ const StudentPaymentsPage = () => {
     const [classes, setClasses] = useState([]);
     const [selectedClassId, setSelectedClassId] = useState('');
     const [selectedStudentId, setSelectedStudentId] = useState('');
+    const [selectedMonth, setSelectedMonth] = useState((new Date().getMonth() + 1).toString());
+    const [selectedYear, setSelectedYear] = useState(new Date().getFullYear().toString());
     const [amount, setAmount] = useState('');
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         Promise.all([
             api.get('/core/classes').then(res => setClasses(res.data)),
-            api.get('/users/students?status=Active').then(res => setStudents(res.data)),
-            api.get('/management/student-payments').then(res => setPayments(res.data))
+            api.get('/users/students?status=Active').then(res => setStudents(res.data))
         ]).catch(console.error);
     }, []);
+
+    useEffect(() => {
+        const fetchPayments = async () => {
+            try {
+                const query = new URLSearchParams({
+                    ...(selectedClassId && { classId: selectedClassId }),
+                    ...(selectedMonth && { month: selectedMonth }),
+                    ...(selectedYear && { year: selectedYear }),
+                }).toString();
+                const res = await api.get(`/management/student-payments?${query}`);
+                setPayments(res.data);
+            } catch (error) {
+                console.error('Error fetching payments:', error);
+            }
+        };
+        fetchPayments();
+    }, [selectedClassId, selectedMonth, selectedYear]);
 
     const selectedStudent = students.find(s => s._id === selectedStudentId);
     // Student total fee is stored in 'amount', total paid is 'totalPaid'
@@ -51,6 +69,85 @@ const StudentPaymentsPage = () => {
         } finally {
             setLoading(false);
         }
+    };
+
+    const handlePrintReceipt = (payment) => {
+        const printWindow = window.open('', '_blank');
+        const content = `
+            <html>
+                <head>
+                    <title>Receipt - ${payment.receiptNumber}</title>
+                    <style>
+                        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; color: #334155; }
+                        .receipt-box { border: 2px solid #e2e8f0; padding: 40px; max-width: 600px; margin: 40px auto; background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+                        .header { text-align: center; border-bottom: 2px solid #3b82f6; margin-bottom: 30px; padding-bottom: 20px; }
+                        .header h1 { color: #1e293b; margin: 0; font-size: 28px; letter-spacing: -0.025em; }
+                        .header p { color: #64748b; margin: 5px 0 0 0; font-weight: 500; }
+                        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+                        .info-item { display: flex; flex-direction: column; }
+                        .label { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #94a3b8; margin-bottom: 4px; }
+                        .value { font-size: 15px; font-weight: 600; color: #1e293b; }
+                        .amount-box { background: #eff6ff; border: 1px solid #bfdbfe; padding: 20px; border-radius: 8px; text-align: center; margin: 30px 0; }
+                        .amount-label { font-size: 14px; font-weight: 600; color: #3b82f6; margin-bottom: 5px; }
+                        .amount-value { font-size: 32px; font-weight: 800; color: #1d4ed8; }
+                        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #f1f5f9; text-align: center; }
+                        .footer p { font-size: 12px; color: #94a3b8; margin: 0; }
+                        .signature-line { margin-top: 50px; border-top: 1px solid #cbd5e1; width: 200px; margin-left: auto; margin-right: auto; padding-top: 8px; font-size: 12px; font-weight: 600; color: #64748b; }
+                        @media print {
+                            body { background: white; padding: 0; }
+                            .receipt-box { box-shadow: none; border: 2px solid #000; margin: 0 auto; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="receipt-box">
+                        <div class="header">
+                            <img src="/assets/logo.jpg" style="height: 80px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;" />
+                            <h1>AL-HAFID SKILLS</h1>
+                            <p>Official Payment Receipt</p>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="label">Receipt Number</span>
+                                <span class="value">${payment.receiptNumber}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Date Issued</span>
+                                <span class="value">${new Date(payment.paymentDate).toLocaleDateString()}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Student Name</span>
+                                <span class="value">${payment.studentId?.user?.name || 'N/A'}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Enrollment No</span>
+                                <span class="value">${payment.studentId?.enrollmentNo || 'N/A'}</span>
+                            </div>
+                            <div class="info-item" style="grid-column: span 2;">
+                                <span class="label">Course/Class</span>
+                                <span class="value">${payment.studentId?.classId?.name || 'N/A'} (${payment.studentId?.skillId?.name || 'N/A'})</span>
+                            </div>
+                        </div>
+                        <div class="amount-box">
+                            <div class="amount-label">TOTAL AMOUNT PAID</div>
+                            <div class="amount-value">$${payment.amount}</div>
+                        </div>
+                        <div class="footer">
+                            <p>Thank you for choosing Al-Hafid Skills!</p>
+                            <div class="signature-line">Authorized Signatory</div>
+                        </div>
+                    </div>
+                    <script>
+                        window.onload = function() { 
+                            window.print(); 
+                            setTimeout(function() { window.close(); }, 500);
+                        }
+                    </script>
+                </body>
+            </html>
+        `;
+        printWindow.document.write(content);
+        printWindow.document.close();
     };
 
     const studentPaymentsHistory = payments.filter(p => p.studentId?._id === selectedStudentId);
@@ -160,8 +257,42 @@ const StudentPaymentsPage = () => {
                                 Payment History
                                 {selectedStudent ? ` for ${selectedStudent.user?.name}` :
                                     selectedClassId ? ` for ${classes.find(c => c._id === selectedClassId)?.name || ''}` :
-                                        ' (All)'}
+                                        ' (Filtered List)'}
                             </h2>
+                        </div>
+                        <div className="flex items-center space-x-3 no-print">
+                            <select
+                                className="p-1.5 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 outline-none text-xs font-semibold"
+                                value={selectedMonth}
+                                onChange={(e) => setSelectedMonth(e.target.value)}
+                            >
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select
+                                className="p-1.5 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 outline-none text-xs font-semibold"
+                                value={selectedYear}
+                                onChange={(e) => setSelectedYear(e.target.value)}
+                            >
+                                {[2024, 2025, 2026, 2027].map(y => <option key={y} value={y}>{y}</option>)}
+                            </select>
+                            <button
+                                onClick={() => window.print()}
+                                className="bg-white border border-slate-200 text-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-slate-50 transition-colors flex items-center shadow-sm"
+                            >
+                                <Printer className="w-3.5 h-3.5 mr-1.5" />
+                                Print Report
+                            </button>
                         </div>
                     </div>
                     <div className="flex-1 overflow-auto p-0">
@@ -173,15 +304,18 @@ const StudentPaymentsPage = () => {
                                     <th className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Student</th>
                                     {!selectedStudent && <th className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Class</th>}
                                     <th className="px-6 py-3 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider">Amount</th>
+                                    <th className="px-6 py-3 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider no-print">Action</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-slate-200">
                                 {(() => {
+                                    // Payments are now server-filtered, so we just display 'payments'
                                     let filtered = payments;
+
+                                    // If a specific student is selected, we might still want to filter locally 
+                                    // if the backend returned more (though with the current useEffect it's already filtered)
                                     if (selectedStudentId) {
                                         filtered = payments.filter(p => p.studentId?._id === selectedStudentId || p.studentId === selectedStudentId);
-                                    } else if (selectedClassId) {
-                                        filtered = payments.filter(p => p.studentId?.classId?._id === selectedClassId || p.studentId?.classId === selectedClassId);
                                     }
 
                                     if (filtered.length === 0) {
@@ -214,6 +348,15 @@ const StudentPaymentsPage = () => {
                                             )}
                                             <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600 text-right">
                                                 +${payment.amount}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-right no-print">
+                                                <button
+                                                    onClick={() => handlePrintReceipt(payment)}
+                                                    className="p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors border border-transparent hover:border-blue-100"
+                                                    title="Print Receipt"
+                                                >
+                                                    <Printer className="h-4 w-4" />
+                                                </button>
                                             </td>
                                         </tr>
                                     ));

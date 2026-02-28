@@ -1,11 +1,18 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CrudPage from '../components/CrudPage';
-import { Lock, Unlock, Edit3 } from 'lucide-react';
+import { Lock, Unlock, Edit3, Printer } from 'lucide-react';
 import api from '../utils/api';
 import useAuthStore from '../store/useAuthStore';
 
 const EMPTY_ARRAY = [];
+
+const monthsList = [
+    { label: 'January', value: '1' }, { label: 'February', value: '2' }, { label: 'March', value: '3' },
+    { label: 'April', value: '4' }, { label: 'May', value: '5' }, { label: 'June', value: '6' },
+    { label: 'July', value: '7' }, { label: 'August', value: '8' }, { label: 'September', value: '9' },
+    { label: 'October', value: '10' }, { label: 'November', value: '11' }, { label: 'December', value: '12' }
+];
 
 // --- Expenses Page Config ---
 const expensesColumns = [
@@ -46,6 +53,9 @@ const feesColumns = [
                     {item.studentId?.user?.phone && (
                         <span className="text-[10px] text-blue-600 font-medium bg-blue-50 px-1 rounded">{item.studentId.user.phone}</span>
                     )}
+                    {item.studentId?.classId?.name && (
+                        <span className="text-[10px] text-indigo-500 font-bold bg-indigo-50 px-1 rounded uppercase tracking-tighter">{item.studentId.classId.name}</span>
+                    )}
                 </div>
             </div>
         )
@@ -59,32 +69,141 @@ const feesColumns = [
             return <span className={`font-bold ${balance > 0 ? 'text-red-500' : 'text-slate-500'}`}>${balance}</span>;
         }
     },
-    { header: 'Status', accessor: 'status' }
+    {
+        header: 'Status',
+        render: (item) => (
+            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${item.status === 'Paid' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
+                {item.status || 'Pending'}
+            </span>
+        )
+    },
+    {
+        header: 'Period',
+        render: (item) => {
+            const m = monthsList.find(ml => ml.value === String(item.month))?.label || '';
+            return <span className="text-[11px] font-bold text-slate-500 uppercase">{m} {item.year}</span>;
+        }
+    }
 ];
 
 const feesFields = [
     { name: 'studentId', label: 'Ardayga', type: 'select', required: true, optionsEndpoint: '/users/students', optionsLabel: 'user.name', optionsValue: '_id' },
-    { name: 'amount', label: 'Amount', type: 'number', required: true },
+    { name: 'month', label: 'Bisha', type: 'select', options: monthsList, required: true },
+    { name: 'year', label: 'Sannadka', type: 'number', required: true },
+    { name: 'amount', label: 'Cash (Fee Amount)', type: 'number', required: true },
     { name: 'status', label: 'Status', type: 'select', options: [{ label: 'Paid', value: 'Paid' }, { label: 'Pending', value: 'Pending' }] }
 ];
 
 const feesRoleAccess = ['Admin', 'Student'];
 const feesWriteAccess = ['Admin'];
 
-export const FeesPage = () => (
-    <CrudPage
-        title="Fee Management"
-        endpoint="/management/fees"
-        roleAccess={feesRoleAccess}
-        writeAccessRoles={feesWriteAccess}
-        transformEditData={(item) => ({
-            ...item,
-            studentId: item.studentId?._id || item.studentId || ''
-        })}
-        columns={feesColumns}
-        formFields={feesFields}
-    />
+const PrintFeesAction = () => (
+    <button
+        onClick={() => window.print()}
+        className="flex items-center px-3 py-2 bg-indigo-50 text-indigo-700 border border-indigo-100 rounded-lg hover:bg-indigo-100 transition-colors text-[10px] font-bold shadow-sm no-print"
+        title="Print this list"
+    >
+        <Printer className="h-3 w-3 mr-1" /> Print List
+    </button>
 );
+
+export const FeesPage = () => {
+    const [selectedClass, setSelectedClass] = useState('');
+    const [selectedMonth, setSelectedMonth] = useState((new Date().getMonth() + 1).toString());
+    const [selectedYear, setSelectedYear] = useState(new Date().getFullYear().toString());
+    const [selectedStatus, setSelectedStatus] = useState('');
+    const [classes, setClasses] = useState([]);
+
+    useEffect(() => {
+        api.get('/core/classes').then(res => setClasses(res.data)).catch(console.error);
+    }, []);
+
+    const endpoint = `/management/fees?${new URLSearchParams({
+        ...(selectedClass && { classId: selectedClass }),
+        ...(selectedMonth && { month: selectedMonth }),
+        ...(selectedYear && { year: selectedYear }),
+        ...(selectedStatus && { status: selectedStatus }),
+    }).toString()}`;
+
+    const handleClearFilters = () => {
+        setSelectedClass('');
+        setSelectedMonth((new Date().getMonth() + 1).toString());
+        setSelectedYear(new Date().getFullYear().toString());
+        setSelectedStatus('');
+    };
+
+    return (
+        <div className="space-y-6">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-wrap gap-4 items-end no-print">
+                <div className="flex flex-col flex-1 min-w-[150px]">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Filter by Class:</label>
+                    <select
+                        className="p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium"
+                        value={selectedClass}
+                        onChange={(e) => setSelectedClass(e.target.value)}
+                    >
+                        <option value="">All Classes</option>
+                        {classes.map(c => <option key={c._id} value={c._id}>{c.name}</option>)}
+                    </select>
+                </div>
+                <div className="flex flex-col flex-1 min-w-[150px]">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Choose Month:</label>
+                    <select
+                        className="p-2 border border-slate-300 rounded-lg bg-amber-50 border-amber-200 focus:ring-2 focus:ring-amber-500 outline-none text-sm font-bold text-amber-900"
+                        value={selectedMonth}
+                        onChange={(e) => setSelectedMonth(e.target.value)}
+                    >
+                        {monthsList.map(m => <option key={m.value} value={m.value}>{m.label}</option>)}
+                    </select>
+                </div>
+                <div className="flex flex-col w-[100px]">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Year:</label>
+                    <select
+                        className="p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium"
+                        value={selectedYear}
+                        onChange={(e) => setSelectedYear(e.target.value)}
+                    >
+                        {[2024, 2025, 2026, 2027].map(y => <option key={y} value={y}>{y}</option>)}
+                    </select>
+                </div>
+                <div className="flex flex-col flex-1 min-w-[150px]">
+                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Status:</label>
+                    <select
+                        className={`p-2 border border-slate-300 rounded-lg focus:ring-2 outline-none text-sm font-bold ${selectedStatus === 'Paid' ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-slate-50'}`}
+                        value={selectedStatus}
+                        onChange={(e) => setSelectedStatus(e.target.value)}
+                    >
+                        <option value="">All Statuses</option>
+                        <option value="Paid">Paid (Wixii dhiibay)</option>
+                        <option value="Pending">Pending (Wixii dhiman)</option>
+                    </select>
+                </div>
+                <button
+                    onClick={handleClearFilters}
+                    className="p-2 text-slate-400 hover:text-slate-600 text-xs font-bold hover:bg-slate-50 rounded-lg transition-colors border border-transparent hover:border-slate-100"
+                >
+                    Reset
+                </button>
+            </div>
+
+            <CrudPage
+                title="Fee Management"
+                endpoint={endpoint}
+                roleAccess={feesRoleAccess}
+                writeAccessRoles={feesWriteAccess}
+                extraHeaderActions={[PrintFeesAction]}
+                transformEditData={(item) => ({
+                    ...item,
+                    studentId: item.studentId?._id || item.studentId || '',
+                    year: item.year || new Date().getFullYear(),
+                    month: item.month || (new Date().getMonth() + 1)
+                })}
+                columns={feesColumns}
+                formFields={feesFields}
+            />
+        </div>
+    );
+};
 
 // --- Exams Page Config ---
 const examsColumns = [

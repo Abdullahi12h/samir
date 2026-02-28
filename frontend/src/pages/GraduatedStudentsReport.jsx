@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../utils/api';
 import { Printer, ArrowLeft, GraduationCap, Phone, Info } from 'lucide-react';
+import PrintHeader from '../components/PrintHeader';
 
 const GraduatedStudentsReport = () => {
     const { batchId } = useParams();
@@ -70,35 +71,7 @@ const GraduatedStudentsReport = () => {
                 </button>
             </div>
 
-            {/* Print Specific Header */}
-            <div className="hidden print:block mb-4">
-                <div className="p-0 rounded-sm">
-                    <div className="flex items-center mb-4">
-                        <img src="/assets/logo.jpg" alt="Logo" className="h-32 w-32 object-contain mr-6" />
-                        <div>
-                            <h1 className="text-5xl font-black text-slate-900 tracking-tighter uppercase leading-none">Al-Hafiid Skills</h1>
-                            <p className="text-xl font-bold text-slate-600 mt-2 italic">Hoyga Xirfadaha Casriga ah</p>
-                        </div>
-                    </div>
-
-                    <div className="border-t border-slate-800 pt-4">
-                        <div className="text-center mb-4">
-                            <h3 className="text-2xl font-bold text-slate-900 uppercase underline decoration-2 underline-offset-8">Graduated Students Report</h3>
-                        </div>
-
-                        <div className="flex justify-between items-start text-sm font-semibold text-slate-600">
-                            <div className="text-left space-y-1">
-                                <p>Batch: <span className="text-slate-900 font-bold">{batch?.name}</span></p>
-                                <p>Skill: <span className="text-slate-900 font-bold">{students[0]?.skillId?.name || '-'}</span></p>
-                            </div>
-                            <div className="text-right space-y-1">
-                                <p>Total Graduates: <span className="text-slate-900 font-bold">{students.length}</span></p>
-                                <p>Print Date: <span className="text-slate-900 font-bold">{new Date().toLocaleDateString()}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PrintHeader title="Graduated Students Report" subtitle={`Batch: ${batch?.name} | Total graduates: ${students.length}`} />
 
             {/* Main Content */}
             <div className="print-area bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden print:shadow-none print:border-none">
@@ -180,7 +153,7 @@ const GraduatedStudentsReport = () => {
                         <div className="mt-8 border-t border-slate-300 w-48 ml-auto"></div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             <style>{`
                 @media print {
@@ -218,7 +191,7 @@ const GraduatedStudentsReport = () => {
                     }
                 }
             `}</style>
-        </div>
+        </div >
     );
 };
 

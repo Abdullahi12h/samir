@@ -143,11 +143,11 @@ const teacherFields = [
     { name: 'subjects', label: 'Teaching Subjects', type: 'multi-select', optionsEndpoint: 'core/subjects', optionsLabel: 'name', optionsValue: '_id', max: 6 },
     { name: 'educationLevel', label: 'Education Level' },
     { name: 'experience', label: 'Experience (Years)', type: 'number' },
-    { name: 'salary', label: 'Salary', type: 'number', required: true },
+    { name: 'salary', label: 'Salary', type: 'number' },
     { name: 'joinDate', label: 'Join Date', type: 'date', required: true },
     { name: 'address', label: 'Address' },
-    { name: 'photo', label: 'Photo', type: 'file', accept: 'image/*' },
-    { name: 'cv', label: 'CV', type: 'file', accept: '.pdf,.doc,.docx' },
+    { name: 'photo', label: 'Photo (Optional)', type: 'file', accept: 'image/*' },
+    { name: 'cv', label: 'CV (Optional)', type: 'file', accept: '.pdf,.doc,.docx' },
 ];
 
 export const TeachersPage = () => (
@@ -196,10 +196,10 @@ const studentFields = [
     { name: 'username', label: 'Username', type: 'text', required: true },
     { name: 'phone', label: 'Phone Number', type: 'number', required: true },
     { name: 'whatsapp', label: 'WhatsApp Number', type: 'number', required: true },
-    { name: 'motherName', label: 'Mother Name', required: true },
-    { name: 'age', label: 'Age', type: 'number', required: true },
+    { name: 'motherName', label: 'Mother Name' },
+    { name: 'age', label: 'Age', type: 'number' },
     { name: 'password', label: 'Password', type: 'password', required: true },
-    { name: 'photo', label: 'Student Photo', type: 'file', accept: 'image/*' },
+    { name: 'photo', label: 'Student Photo (Optional)', type: 'file', accept: 'image/*' },
     { name: 'classId', label: 'Class', type: 'select', required: true, optionsEndpoint: '/core/classes', optionsLabel: 'name', optionsValue: '_id' },
     { name: 'batchId', label: 'Batch', type: 'select', required: true, optionsEndpoint: '/core/batches', optionsLabel: 'name', optionsValue: '_id' },
     { name: 'skillId', label: 'Skill', type: 'select', required: true, optionsEndpoint: '/core/skills', optionsLabel: 'name', optionsValue: '_id' },

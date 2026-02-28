@@ -228,7 +228,6 @@ const Register = () => {
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        required
                                         className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-slate-300 placeholder-slate-400 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm transition-shadow"
                                         placeholder="Mother's Name"
                                         value={motherName}
@@ -239,7 +238,6 @@ const Register = () => {
                                     <label className="block text-xs text-slate-500 mb-1 ml-1">Date of Birth</label>
                                     <input
                                         type="date"
-                                        required
                                         className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-slate-300 placeholder-slate-400 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm transition-shadow"
                                         value={dateOfBirth}
                                         onChange={(e) => setDateOfBirth(e.target.value)}
@@ -248,7 +246,6 @@ const Register = () => {
                                 <div className="relative">
                                     <input
                                         type="number"
-                                        required
                                         className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-slate-300 placeholder-slate-400 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm transition-shadow"
                                         placeholder="Age"
                                         value={age}
@@ -256,7 +253,7 @@ const Register = () => {
                                     />
                                 </div>
                                 <div className="relative">
-                                    <label className="block text-xs text-slate-500 mb-1 ml-1">Student Photo</label>
+                                    <label className="block text-xs text-slate-500 mb-1 ml-1">Student Photo (Optional)</label>
                                     <input
                                         type="file"
                                         accept="image/*"
@@ -388,7 +385,6 @@ const Register = () => {
                                     <div className="relative">
                                         <input
                                             type="number"
-                                            required
                                             className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-slate-300 placeholder-slate-400 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm transition-shadow"
                                             placeholder="Years of Experience"
                                             value={experience}
@@ -398,7 +394,6 @@ const Register = () => {
                                     <div className="relative">
                                         <input
                                             type="text"
-                                            required
                                             className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-slate-300 placeholder-slate-400 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm transition-shadow"
                                             placeholder="Home Address"
                                             value={address}
@@ -418,7 +413,7 @@ const Register = () => {
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="relative">
-                                        <label className="block text-xs text-slate-500 mb-1 ml-1">Teacher Photo</label>
+                                        <label className="block text-xs text-slate-500 mb-1 ml-1">Teacher Photo (Optional)</label>
                                         <input
                                             type="file"
                                             accept="image/*"
@@ -427,7 +422,7 @@ const Register = () => {
                                         />
                                     </div>
                                     <div className="relative">
-                                        <label className="block text-xs text-slate-500 mb-1 ml-1">Upload CV (PDF/Doc)</label>
+                                        <label className="block text-xs text-slate-500 mb-1 ml-1">Upload CV (Optional)</label>
                                         <input
                                             type="file"
                                             accept=".pdf,.doc,.docx"

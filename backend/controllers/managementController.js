@@ -39,11 +39,49 @@ export const deleteExpense = async (req, res) => {
 export const getFees = async (req, res) => {
     try {
         let query = {};
+        const { classId, month, year, status } = req.query;
+
+        try {
+            fs.appendFileSync('results_debug.log', `[${new Date().toISOString()}] [getFees] Query: ${JSON.stringify(req.query)}\n`);
+        } catch (e) { }
+
+        // Base Student Role Filter
         if (req.user.role === 'Student') {
             const student = await Student.findOne({ user: req.user._id });
             if (student) query.studentId = student._id;
         }
-        const fees = await Fee.find(query).populate({ path: 'studentId', populate: { path: 'user' } });
+
+        // Strict Filter by Month/Year (Educational Billing Style)
+        if (month && month !== 'null' && month !== '') {
+            query.month = Number(month);
+        }
+        if (year && year !== 'null' && year !== '') {
+            query.year = Number(year);
+        }
+
+        // Filter by Status (Paid/Pending)
+        if (status && status !== 'null' && status !== '') {
+            query.status = status;
+        }
+
+        try {
+            fs.appendFileSync('results_debug.log', `[${new Date().toISOString()}] [getFees] DB Query: ${JSON.stringify(query)}\n`);
+        } catch (e) { }
+
+        // Filter by Class (Only if Admin/Teacher)
+        if (classId && classId !== 'null') {
+            const studentsInClass = await Student.find({ classId }).select('_id');
+            const studentIds = studentsInClass.map(s => s._id);
+            query.studentId = { $in: studentIds };
+        }
+
+        const fees = await Fee.find(query).populate({
+            path: 'studentId',
+            populate: [
+                { path: 'user', select: 'name phone' },
+                { path: 'classId', select: 'name' }
+            ]
+        }).sort({ createdAt: -1 });
         res.json(fees);
     } catch (error) { res.status(500).json({ message: error.message }); }
 };
@@ -138,14 +176,35 @@ export const paySalary = async (req, res) => {
 // Student Payments (Advanced System)
 export const getStudentPayments = async (req, res) => {
     try {
-        const payments = await StudentPayment.find({})
+        const { classId, month, year } = req.query;
+        let query = {};
+
+        // Filter by Date (using paymentDate)
+        if (month && month !== 'null' && year) {
+            const start = new Date(Number(year), Number(month) - 1, 1);
+            const end = new Date(Number(year), Number(month), 1);
+            query.paymentDate = { $gte: start, $lt: end };
+        } else if (year && year !== 'null') {
+            const start = new Date(Number(year), 0, 1);
+            const end = new Date(Number(year) + 1, 0, 1);
+            query.paymentDate = { $gte: start, $lt: end };
+        }
+
+        // Handle filtering by Class
+        if (classId && classId !== 'null') {
+            const studentsInClass = await Student.find({ classId }).select('_id');
+            const studentIds = studentsInClass.map(s => s._id);
+            query.studentId = { $in: studentIds };
+        }
+
+        const payments = await StudentPayment.find(query)
             .populate({
                 path: 'studentId',
                 populate: [
                     { path: 'user', select: 'name username' },
                     { path: 'classId', select: 'name' }
                 ]
-            });
+            }).sort({ paymentDate: -1 });
         res.json(payments);
     } catch (error) { res.status(500).json({ message: error.message }); }
 };

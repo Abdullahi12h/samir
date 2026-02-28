@@ -15,10 +15,12 @@ const Layout = () => {
 
     return (
         <div className="flex h-screen bg-slate-50 overflow-hidden relative">
-            <Sidebar role={user.role} isOpen={sidebarOpen} toggle={() => setSidebarOpen(!sidebarOpen)} />
+            <div className="no-print">
+                <Sidebar role={user.role} isOpen={sidebarOpen} toggle={() => setSidebarOpen(!sidebarOpen)} />
+            </div>
 
             <div className="flex-1 flex flex-col overflow-hidden">
-                <header className="bg-white shadow-sm z-10">
+                <header className="bg-white shadow-sm z-10 no-print">
                     <div className="mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                         <div className="flex items-center">
                             <button
@@ -50,7 +52,7 @@ const Layout = () => {
                 <main className="flex-1 overflow-x-hidden overflow-y-auto bg-slate-50 p-6">
                     <Outlet />
                 </main>
-                <footer className="bg-white border-t border-slate-100 py-1.5 px-6 text-center">
+                <footer className="bg-white border-t border-slate-100 py-1.5 px-6 text-center no-print">
                     <p className="text-[9px] text-slate-400 tracking-wide">
                         Developed by <span className="text-orange-500 font-bold">Abdullahi Abdinasir Hussein</span>
                     </p>

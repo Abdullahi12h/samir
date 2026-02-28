@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 import { FileText, Printer, Users, TrendingUp, Wallet, Download } from 'lucide-react';
+import PrintHeader from '../components/PrintHeader';
 
 const ReportsPage = () => {
     const [reportType, setReportType] = useState('Financial');
@@ -91,12 +92,7 @@ const ReportsPage = () => {
                 </button>
             </div>
 
-            {/* Print Header - Visible ONLY on Print */}
-            <div className="print-only hidden print:block text-center mb-0 pb-0">
-                <div className="flex justify-center mb-0">
-                    <img src="/assets/logo.jpg" alt="Logo" className="h-32 w-32 object-contain" />
-                </div>
-            </div>
+            <PrintHeader title={`${reportType} Report`} subtitle={reportType === 'Financial' ? `Year: ${filters.year}` : ''} />
 
             {loading ? (
                 <div className="flex justify-center py-20"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div></div>

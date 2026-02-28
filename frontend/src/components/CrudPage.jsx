@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import api from '../utils/api';
 import useAuthStore from '../store/useAuthStore';
 import { Plus, Trash2, Edit, Lock } from 'lucide-react';
+import PrintHeader from './PrintHeader';
 
 const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin'], writeAccessRoles = ['Admin'], customActions = [], transformEditData, filters = [], extraHeaderActions = [] }) => {
     const [data, setData] = useState([]);
@@ -130,6 +131,7 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
 
     return (
         <div className="space-y-4 sm:space-y-6">
+            <PrintHeader title={title} />
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                     <h2 className="text-xl sm:text-2xl font-bold text-slate-800">{title}</h2>

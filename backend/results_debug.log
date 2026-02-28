@@ -2064,3 +2064,51 @@
 [2026-02-27T13:25:18.208Z] [getResults] Found 7 total results. Pre-filtering for valid subjects...
 [2026-02-27T13:25:18.210Z] [getResults] Filtered to 1 results after strict subject validation
 [2026-02-27T13:25:18.212Z] [getResults] Returning 1 results
+[2026-02-28T09:10:20.228Z] [getResults] START - User: 69a1c6c7b0f778530ad5b8c4, Role: Admin
+[2026-02-28T09:10:20.436Z] [getResults] Found 0 total results. Pre-filtering for valid subjects...
+[2026-02-28T09:10:20.439Z] [getResults] Filtered to 0 results after strict subject validation
+[2026-02-28T09:10:20.441Z] [getResults] Returning 0 results
+[2026-02-28T09:10:29.842Z] [getResults] START - User: 69a1c6c7b0f778530ad5b8c4, Role: Admin
+[2026-02-28T09:10:30.050Z] [getResults] Found 0 total results. Pre-filtering for valid subjects...
+[2026-02-28T09:10:30.056Z] [getResults] Filtered to 0 results after strict subject validation
+[2026-02-28T09:10:30.060Z] [getResults] Returning 0 results
+[2026-02-28T10:23:17.008Z] [getResults] START - User: 69a2b537888c75f8fe3909b4, Role: Admin
+[2026-02-28T10:23:17.816Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-02-28T10:23:17.818Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-28T10:23:17.820Z] [getResults] Returning 1 results
+[2026-02-28T11:38:08.023Z] [getResults] START - User: 69a2b537888c75f8fe3909b4, Role: Admin
+[2026-02-28T11:38:08.938Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-02-28T11:38:08.939Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-02-28T11:38:08.940Z] [getResults] Returning 1 results
+[2026-02-28T11:38:16.294Z] [getFees] Query: {"month":"2","year":"2026"}
+[2026-02-28T11:38:16.296Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-02-28T11:38:42.833Z] [getFees] Query: {"month":"2","year":"2026","status":"Paid"}
+[2026-02-28T11:38:42.834Z] [getFees] DB Query: {"month":2,"year":2026,"status":"Paid"}
+[2026-02-28T11:38:47.133Z] [getFees] Query: {"month":"2","year":"2026","status":"Pending"}
+[2026-02-28T11:38:47.134Z] [getFees] DB Query: {"month":2,"year":2026,"status":"Pending"}
+[2026-02-28T11:38:50.605Z] [getFees] Query: {"month":"8","year":"2026","status":"Pending"}
+[2026-02-28T11:38:50.606Z] [getFees] DB Query: {"month":8,"year":2026,"status":"Pending"}
+[2026-02-28T11:38:55.917Z] [getFees] Query: {"month":"1","year":"2026","status":"Pending"}
+[2026-02-28T11:38:55.918Z] [getFees] DB Query: {"month":1,"year":2026,"status":"Pending"}
+[2026-02-28T11:38:58.910Z] [getFees] Query: {"month":"2","year":"2026","status":"Pending"}
+[2026-02-28T11:38:58.912Z] [getFees] DB Query: {"month":2,"year":2026,"status":"Pending"}
+[2026-02-28T11:39:02.037Z] [getFees] Query: {"month":"7","year":"2026","status":"Pending"}
+[2026-02-28T11:39:02.038Z] [getFees] DB Query: {"month":7,"year":2026,"status":"Pending"}
+[2026-02-28T11:39:05.883Z] [getFees] Query: {"month":"7","year":"2026"}
+[2026-02-28T11:39:05.884Z] [getFees] DB Query: {"month":7,"year":2026}
+[2026-02-28T11:39:09.151Z] [getFees] Query: {"month":"12","year":"2026"}
+[2026-02-28T11:39:09.153Z] [getFees] DB Query: {"month":12,"year":2026}
+[2026-02-28T11:39:11.954Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-02-28T11:39:11.956Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-02-28T11:39:14.924Z] [getFees] Query: {"month":"2","year":"2026"}
+[2026-02-28T11:39:14.926Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-02-28T11:40:12.126Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"2","year":"2026"}
+[2026-02-28T11:40:12.127Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-02-28T11:40:15.815Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"8","year":"2026"}
+[2026-02-28T11:40:15.816Z] [getFees] DB Query: {"month":8,"year":2026}
+[2026-02-28T11:40:31.826Z] [getFees] Query: {"month":"2","year":"2026"}
+[2026-02-28T11:40:31.827Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-02-28T11:44:40.035Z] [getFees] Query: {"month":"2","year":"2026"}
+[2026-02-28T11:44:40.037Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-02-28T11:50:37.698Z] [getFees] Query: {"month":"2","year":"2026"}
+[2026-02-28T11:50:37.700Z] [getFees] DB Query: {"month":2,"year":2026}
