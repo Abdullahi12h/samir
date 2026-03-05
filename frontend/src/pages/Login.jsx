@@ -108,11 +108,7 @@ const Login = () => {
                         </div>
                     </form>
 
-                    <div className="mt-8 text-center">
-                        <Link to="/register" className="text-xs font-medium text-emerald-600 hover:text-emerald-500">
-                            Don't have an account? Register
-                        </Link>
-                    </div>
+
 
                 </div>
             </div>

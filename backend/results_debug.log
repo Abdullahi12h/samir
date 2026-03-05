@@ -2392,3 +2392,5 @@
 [2026-03-05T17:46:59.381Z] [getResults] Filtering by specific subjectId: 69a2a0c4f9760a3fca586b22
 [2026-03-05T17:46:59.382Z] [getResults] Filtering by specific skillId: 69a2a051f9760a3fca5869e2
 [2026-03-05T17:46:59.384Z] [getResults] Returning 2 results
+[2026-03-05T20:41:34.685Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-05T20:41:34.687Z] [getFees] DB Query: {"month":3,"year":2026}

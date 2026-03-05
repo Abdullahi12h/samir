@@ -280,6 +280,32 @@ export const createStudentPayment = async (req, res) => {
     }
 };
 
+export const deleteStudentPayment = async (req, res) => {
+    try {
+        console.log(`[deleteStudentPayment] Attempting to delete payment: ${req.params.id} by user: ${req.user?._id}`);
+        const payment = await StudentPayment.findById(req.params.id);
+        if (!payment) {
+            console.log(`[deleteStudentPayment] Payment NOT FOUND: ${req.params.id}`);
+            return res.status(404).json({ message: 'Payment not found' });
+        }
+
+        // Decrease Student totalPaid
+        const student = await Student.findById(payment.studentId);
+        if (student) {
+            console.log(`[deleteStudentPayment] Updating student ${student._id} totalPaid. Current: ${student.totalPaid}, Reducing by: ${payment.amount}`);
+            student.totalPaid = Math.max(0, (student.totalPaid || 0) - payment.amount);
+            await student.save();
+        }
+
+        await StudentPayment.findByIdAndDelete(req.params.id);
+        console.log(`[deleteStudentPayment] SUCCESS: ${req.params.id}`);
+        res.json({ message: 'Payment deleted and student balance updated' });
+    } catch (error) {
+        console.error(`[deleteStudentPayment] ERROR:`, error);
+        res.status(500).json({ message: error.message });
+    }
+};
+
 // Debts
 export const getDebts = async (req, res) => {
     try {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CreditCard, History, Search, Printer } from 'lucide-react';
+import { CreditCard, History, Search, Printer, Trash2 } from 'lucide-react';
 import api from '../utils/api';
 
 const StudentPaymentsPage = () => {
@@ -106,6 +106,33 @@ const StudentPaymentsPage = () => {
             alert(error.response?.data?.message || 'Error processing payment');
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleDeletePayment = async (id) => {
+        if (!window.confirm('Are you sure you want to delete this payment? This will also update the student\'s remaining balance.')) return;
+
+        try {
+            await api.delete(`/management/student-payments/${id}`);
+            // Refresh
+            fetchPayments();
+            // Also refresh student info if one is selected
+            if (selectedStudentId) {
+                const studentsRes = await api.get('/users/students?status=Active');
+                setStudents(studentsRes.data);
+                const [fRes, dRes] = await Promise.all([
+                    api.get(`/management/fees?studentId=${selectedStudentId}`),
+                    api.get(`/management/debts?studentId=${selectedStudentId}`)
+                ]);
+                setSelectedStudentFinances({
+                    fees: Array.isArray(fRes.data) ? fRes.data : [],
+                    debts: Array.isArray(dRes.data) ? dRes.data : []
+                });
+            }
+            alert('Payment deleted successfully');
+        } catch (error) {
+            console.error('Delete error:', error);
+            alert(error.response?.data?.message || error.message || 'Error deleting payment');
         }
     };
 
@@ -391,12 +418,12 @@ const StudentPaymentsPage = () => {
                                                 {payment.receiptNumber}
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-800 font-medium">
-                                                {payment.studentId?.user?.name || 'Unknown'}
+                                                {payment.studentId?.user?.name || (typeof payment.studentId === 'string' ? `ID: ${payment.studentId.slice(-4)}` : 'Unknown')}
                                             </td>
                                             {!selectedStudent && (
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500 text-center">
                                                     <span className="bg-slate-100 px-2 py-0.5 rounded text-[10px] font-bold text-slate-600 uppercase">
-                                                        {payment.studentId?.classId?.name || '-'}
+                                                        {payment.studentId?.classId?.name || (payment.classId?.name) || '-'}
                                                     </span>
                                                 </td>
                                             )}
@@ -409,13 +436,24 @@ const StudentPaymentsPage = () => {
                                             <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600 text-right">
                                                 +${payment.amount}
                                             </td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-right no-print">
+                                            <td className="px-6 py-4 whitespace-nowrap text-right no-print flex justify-end items-center gap-3">
                                                 <button
                                                     onClick={() => handlePrintReceipt(payment)}
-                                                    className="p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors border border-transparent hover:border-blue-100"
+                                                    className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors border border-blue-100 bg-white shadow-sm"
                                                     title="Print Receipt"
                                                 >
                                                     <Printer className="h-4 w-4" />
+                                                </button>
+                                                <button
+                                                    onClick={() => {
+                                                        const pId = payment._id || payment.id;
+                                                        if (!pId) return alert('Error: Payment ID missing!');
+                                                        handleDeletePayment(pId);
+                                                    }}
+                                                    className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors border border-red-100 bg-white shadow-sm"
+                                                    title="Delete Payment"
+                                                >
+                                                    <Trash2 className="h-4 w-4" />
                                                 </button>
                                             </td>
                                         </tr>
