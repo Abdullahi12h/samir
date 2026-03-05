@@ -9,6 +9,18 @@ export const getStudents = async (req, res) => {
         if (status) query.status = status;
         if (batchId) query.batchId = batchId;
 
+        // Teacher Restriction
+        if (req.user.role === 'Teacher') {
+            const { default: Teacher } = await import('../models/Teacher.js');
+            const teacherRec = await Teacher.findOne({ user: req.user._id });
+            if (teacherRec && teacherRec.classIds && teacherRec.classIds.length > 0) {
+                query.classId = { $in: teacherRec.classIds };
+            } else if (teacherRec) {
+                // If teacher exists but has no classes, they see nothing
+                return res.json([]);
+            }
+        }
+
         const students = await Student.find(query).populate('user', 'name username phone whatsapp').populate('classId', 'name').populate('batchId', 'name').populate('skillId', 'name');
         res.json(students);
     } catch (error) { res.status(500).json({ message: error.message }); }

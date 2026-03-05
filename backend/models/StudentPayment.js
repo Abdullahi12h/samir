@@ -18,6 +18,10 @@ const studentPaymentSchema = new mongoose.Schema({
         type: String, // Auto-generated
         required: true,
         unique: true
+    },
+    description: {
+        type: String,
+        default: ''
     }
 }, { timestamps: true });
 

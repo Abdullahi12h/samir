@@ -11,6 +11,8 @@ const StudentPaymentsPage = () => {
     const [selectedMonth, setSelectedMonth] = useState((new Date().getMonth() + 1).toString());
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear().toString());
     const [amount, setAmount] = useState('');
+    const [description, setDescription] = useState('');
+    const [selectedStudentFinances, setSelectedStudentFinances] = useState({ fees: [], debts: [] });
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -21,39 +23,65 @@ const StudentPaymentsPage = () => {
     }, []);
 
     useEffect(() => {
-        const fetchPayments = async () => {
+        const fetchStudentFinances = async () => {
+            if (!selectedStudentId) {
+                setSelectedStudentFinances({ fees: [], debts: [] });
+                return;
+            }
             try {
-                const query = new URLSearchParams({
-                    ...(selectedClassId && { classId: selectedClassId }),
-                    ...(selectedMonth && { month: selectedMonth }),
-                    ...(selectedYear && { year: selectedYear }),
-                }).toString();
-                const res = await api.get(`/management/student-payments?${query}`);
-                setPayments(res.data);
-            } catch (error) {
-                console.error('Error fetching payments:', error);
+                const [fRes, dRes] = await Promise.all([
+                    api.get(`/management/fees?studentId=${selectedStudentId}`),
+                    api.get(`/management/debts?studentId=${selectedStudentId}`)
+                ]);
+                setSelectedStudentFinances({
+                    fees: Array.isArray(fRes.data) ? fRes.data : [],
+                    debts: Array.isArray(dRes.data) ? dRes.data : []
+                });
+            } catch (err) {
+                console.error('Error fetching student finances:', err);
             }
         };
+        fetchStudentFinances();
+    }, [selectedStudentId]);
+
+    const fetchPayments = async () => {
+        try {
+            const query = new URLSearchParams({
+                ...(selectedClassId && { classId: selectedClassId }),
+                ...(selectedMonth && { month: selectedMonth }),
+                ...(selectedYear && { year: selectedYear }),
+            }).toString();
+            const res = await api.get(`/management/student-payments?${query}`);
+            setPayments(res.data);
+        } catch (error) {
+            console.error('Error fetching payments:', error);
+        }
+    };
+
+    useEffect(() => {
         fetchPayments();
     }, [selectedClassId, selectedMonth, selectedYear]);
 
     const selectedStudent = students.find(s => s._id === selectedStudentId);
-    // Student total fee is stored in 'amount', total paid is 'totalPaid'
-    const totalFee = selectedStudent?.amount || 0;
+
+    // Accurate balance calculation:
+    const totalFeesOwed = selectedStudentFinances.fees.reduce((sum, f) => sum + (f.amount || 0), 0);
+    const totalDebtsOwed = selectedStudentFinances.debts.reduce((sum, d) => sum + (d.amount || 0), 0);
+    const totalEverOwed = totalFeesOwed + totalDebtsOwed;
     const totalPaid = selectedStudent?.totalPaid || 0;
-    const remainingBalance = totalFee - totalPaid;
+    const remainingBalance = totalEverOwed - totalPaid;
 
 
     const handlePayment = async (e) => {
         e.preventDefault();
         if (!selectedStudentId || !amount || amount <= 0) return alert('Enter a valid amount and select a student.');
-        if (Number(amount) > remainingBalance) return alert('Payment exceeds remaining balance.');
 
         setLoading(true);
         try {
             await api.post('/management/student-payments', {
                 studentId: selectedStudentId,
-                amount: Number(amount)
+                amount: Number(amount),
+                description: description.trim(),
             });
             // Refresh data
             const [studentsRes, paymentsRes] = await Promise.all([
@@ -62,7 +90,17 @@ const StudentPaymentsPage = () => {
             ]);
             setStudents(studentsRes.data);
             setPayments(paymentsRes.data);
+            // Re-fetch specific student finances too
+            const [fRes, dRes] = await Promise.all([
+                api.get(`/management/fees?studentId=${selectedStudentId}`),
+                api.get(`/management/debts?studentId=${selectedStudentId}`)
+            ]);
+            setSelectedStudentFinances({
+                fees: Array.isArray(fRes.data) ? fRes.data : [],
+                debts: Array.isArray(dRes.data) ? dRes.data : []
+            });
             setAmount('');
+            setDescription('');
             alert('Payment recorded successfully!');
         } catch (error) {
             alert(error.response?.data?.message || 'Error processing payment');
@@ -207,18 +245,22 @@ const StudentPaymentsPage = () => {
                             </div>
 
                             {selectedStudent && (
-                                <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="text-slate-500">Total Course Fee:</span>
-                                        <span className="font-semibold text-slate-700">${totalFee}</span>
+                                <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm space-y-3">
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-slate-500 font-medium">Total Ever Owed (Wadarta):</span>
+                                        <span className="font-bold text-slate-800 bg-slate-50 px-3 py-1 rounded-lg border border-slate-100">${totalEverOwed}</span>
                                     </div>
-                                    <div className="flex justify-between text-sm">
-                                        <span className="text-slate-500">Total Paid:</span>
-                                        <span className="font-semibold text-green-600">${totalPaid}</span>
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-slate-500 font-medium">Total Paid (Bixisay):</span>
+                                        <span className="font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-100">${totalPaid}</span>
                                     </div>
-                                    <div className="flex justify-between text-sm border-t border-slate-200 pt-2 mt-2">
-                                        <span className="text-slate-700 font-bold">Remaining Balance:</span>
-                                        <span className="font-bold text-red-500">${remainingBalance}</span>
+                                    <div className="flex justify-between items-center text-sm border-t border-slate-50 pt-3 mt-1">
+                                        <span className="text-slate-700 font-black uppercase tracking-tight text-[11px]">
+                                            {remainingBalance > 0 ? 'Remaining Debt' : 'Advance / Credit'}
+                                        </span>
+                                        <span className={`font-black text-lg px-3 py-1 rounded-xl shadow-sm border ${remainingBalance > 0 ? 'text-red-600 bg-red-50 border-red-100' : 'text-emerald-700 bg-emerald-50 border-emerald-100'}`}>
+                                            ${Math.abs(remainingBalance)}
+                                        </span>
                                     </div>
                                 </div>
                             )}
@@ -228,8 +270,7 @@ const StudentPaymentsPage = () => {
                                 <input
                                     type="number"
                                     min="1"
-                                    max={remainingBalance > 0 ? remainingBalance : 0}
-                                    disabled={!selectedStudent || remainingBalance <= 0}
+                                    disabled={!selectedStudent}
                                     className="w-full p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm disabled:opacity-50"
                                     value={amount}
                                     onChange={(e) => setAmount(e.target.value)}
@@ -237,9 +278,21 @@ const StudentPaymentsPage = () => {
                                 />
                             </div>
 
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Sharaxaad (Description)</label>
+                                <input
+                                    type="text"
+                                    disabled={!selectedStudent}
+                                    className="w-full p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm disabled:opacity-50"
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    placeholder="e.g. Monthly fee, Partial payment..."
+                                />
+                            </div>
+
                             <button
                                 type="submit"
-                                disabled={!selectedStudent || loading || remainingBalance <= 0 || !amount}
+                                disabled={!selectedStudent || loading || !amount}
                                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
                             >
                                 {loading ? 'Processing...' : 'Submit Payment'}
@@ -303,6 +356,7 @@ const StudentPaymentsPage = () => {
                                     <th className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Receipt</th>
                                     <th className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Student</th>
                                     {!selectedStudent && <th className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Class</th>}
+                                    <th className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Description</th>
                                     <th className="px-6 py-3 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider">Amount</th>
                                     <th className="px-6 py-3 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider no-print">Action</th>
                                 </tr>
@@ -346,6 +400,12 @@ const StudentPaymentsPage = () => {
                                                     </span>
                                                 </td>
                                             )}
+                                            <td className="px-6 py-4 text-sm text-slate-500 max-w-[160px]">
+                                                {payment.description
+                                                    ? <span className="italic text-slate-600">{payment.description}</span>
+                                                    : <span className="text-slate-300">—</span>
+                                                }
+                                            </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600 text-right">
                                                 +${payment.amount}
                                             </td>

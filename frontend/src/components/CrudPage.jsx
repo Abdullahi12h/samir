@@ -272,13 +272,15 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                     </div>
                 ) : filteredData.length === 0 ? (
                     <div className="p-12 text-center flex flex-col items-center justify-center space-y-4">
-                        {title === 'Exam Results' && (
+                        {title === 'Exam Results' && user?.role === 'Student' && (
                             <div className="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center">
                                 <Lock className="h-8 w-8" />
                             </div>
                         )}
                         <div className={`p-8 text-center text-sm font-bold uppercase tracking-wider ${title === 'Exam Results' ? 'text-red-600' : 'text-slate-500'}`}>
-                            {title === 'Exam Results' ? 'Fadlan iska bixi lacagta.' : `No ${title.toLowerCase()} found.`}
+                            {title === 'Exam Results'
+                                ? (user?.role === 'Student' ? 'Fadlan iska bixi lacagta.' : 'Wali lama gaari natiijada fasalkan.')
+                                : `No ${title.toLowerCase()} found.`}
                         </div>
                     </div>
                 ) : (

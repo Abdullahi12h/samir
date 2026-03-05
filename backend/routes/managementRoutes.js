@@ -7,7 +7,8 @@ import {
     getResults, createResult, updateResult, deleteResult, bulkToggleStudentResults,
     getFinancialReport, getGeneralReport,
     getSalaries, paySalary,
-    getStudentPayments, createStudentPayment
+    getStudentPayments, createStudentPayment,
+    getDebts, createDebt, updateDebt, deleteDebt
 } from '../controllers/managementController.js';
 import { getDashboardStats } from '../controllers/dashboardController.js';
 import { protect, admin, teacherOrAdmin } from '../middleware/authMiddleware.js';
@@ -21,7 +22,10 @@ router.route('/fees').get(protect, getFees).post(protect, admin, createFee);
 router.route('/fees/:id').put(protect, admin, updateFee).delete(protect, admin, deleteFee);
 
 router.route('/salaries').get(protect, admin, getSalaries).post(protect, admin, paySalary);
-router.route('/student-payments').get(protect, admin, getStudentPayments).post(protect, admin, createStudentPayment);
+router.route('/student-payments').get(protect, getStudentPayments).post(protect, admin, createStudentPayment);
+
+router.route('/debts').get(protect, getDebts).post(protect, admin, createDebt);
+router.route('/debts/:id').put(protect, admin, updateDebt).delete(protect, admin, deleteDebt);
 
 router.route('/attendances').get(protect, getAttendances).post(protect, teacherOrAdmin, createAttendance);
 router.route('/attendances/daily').get(protect, teacherOrAdmin, getDailyAttendance).post(protect, teacherOrAdmin, submitDailyAttendance);

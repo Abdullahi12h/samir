@@ -18,6 +18,7 @@ const OrdersPage = () => {
     const [amountPaid, setAmountPaid] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [loading, setLoading] = useState(true);
+    const isStaff = user?.role === 'Admin' || user?.role === 'Teacher';
 
     useEffect(() => {
         fetchOrders();
@@ -173,7 +174,7 @@ const OrdersPage = () => {
                                         <p className="text-sm font-semibold text-slate-800 line-clamp-1">
                                             {order.serviceDescription}
                                         </p>
-                                        {user?.role === 'Admin' && order.student && typeof order.student === 'object' && (
+                                        {isStaff && order.student && typeof order.student === 'object' && (
                                             <p className="text-[10px] text-blue-600 font-bold mt-1">
                                                 By: {order.student.name || 'Unknown'}
                                             </p>
@@ -228,7 +229,7 @@ const OrdersPage = () => {
 
                                     {/* Action Column */}
                                     <div className="w-full md:w-64 space-y-4">
-                                        {user?.role === 'Admin' ? (
+                                        {isStaff ? (
                                             <div className="space-y-3">
                                                 <div>
                                                     <label className="text-[11px] font-bold text-slate-500 mb-1 block">DHIG QIIMAHA</label>

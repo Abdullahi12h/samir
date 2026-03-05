@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import {
     LayoutDashboard, BookOpen, Layers, Users, Building,
     GraduationCap, ClipboardList, Wallet, FileText, CheckSquare,
-    UserSquare, Database, X, MessageCircle
+    UserSquare, Database, X, MessageCircle, ClipboardCheck
 } from 'lucide-react';
 
 const Sidebar = ({ role, isOpen, toggle }) => {
@@ -36,6 +36,7 @@ const Sidebar = ({ role, isOpen, toggle }) => {
         {
             title: 'Academic Records',
             links: [
+                { name: 'Assignments', path: '/assignments', icon: ClipboardCheck },
                 { name: 'Daily Attendance', path: '/attendance-entry', icon: CheckSquare },
                 { name: 'Attendance History', path: '/attendances', icon: FileText },
                 { name: 'Exam Management', path: '/exams', icon: ClipboardList },
@@ -48,6 +49,7 @@ const Sidebar = ({ role, isOpen, toggle }) => {
             links: [
                 { name: 'Expenses', path: '/expenses', icon: Wallet },
                 { name: 'Fee Management', path: '/fees', icon: Wallet },
+                { name: 'Debt Management', path: '/debts', icon: Wallet },
                 { name: 'Student Payments', path: '/student-payments', icon: Wallet },
                 { name: 'Salaries', path: '/salaries', icon: Wallet },
             ]
@@ -56,6 +58,7 @@ const Sidebar = ({ role, isOpen, toggle }) => {
 
     const teacherLinks = [
         { name: 'Dashboard', path: '/', icon: LayoutDashboard },
+        { name: 'Assignments', path: '/assignments', icon: ClipboardCheck },
         { name: 'My Subjects', path: '/subjects', icon: BookOpen },
         { name: 'Daily Attendance', path: '/attendance-entry', icon: CheckSquare },
         { name: 'Attendance History', path: '/attendances', icon: FileText },
@@ -65,11 +68,12 @@ const Sidebar = ({ role, isOpen, toggle }) => {
 
     const studentLinks = [
         { name: 'Dashboard', path: '/', icon: LayoutDashboard },
+        { name: 'Assignments', path: '/assignments', icon: ClipboardCheck },
+        { name: 'My Attendance', path: '/my-attendance', icon: CheckSquare },
+        { name: 'My Results', path: '/results', icon: ClipboardList },
+        { name: 'My Fees', path: '/fees', icon: Wallet },
         { name: 'Orders & Chat', path: '/orders', icon: MessageCircle },
         { name: 'Profile', path: '/profile', icon: UserSquare },
-        { name: 'My Attendance', path: '/my-attendance', icon: CheckSquare },
-        { name: 'My Fees', path: '/fees', icon: Wallet },
-        { name: 'My Results', path: '/results', icon: ClipboardList },
     ];
 
     return (

@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import { ClassesPage } from './pages/CorePages';
 import { SkillsPage, BatchesPage, SubjectsPage } from './pages/CorePages2';
 import { TeachersPage, StudentsPage, GraduatesPage } from './pages/UsersPages';
-import { ExpensesPage, FeesPage, ExamsPage, ResultsPage, AttendancesPage } from './pages/ManagementPages';
+import { ExpensesPage, FeesPage, ExamsPage, ResultsPage, AttendancesPage, DebtsPage } from './pages/ManagementPages';
 import MarkEntryPage from './pages/MarkEntryPage';
 import DailyAttendancePage from './pages/DailyAttendancePage';
 import StudentAttendancePage from './pages/StudentAttendancePage';
@@ -18,6 +18,7 @@ import StudentPaymentsPage from './pages/StudentPaymentsPage';
 import BackupPage from './pages/BackupPage';
 import ProfilePage from './pages/ProfilePage';
 import OrdersPage from './pages/OrdersPage';
+import AssignmentPage from './pages/AssignmentPage';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
 
           <Route path="expenses" element={<ExpensesPage />} />
           <Route path="fees" element={<FeesPage />} />
+          <Route path="debts" element={<DebtsPage />} />
           <Route path="student-payments" element={<StudentPaymentsPage />} />
           <Route path="salaries" element={<SalariesPage />} />
           <Route path="attendances" element={<AttendancesPage />} />
@@ -50,6 +52,7 @@ function App() {
           <Route path="mark-entry" element={<MarkEntryPage />} />
           <Route path="results" element={<ResultsPage />} />
           <Route path="orders" element={<OrdersPage />} />
+          <Route path="assignments" element={<AssignmentPage />} />
           <Route path="reports" element={<ReportsPage />} />
           <Route path="reports/graduated/:batchId" element={<GraduatedStudentsReport />} />
           <Route path="backup" element={<BackupPage />} />

@@ -9,6 +9,7 @@ import managementRoutes from './routes/managementRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import backupRoutes from './routes/backupRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
+import assignmentRoutes from './routes/assignmentRoutes.js';
 import graduationJob from './jobs/graduationJob.js';
 import path from 'path';
 import { Server } from 'socket.io';
@@ -72,6 +73,7 @@ app.use('/api/management', managementRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/backup', backupRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/assignments', assignmentRoutes);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));

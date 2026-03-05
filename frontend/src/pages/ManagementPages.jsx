@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CrudPage from '../components/CrudPage';
-import { Lock, Unlock, Edit3, Printer } from 'lucide-react';
+import { Lock, Unlock, Edit3, Printer, AlertCircle, CheckCircle2, Wallet as WalletIcon, X } from 'lucide-react';
 import api from '../utils/api';
 import useAuthStore from '../store/useAuthStore';
 
@@ -107,12 +107,300 @@ const PrintFeesAction = () => (
     </button>
 );
 
-export const FeesPage = () => {
+// ─── Student Fees View ─────────────────────────────────────────
+
+const StudentFeesView = () => {
+    const [fees, setFees] = useState([]);
+    const [debts, setDebts] = useState([]);
+    const [payments, setPayments] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        Promise.all([
+            api.get('/management/fees'),
+            api.get('/management/debts'),
+            api.get('/management/student-payments')
+        ])
+            .then(([resFees, resDebts, resPayments]) => {
+                setFees(Array.isArray(resFees?.data) ? resFees.data : []);
+                setDebts(Array.isArray(resDebts?.data) ? resDebts.data : []);
+                setPayments(Array.isArray(resPayments?.data) ? resPayments.data : []);
+            })
+            .catch(console.error)
+            .finally(() => setLoading(false));
+    }, []);
+
+    // Calulate totals:
+    const totalFeesOwed = fees.reduce((sum, f) => sum + (f.amount || f.studentId?.amount || 0), 0);
+    const totalDebtsOwed = debts.reduce((sum, d) => sum + (d.amount || 0), 0);
+    const totalEverOwed = totalFeesOwed + totalDebtsOwed;
+
+    const studentInfo = (fees[0]?.studentId || debts[0]?.studentId || payments[0]?.studentId) || {};
+    const finalTotalPaid = typeof studentInfo === 'object' ? studentInfo.totalPaid || 0 : 0;
+
+    const balance = totalEverOwed - finalTotalPaid;
+    const allPaid = balance <= 0 && totalEverOwed > 0;
+
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center py-24">
+                <div className="flex flex-col items-center gap-3 text-slate-400">
+                    <div className="h-8 w-8 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" />
+                    <span className="text-sm">Loading your records...</span>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="max-w-2xl mx-auto space-y-8">
+            <div>
+                <h1 className="text-2xl font-black text-slate-800 flex items-center gap-2">
+                    <WalletIcon className="h-7 w-7 text-blue-500" /> My Fees & Payments
+                </h1>
+                <p className="text-sm text-slate-500 mt-0.5">Xogta lacagaha aad bixisay iyo kuwa kugu dhiman</p>
+            </div>
+
+            {/* Summary banner */}
+            <div className={`rounded-2xl p-5 border flex flex-col sm:flex-row sm:items-center gap-4 ${allPaid ? 'bg-emerald-50 border-emerald-200' : balance > 0 ? 'bg-amber-50 border-amber-200' : 'bg-blue-50 border-blue-200'}`}>
+                <div className={`h-12 w-12 rounded-2xl flex items-center justify-center shrink-0 ${allPaid ? 'bg-emerald-100' : balance > 0 ? 'bg-amber-100' : 'bg-blue-100'}`}>
+                    {allPaid
+                        ? <CheckCircle2 className="h-7 w-7 text-emerald-600" />
+                        : balance > 0 ? <AlertCircle className="h-7 w-7 text-amber-600" /> : <WalletIcon className="h-7 w-7 text-blue-600" />
+                    }
+                </div>
+                <div className="flex-1">
+                    <p className={`font-black text-lg ${allPaid ? 'text-emerald-700' : balance > 0 ? 'text-amber-700' : 'text-blue-700'}`}>
+                        {allPaid ? 'Dhammaan lacagaha waad bixisay ✅' : balance > 0 ? `Waxaad hadhsan tahay: $${balance}` : `Waxaad u horraysay (Credit): $${Math.abs(balance)}`}
+                    </p>
+                    <p className={`text-xs mt-0.5 ${allPaid ? 'text-emerald-600' : balance > 0 ? 'text-amber-600' : 'text-blue-600'}`}>
+                        Wadarta Lagu weydiiyo: ${totalEverOwed} &nbsp;|&nbsp; Wadarta aad bixisay: ${finalTotalPaid}
+                    </p>
+                </div>
+            </div>
+
+            {/* Extra Debts (Books, etc.) */}
+            {debts.length > 0 && (
+                <div>
+                    <h2 className="text-lg font-black text-slate-800 mb-3 ml-1">Other Debts (Deyn Kale)</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {debts.map(debt => (
+                            <div key={debt._id} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4 flex items-center justify-between">
+                                <div>
+                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{debt.description}</p>
+                                    <p className="font-bold text-slate-800">${debt.amount}</p>
+                                </div>
+                                <span className={`text-[9px] font-black px-2 py-1 rounded border ${debt.status === 'Paid' ? 'bg-emerald-50 text-emerald-600 border-emerald-100' : 'bg-red-50 text-red-600 border-red-100'}`}>
+                                    {debt.status}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Monthly Fee records */}
+            <h2 className="text-lg font-black text-slate-800 mb-3 ml-1">Monthly Fees (Bileedka)</h2>
+            {fees.length === 0 ? (
+                <div className="bg-slate-50 rounded-2xl p-8 text-center border border-dashed border-slate-200">
+                    <p className="text-slate-400 text-sm font-medium">No monthly fees records found.</p>
+                </div>
+            ) : (
+                <div className="space-y-3">
+                    {fees.map(fee => {
+                        const m = monthsList.find(ml => ml.value === String(fee.month))?.label || fee.month;
+                        const isPaid = fee.status === 'Paid';
+                        return (
+                            <div key={fee._id} className="bg-white rounded-2xl border border-slate-100 shadow-sm px-5 py-4 flex items-center justify-between gap-4">
+                                <div>
+                                    <p className="font-bold text-slate-800 text-sm">{m} {fee.year}</p>
+                                    <p className="text-xs text-slate-400 mt-0.5">
+                                        Fee: <span className="font-semibold text-slate-600">${fee.amount || fee.studentId?.amount || '—'}</span>
+                                    </p>
+                                </div>
+                                <span className={`flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded-full border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-red-50 text-red-600 border-red-200'}`}>
+                                    {isPaid ? <CheckCircle2 className="h-3.5 w-3.5" /> : <AlertCircle className="h-3.5 w-3.5" />}
+                                    {isPaid ? 'Paid' : 'Pending'}
+                                </span>
+                            </div>
+                        );
+                    })}
+                </div>
+            )}
+
+            {/* Payment History Section */}
+            <div>
+                <h2 className="text-lg font-black text-slate-800 mb-3 ml-1">Payment History (Taariikhda Bixinta)</h2>
+                {payments.length === 0 ? (
+                    <div className="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center text-slate-500 text-sm">
+                        No payments found.
+                    </div>
+                ) : (
+                    <div className="space-y-3">
+                        {payments.slice().map(payment => (
+                            <div key={payment._id} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4">
+                                <div className="flex justify-between items-start mb-2">
+                                    <div>
+                                        <p className="font-bold text-slate-800 text-sm">${payment.amount}</p>
+                                        <p className="text-[11px] font-bold text-slate-400 mt-0.5">{new Date(payment.paymentDate).toLocaleDateString()}</p>
+                                    </div>
+                                    <span className="text-[10px] font-bold px-2 py-1 rounded bg-slate-50 text-slate-500 border border-slate-200">
+                                        {payment.receiptNumber}
+                                    </span>
+                                </div>
+                                <div className="bg-slate-50 rounded-lg p-3 border border-slate-100">
+                                    <p className="text-xs text-slate-500 font-medium">
+                                        <span className="font-bold text-slate-700">Sharaxaad: </span>
+                                        {payment.description || 'Wax sharaxaad ah laguma darin'}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+// ─── Quick Pay Panel (shown when a fee row student is selected) ─
+const QuickPayPanel = ({ feeItem, onClose, onPaid }) => {
+    const [amount, setAmount] = useState('');
+    const [description, setDescription] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [msg, setMsg] = useState(null);
+
+    const studentId = feeItem?.studentId?._id || feeItem?.studentId;
+    const feeId = feeItem?._id;
+    const studentName = feeItem?.studentId?.user?.name || 'Unknown Student';
+    const totalFee = feeItem?.studentId?.amount || 0;
+    const totalPaid = feeItem?.studentId?.totalPaid || 0;
+    const remaining = totalFee - totalPaid;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const num = Number(amount);
+        if (!num || num <= 0) { setMsg({ type: 'err', text: 'Fadlan lacag sax ah geli.' }); return; }
+        setLoading(true); setMsg(null);
+        try {
+            await api.post('/management/student-payments', {
+                studentId,
+                feeId,
+                amount: num,
+                description: description.trim(),
+            });
+            setMsg({ type: 'ok', text: `✅ $${num} si guul leh ayaa loo diiwaan geliyay!` });
+            setAmount('');
+            setDescription('');
+            onPaid?.();
+        } catch (err) {
+            setMsg({ type: 'err', text: err.response?.data?.message || 'Khalad ayaa dhacay.' });
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-5 flex items-center justify-between">
+                    <div>
+                        <h2 className="text-white font-black text-lg">Quick Pay</h2>
+                        <p className="text-blue-100 text-xs mt-0.5 font-medium">{studentName}</p>
+                    </div>
+                    <button onClick={onClose} className="text-white/70 hover:text-white transition-colors p-1 rounded-lg hover:bg-white/10">
+                        <X className="h-5 w-5" />
+                    </button>
+                </div>
+
+                {/* Balance summary */}
+                <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 grid grid-cols-3 gap-3 text-center">
+                    {[
+                        { label: 'Total Fee', value: `$${totalFee}`, color: 'text-slate-700' },
+                        { label: 'Total Paid', value: `$${totalPaid}`, color: 'text-emerald-600' },
+                        {
+                            label: remaining > 0 ? 'Remaining' : 'Advance / Credit',
+                            value: `$${Math.abs(remaining)}`,
+                            color: remaining > 0 ? 'text-red-500' : 'text-emerald-500'
+                        },
+                    ].map(({ label, value, color }) => (
+                        <div key={label} className="bg-white rounded-xl py-3 border border-slate-100 shadow-sm">
+                            <p className={`font-black text-lg ${color}`}>{value}</p>
+                            <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wide mt-0.5">{label}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Form */}
+                <form onSubmit={handleSubmit} className="p-6 space-y-4">
+                    {remaining <= 0 && (
+                        <div className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-2 rounded-lg font-semibold">
+                            ✅ Ardaygan lacagtiisii hore ($ {totalFee}) waa uu bixiyay, laakiin wali lacag dheeraad ah waad ku dari kartaa.
+                        </div>
+                    )}
+                    <div>
+                        <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-1.5">
+                            Lacagta (Amount) *
+                        </label>
+                        <input
+                            type="number"
+                            min="1"
+                            value={amount}
+                            onChange={e => setAmount(e.target.value)}
+                            placeholder="Enter amount..."
+                            className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50 disabled:bg-slate-50"
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-1.5">
+                            Sharaxaad (Description)
+                        </label>
+                        <input
+                            type="text"
+                            value={description}
+                            onChange={e => setDescription(e.target.value)}
+                            placeholder="e.g. Monthly fee March, Partial payment..."
+                            className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50 disabled:bg-slate-50"
+                        />
+                    </div>
+                    {msg && (
+                        <div className={`text-xs px-3 py-2 rounded-lg border ${msg.type === 'ok' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-red-50 text-red-600 border-red-200'}`}>
+                            {msg.text}
+                        </div>
+                    )}
+                    <div className="flex gap-3 pt-1">
+                        <button
+                            type="button"
+                            onClick={onClose}
+                            className="flex-1 py-2.5 border border-slate-200 text-slate-600 text-sm font-semibold rounded-xl hover:bg-slate-50 transition-colors"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            type="submit"
+                            disabled={loading || !amount}
+                            className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-xl transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                        >
+                            <WalletIcon className="h-4 w-4" />
+                            {loading ? 'Processing...' : 'Submit Payment'}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+};
+
+// ─── Admin Fees View ──────────────────────────────────────────
+const AdminFeesView = () => {
     const [selectedClass, setSelectedClass] = useState('');
     const [selectedMonth, setSelectedMonth] = useState((new Date().getMonth() + 1).toString());
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear().toString());
     const [selectedStatus, setSelectedStatus] = useState('');
     const [classes, setClasses] = useState([]);
+    const [payFeeItem, setPayFeeItem] = useState(null); // the fee row being paid
+    const [refreshKey, setRefreshKey] = useState(0);
 
     useEffect(() => {
         api.get('/core/classes').then(res => setClasses(res.data)).catch(console.error);
@@ -132,8 +420,20 @@ export const FeesPage = () => {
         setSelectedStatus('');
     };
 
+    // Custom action button shown on each fee row — opens Quick Pay panel
+    const PayAction = ({ item }) => (
+        <button
+            onClick={() => setPayFeeItem(item)}
+            className="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1.5 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg hover:bg-blue-100 transition-colors"
+            title="Record payment for this student"
+        >
+            <WalletIcon className="h-3.5 w-3.5" /> Pay
+        </button>
+    );
+
     return (
         <div className="space-y-6">
+            {/* Filters */}
             <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-wrap gap-4 items-end no-print">
                 <div className="flex flex-col flex-1 min-w-[150px]">
                     <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Filter by Class:</label>
@@ -187,11 +487,13 @@ export const FeesPage = () => {
             </div>
 
             <CrudPage
+                key={refreshKey}
                 title="Fee Management"
                 endpoint={endpoint}
                 roleAccess={feesRoleAccess}
                 writeAccessRoles={feesWriteAccess}
                 extraHeaderActions={[PrintFeesAction]}
+                customActions={[PayAction]}
                 transformEditData={(item) => ({
                     ...item,
                     studentId: item.studentId?._id || item.studentId || '',
@@ -201,9 +503,30 @@ export const FeesPage = () => {
                 columns={feesColumns}
                 formFields={feesFields}
             />
+
+            {/* Quick Pay Modal */}
+            {payFeeItem && (
+                <QuickPayPanel
+                    feeItem={payFeeItem}
+                    onClose={() => setPayFeeItem(null)}
+                    onPaid={() => {
+                        setPayFeeItem(null);
+                        setRefreshKey(k => k + 1); // force CrudPage refetch
+                    }}
+                />
+            )}
         </div>
     );
 };
+
+
+// ─── FeesPage: router between Student view and Admin view ──────
+export const FeesPage = () => {
+    const user = useAuthStore(state => state.user);
+    if (user?.role === 'Student') return <StudentFeesView />;
+    return <AdminFeesView />;
+};
+
 
 // --- Exams Page Config ---
 const examsColumns = [
@@ -612,5 +935,65 @@ export const AttendancesPage = () => (
         })}
         columns={attendanceColumns}
         formFields={attendanceFields}
+    />
+);
+
+// --- Debts Page Config ---
+const debtColumns = [
+    {
+        header: 'Student',
+        render: (item) => (
+            <div>
+                <div className="font-semibold text-slate-800">{item.studentId?.user?.name || item.studentId?.name || 'Unknown'}</div>
+                <div className="text-[10px] text-slate-500 font-mono italic">{item.studentId?.enrollmentNo}</div>
+            </div>
+        )
+    },
+    {
+        header: 'Description (Wixii loo qoray)',
+        render: (item) => <span className="text-xs font-bold text-slate-600 bg-slate-100 px-2 py-1 rounded">{item.description}</span>
+    },
+    { header: 'Amount', render: (item) => <span className="font-black text-slate-700 font-mono">${item.amount}</span> },
+    {
+        header: 'Status',
+        render: (item) => (
+            <span className={`text-[10px] font-bold px-2 py-1 rounded-full border ${item.status === 'Paid' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-red-50 text-red-600 border-red-200'}`}>
+                {item.status}
+            </span>
+        )
+    },
+    { header: 'Date', render: (item) => <span className="text-xs text-slate-400">{new Date(item.date).toLocaleDateString()}</span> }
+];
+
+const debtFields = [
+    {
+        name: 'studentId',
+        label: 'Select Student',
+        type: 'select',
+        optionsEndpoint: '/users/students?status=Active',
+        optionsLabel: 'user.name',
+        required: true
+    },
+    { name: 'description', label: 'Description (e.g. Book, Ream, Uniform)', required: true },
+    { name: 'amount', label: 'Amount ($)', type: 'number', required: true },
+    {
+        name: 'status',
+        label: 'Status',
+        type: 'select',
+        options: [
+            { label: 'Pending', value: 'Pending' },
+            { label: 'Paid', value: 'Paid' }
+        ],
+        required: true
+    }
+];
+
+export const DebtsPage = () => (
+    <CrudPage
+        title="Extra Debts Management (Maamulka Deynka)"
+        endpoint="/management/debts"
+        roleAccess={['Admin']}
+        columns={debtColumns}
+        formFields={debtFields}
     />
 );

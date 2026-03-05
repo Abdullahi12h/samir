@@ -2114,3 +2114,281 @@
 [2026-02-28T11:50:37.700Z] [getFees] DB Query: {"month":2,"year":2026}
 [2026-02-28T18:48:20.230Z] [getFees] Query: {"month":"2","year":"2026"}
 [2026-02-28T18:48:20.233Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-03-04T16:30:02.794Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:30:03.153Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944","month":3,"year":2026}
+[2026-03-04T16:30:03.166Z] [getFees] Query: {}
+[2026-03-04T16:30:03.355Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:31:12.682Z] [getFees] Query: {}
+[2026-03-04T16:31:12.687Z] [getFees] Query: {}
+[2026-03-04T16:31:12.888Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:31:12.893Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:31:23.842Z] [getFees] Query: {}
+[2026-03-04T16:31:24.145Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:31:25.382Z] [getFees] Query: {}
+[2026-03-04T16:31:25.685Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:32:16.563Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:32:16.565Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:32:24.745Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"3","year":"2026"}
+[2026-03-04T16:32:24.747Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:32:27.695Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"6","year":"2026"}
+[2026-03-04T16:32:27.697Z] [getFees] DB Query: {"month":6,"year":2026}
+[2026-03-04T16:32:30.302Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"2","year":"2026"}
+[2026-03-04T16:32:30.304Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-03-04T16:32:35.356Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"2","year":"2026"}
+[2026-03-04T16:32:35.357Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-03-04T16:32:46.566Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"2","year":"2026"}
+[2026-03-04T16:32:46.567Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-03-04T16:32:50.166Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"1","year":"2026"}
+[2026-03-04T16:32:50.166Z] [getFees] DB Query: {"month":1,"year":2026}
+[2026-03-04T16:33:18.551Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"1","year":"2026"}
+[2026-03-04T16:33:18.553Z] [getFees] DB Query: {"month":1,"year":2026}
+[2026-03-04T16:33:30.410Z] [getFees] Query: {}
+[2026-03-04T16:33:30.819Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:33:32.050Z] [getFees] Query: {}
+[2026-03-04T16:33:32.360Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:34:56.844Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:34:56.846Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:35:18.852Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:35:18.854Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:35:25.098Z] [getFees] Query: {}
+[2026-03-04T16:35:25.405Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:35:26.634Z] [getFees] Query: {}
+[2026-03-04T16:35:26.839Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:37:29.206Z] [getFees] Query: {}
+[2026-03-04T16:37:29.215Z] [getFees] Query: {}
+[2026-03-04T16:37:29.387Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:37:29.402Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:37:47.029Z] [getFees] Query: {"month":"3","year":"2026","status":"Paid"}
+[2026-03-04T16:37:47.030Z] [getFees] DB Query: {"month":3,"year":2026,"status":"Paid"}
+[2026-03-04T16:37:50.725Z] [getFees] Query: {"month":"3","year":"2026","status":"Pending"}
+[2026-03-04T16:37:50.726Z] [getFees] DB Query: {"month":3,"year":2026,"status":"Pending"}
+[2026-03-04T16:37:54.813Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"3","year":"2026","status":"Pending"}
+[2026-03-04T16:37:54.814Z] [getFees] DB Query: {"month":3,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:05.354Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"1","year":"2026","status":"Pending"}
+[2026-03-04T16:38:05.355Z] [getFees] DB Query: {"month":1,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:08.327Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"2","year":"2026","status":"Pending"}
+[2026-03-04T16:38:08.329Z] [getFees] DB Query: {"month":2,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:10.784Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"4","year":"2026","status":"Pending"}
+[2026-03-04T16:38:10.786Z] [getFees] DB Query: {"month":4,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:13.958Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"5","year":"2026","status":"Pending"}
+[2026-03-04T16:38:13.960Z] [getFees] DB Query: {"month":5,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:20.308Z] [getFees] Query: {"classId":"69a2a0d2f9760a3fca586b69","month":"4","year":"2026","status":"Pending"}
+[2026-03-04T16:38:20.310Z] [getFees] DB Query: {"month":4,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:23.710Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"4","year":"2026","status":"Pending"}
+[2026-03-04T16:38:23.711Z] [getFees] DB Query: {"month":4,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:27.271Z] [getFees] Query: {"month":"4","year":"2026","status":"Pending"}
+[2026-03-04T16:38:27.272Z] [getFees] DB Query: {"month":4,"year":2026,"status":"Pending"}
+[2026-03-04T16:38:31.292Z] [getFees] Query: {"month":"4","year":"2026"}
+[2026-03-04T16:38:31.294Z] [getFees] DB Query: {"month":4,"year":2026}
+[2026-03-04T16:38:34.640Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"4","year":"2026"}
+[2026-03-04T16:38:34.642Z] [getFees] DB Query: {"month":4,"year":2026}
+[2026-03-04T16:38:38.638Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"2","year":"2026"}
+[2026-03-04T16:38:38.639Z] [getFees] DB Query: {"month":2,"year":2026}
+[2026-03-04T16:38:43.039Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:38:43.041Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:38:50.562Z] [getFees] Query: {"classId":"69a2a06df9760a3fca586a18","month":"3","year":"2026"}
+[2026-03-04T16:38:50.564Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:39:05.262Z] [getFees] Query: {}
+[2026-03-04T16:39:05.470Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:39:06.713Z] [getFees] Query: {}
+[2026-03-04T16:39:06.902Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:44:51.691Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:44:51.692Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:52:24.709Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:52:24.711Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:52:44.606Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:52:44.608Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:55:00.667Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:55:00.669Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:55:12.344Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:55:12.346Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:55:44.561Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:55:44.563Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:55:58.490Z] [getFees] Query: {}
+[2026-03-04T16:55:58.714Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:55:59.646Z] [getFees] Query: {}
+[2026-03-04T16:55:59.847Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:56:03.331Z] [getFees] Query: {}
+[2026-03-04T16:56:03.536Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:56:04.561Z] [getFees] Query: {}
+[2026-03-04T16:56:04.824Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:58:41.549Z] [getFees] Query: {}
+[2026-03-04T16:58:41.757Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T16:59:15.339Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:59:15.340Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T16:59:47.058Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T16:59:47.060Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T17:00:06.024Z] [getFees] Query: {}
+[2026-03-04T17:00:06.332Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:00:07.263Z] [getFees] Query: {}
+[2026-03-04T17:00:07.569Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:06:38.541Z] [getFees] Query: {}
+[2026-03-04T17:06:38.843Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:06:40.163Z] [getFees] Query: {}
+[2026-03-04T17:06:40.368Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:06:56.447Z] [getFees] Query: {}
+[2026-03-04T17:06:56.454Z] [getFees] Query: {}
+[2026-03-04T17:06:56.852Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:06:56.861Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:07:12.341Z] [getFees] Query: {}
+[2026-03-04T17:07:12.535Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:07:13.655Z] [getFees] Query: {}
+[2026-03-04T17:07:13.959Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:07:57.686Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T17:07:57.687Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T17:11:24.945Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T17:11:24.946Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T17:11:25.255Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T17:11:25.257Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T17:11:47.690Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T17:11:47.692Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T17:11:53.204Z] [getFees] Query: {}
+[2026-03-04T17:11:53.503Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:11:54.753Z] [getFees] Query: {}
+[2026-03-04T17:11:55.056Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:14:14.718Z] [getFees] Query: {}
+[2026-03-04T17:14:14.725Z] [getFees] Query: {}
+[2026-03-04T17:14:15.028Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:14:15.034Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:14:58.345Z] [getFees] Query: {}
+[2026-03-04T17:14:58.553Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:14:58.653Z] [getFees] Query: {}
+[2026-03-04T17:14:58.960Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:14:59.928Z] [getFees] Query: {}
+[2026-03-04T17:15:00.187Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:27:41.169Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T17:27:41.174Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T17:59:52.412Z] [getFees] Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:59:52.414Z] [getFees] DB Query: {}
+[2026-03-04T17:59:59.978Z] [getFees] Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T17:59:59.980Z] [getFees] DB Query: {}
+[2026-03-04T18:00:09.416Z] [getFees] Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:00:09.418Z] [getFees] DB Query: {}
+[2026-03-04T18:00:29.689Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T18:00:29.692Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T18:01:21.794Z] [getFees] Query: {}
+[2026-03-04T18:01:21.987Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:01:22.749Z] [getFees] Query: {}
+[2026-03-04T18:01:22.939Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:02:27.840Z] [getFees] Query: {}
+[2026-03-04T18:02:28.031Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:02:29.289Z] [getFees] Query: {}
+[2026-03-04T18:02:29.595Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:03:12.914Z] [getFees] Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:03:12.916Z] [getFees] DB Query: {}
+[2026-03-04T18:03:28.230Z] [getFees] Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:03:28.232Z] [getFees] DB Query: {}
+[2026-03-04T18:03:54.588Z] [getFees] Query: {}
+[2026-03-04T18:03:54.977Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:03:55.831Z] [getFees] Query: {}
+[2026-03-04T18:03:56.122Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:04:16.428Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-04T18:04:16.432Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-04T18:09:45.729Z] [getFees] Query: {}
+[2026-03-04T18:09:45.746Z] [getFees] Query: {}
+[2026-03-04T18:09:46.139Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:09:46.153Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:09:52.820Z] [getFees] Query: {}
+[2026-03-04T18:09:53.220Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-04T18:09:54.552Z] [getFees] Query: {}
+[2026-03-04T18:09:54.835Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T16:32:48.947Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-05T16:32:48.968Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-05T16:32:59.495Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-05T16:32:59.498Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-05T16:43:49.842Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T16:43:50.483Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-05T16:43:50.486Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-05T16:43:50.698Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T16:44:18.006Z] [getFees] Query: {}
+[2026-03-05T16:44:18.193Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T16:44:19.449Z] [getFees] Query: {}
+[2026-03-05T16:44:19.647Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T16:54:31.255Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T16:54:31.582Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T16:58:19.286Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T16:58:20.043Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-05T16:58:20.047Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-05T16:58:20.347Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:36:14.361Z] [getFees] Query: {"month":"3","year":"2026"}
+[2026-03-05T17:36:14.366Z] [getFees] DB Query: {"month":3,"year":2026}
+[2026-03-05T17:36:19.012Z] [getResults] START - User: 69a2b537888c75f8fe3909b4, Role: Admin
+[2026-03-05T17:36:19.881Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:36:19.883Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-05T17:36:19.884Z] [getResults] Returning 1 results
+[2026-03-05T17:36:23.781Z] [getResults] START - User: 69a2b537888c75f8fe3909b4, Role: Admin
+[2026-03-05T17:36:24.455Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:36:24.457Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-05T17:36:24.460Z] [getResults] Filtering by specific skillId: 69a2a051f9760a3fca5869e2
+[2026-03-05T17:36:24.462Z] [getResults] Returning 1 results
+[2026-03-05T17:36:26.534Z] [getResults] START - User: 69a2b537888c75f8fe3909b4, Role: Admin
+[2026-03-05T17:36:27.096Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:36:27.099Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-05T17:36:27.102Z] [getResults] Filtering by specific classId: 69a2a06df9760a3fca586a18
+[2026-03-05T17:36:27.105Z] [getResults] Filtering by specific skillId: 69a2a051f9760a3fca5869e2
+[2026-03-05T17:36:27.109Z] [getResults] Returning 1 results
+[2026-03-05T17:36:55.598Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T17:36:55.842Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T17:37:05.230Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T17:37:05.467Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T17:37:12.907Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T17:37:13.117Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T17:38:53.713Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T17:38:54.105Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T17:38:54.526Z] [getFees] Query: {}
+[2026-03-05T17:38:54.727Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T17:38:55.683Z] [getFees] Query: {}
+[2026-03-05T17:38:55.870Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T17:38:59.051Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T17:38:59.331Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T17:39:00.319Z] [getFees] Query: {}
+[2026-03-05T17:39:00.540Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T17:39:01.566Z] [getFees] Query: {}
+[2026-03-05T17:39:01.784Z] [getResults] START - User: 69a2b1fd888c75f8fe390942, Role: Student
+[2026-03-05T17:39:01.794Z] [getFees] DB Query: {"studentId":"69a2b1fd888c75f8fe390944"}
+[2026-03-05T17:39:02.005Z] [getResults] Student 69a2b1fd888c75f8fe390944 IS LOCKED. Returning empty results.
+[2026-03-05T17:40:03.553Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:40:04.194Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:40:04.195Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-05T17:40:04.367Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:40:53.024Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:40:54.629Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:40:54.631Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:40:54.778Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:41:13.276Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:41:13.899Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:41:13.902Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:41:14.185Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:45:05.190Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:45:05.743Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:45:05.745Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:45:05.929Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:45:07.503Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:45:07.866Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:45:08.074Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:45:08.075Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:45:08.361Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:45:08.378Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:45:08.379Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:45:08.587Z] [getResults] Teacher requested results without subjectId filter - returning empty
+[2026-03-05T17:45:11.501Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:45:12.126Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:45:12.127Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:45:12.337Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-03-05T17:45:12.341Z] [getResults] Filtering by specific subjectId: 69a2a0c4f9760a3fca586b22
+[2026-03-05T17:45:12.345Z] [getResults] Filtering by specific skillId: 69a2a051f9760a3fca5869e2
+[2026-03-05T17:45:12.350Z] [getResults] Returning 2 results
+[2026-03-05T17:45:17.290Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:45:17.838Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:45:17.839Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:45:18.022Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-03-05T17:45:18.024Z] [getResults] Filtering by specific subjectId: 69a2a0ddf9760a3fca586ba6
+[2026-03-05T17:45:18.026Z] [getResults] Filtering by specific skillId: 69a2a051f9760a3fca5869e2
+[2026-03-05T17:45:18.028Z] [getResults] Returning 0 results
+[2026-03-05T17:46:58.801Z] [getResults] START - User: 69a2a5e5888c75f8fe38d97e, Role: Teacher
+[2026-03-05T17:46:59.233Z] [getResults] Found 2 total results. Pre-filtering for valid subjects...
+[2026-03-05T17:46:59.235Z] [getResults] Filtered to 2 results after strict subject validation
+[2026-03-05T17:46:59.378Z] [getResults] Filtered to 2 results based on Teacher assigned classes
+[2026-03-05T17:46:59.381Z] [getResults] Filtering by specific subjectId: 69a2a0c4f9760a3fca586b22
+[2026-03-05T17:46:59.382Z] [getResults] Filtering by specific skillId: 69a2a051f9760a3fca5869e2
+[2026-03-05T17:46:59.384Z] [getResults] Returning 2 results

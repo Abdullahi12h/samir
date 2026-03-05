@@ -37,7 +37,8 @@ const createOrder = async (req, res) => {
 // @access  Private
 const getOrders = async (req, res) => {
     let orders;
-    if (req.user.role === 'Admin') {
+    const isStaff = req.user.role === 'Admin' || req.user.role === 'Teacher';
+    if (isStaff) {
         orders = await Order.find({}).populate('student', 'name username').sort({ createdAt: -1 });
     } else {
         orders = await Order.find({ student: req.user._id }).sort({ createdAt: -1 });
@@ -66,7 +67,8 @@ const updateOrder = async (req, res) => {
     const io = req.app.get('io');
 
     if (order) {
-        if (req.user.role === 'Admin') {
+        const isStaff = req.user.role === 'Admin' || req.user.role === 'Teacher';
+        if (isStaff) {
             order.price = req.body.price !== undefined ? req.body.price : order.price;
             order.status = req.body.status || order.status;
 
@@ -133,7 +135,8 @@ const postOrderMessage = async (req, res) => {
     }
 
     // Role-based validation
-    if (req.user.role !== 'Admin' && order.student.toString() !== req.user._id.toString()) {
+    const isStaff = req.user.role === 'Admin' || req.user.role === 'Teacher';
+    if (!isStaff && order.student.toString() !== req.user._id.toString()) {
         return res.status(403).json({ message: 'Not authorized to message on this order' });
     }
 

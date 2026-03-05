@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import CrudPage from '../components/CrudPage';
 import api from '../utils/api';
-import { GraduationCap, FileText, Eye, EyeOff, Lock, Unlock } from 'lucide-react';
+import { GraduationCap, FileText, Eye, EyeOff, Lock, Unlock, Edit3 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const EMPTY_ARRAY = [];
@@ -71,7 +71,20 @@ const LockAction = ({ item, refresh }) => {
     );
 };
 
-const studentCustomActions = [GraduateAction, LockAction];
+const MarkAction = ({ item }) => {
+    const navigate = useNavigate();
+    return (
+        <button
+            onClick={() => navigate(`/mark-entry?skillId=${item.skillId?._id || item.skillId}&classId=${item.classId?._id || item.classId}`)}
+            className="text-amber-500 hover:text-amber-700 p-2 rounded-lg hover:bg-amber-50 transition-colors"
+            title="Enter Marks for this Student's Class"
+        >
+            <Edit3 className="h-4 w-4" />
+        </button>
+    );
+};
+
+const studentCustomActions = [MarkAction, GraduateAction, LockAction];
 
 const studentTransformEditData = (item) => ({
     ...item,

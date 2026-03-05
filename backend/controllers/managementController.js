@@ -7,6 +7,7 @@ import SalaryPayment from '../models/SalaryPayment.js';
 import StudentPayment from '../models/StudentPayment.js';
 import Student from '../models/Student.js';
 import Teacher from '../models/Teacher.js';
+import Debt from '../models/Debt.js';
 import fs from 'fs';
 
 // Expenses
@@ -48,7 +49,8 @@ export const getFees = async (req, res) => {
         // Base Student Role Filter
         if (req.user.role === 'Student') {
             const student = await Student.findOne({ user: req.user._id });
-            if (student) query.studentId = student._id;
+            if (!student) return res.json([]);
+            query.studentId = student._id;
         }
 
         // Strict Filter by Month/Year (Educational Billing Style)
@@ -69,7 +71,22 @@ export const getFees = async (req, res) => {
         } catch (e) { }
 
         // Filter by Class (Only if Admin/Teacher)
-        if (classId && classId !== 'null') {
+        if (req.user.role === 'Teacher') {
+            const teacherRec = await Teacher.findOne({ user: req.user._id });
+            const teacherClassIds = teacherRec?.classIds || [];
+
+            if (classId && classId !== 'null') {
+                if (!teacherClassIds.map(id => id.toString()).includes(classId)) {
+                    return res.status(403).json({ message: 'You are not assigned to this class.' });
+                }
+                const studentsInClass = await Student.find({ classId }).select('_id');
+                query.studentId = { $in: studentsInClass.map(s => s._id) };
+            } else {
+                // Default to all assigned classes
+                const studentsInAssignedClasses = await Student.find({ classId: { $in: teacherClassIds } }).select('_id');
+                query.studentId = { $in: studentsInAssignedClasses.map(s => s._id) };
+            }
+        } else if (classId && classId !== 'null') {
             const studentsInClass = await Student.find({ classId }).select('_id');
             const studentIds = studentsInClass.map(s => s._id);
             query.studentId = { $in: studentIds };
@@ -179,6 +196,12 @@ export const getStudentPayments = async (req, res) => {
         const { classId, month, year } = req.query;
         let query = {};
 
+        if (req.user.role === 'Student') {
+            const student = await Student.findOne({ user: req.user._id });
+            if (!student) return res.json([]);
+            query.studentId = student._id;
+        }
+
         // Filter by Date (using paymentDate)
         if (month && month !== 'null' && year) {
             const start = new Date(Number(year), Number(month) - 1, 1);
@@ -211,14 +234,15 @@ export const getStudentPayments = async (req, res) => {
 
 export const createStudentPayment = async (req, res) => {
     try {
-        const { studentId, amount, paymentDate } = req.body;
+        const { studentId, amount, paymentDate, description, feeId, debtId } = req.body;
         const receiptNumber = `RCPT-${Date.now().toString().slice(-6)}${Math.floor(Math.random() * 100)}`;
 
         const payment = await StudentPayment.create({
             studentId,
             amount: Number(amount),
             paymentDate: paymentDate || new Date(),
-            receiptNumber
+            receiptNumber,
+            description: description || ''
         });
 
         // Update Student totalPaid
@@ -228,11 +252,79 @@ export const createStudentPayment = async (req, res) => {
             await student.save();
         }
 
+        // --- Fee/Debt Status Automation ---
+        if (feeId) {
+            await Fee.findByIdAndUpdate(feeId, { status: 'Paid' });
+        } else if (debtId) {
+            await Debt.findByIdAndUpdate(debtId, { status: 'Paid' });
+        } else {
+            // Priority 1: Oldest Pending Debt (e.g. Books)
+            const oldestPendingDebt = await Debt.findOne({ studentId, status: 'Pending' }).sort({ createdAt: 1 });
+            if (oldestPendingDebt) {
+                oldestPendingDebt.status = 'Paid';
+                await oldestPendingDebt.save();
+            } else {
+                // Priority 2: Oldest Pending Fee (Monthly)
+                const oldestPendingFee = await Fee.findOne({ studentId, status: 'Pending' }).sort({ year: 1, month: 1 });
+                if (oldestPendingFee) {
+                    oldestPendingFee.status = 'Paid';
+                    await oldestPendingFee.save();
+                }
+            }
+        }
+
         res.status(201).json(payment);
     } catch (error) {
         console.error('Error in createStudentPayment:', error);
         res.status(400).json({ message: error.message || 'Error processing payment on server' });
     }
+};
+
+// Debts
+export const getDebts = async (req, res) => {
+    try {
+        const { studentId, status } = req.query;
+        let query = {};
+
+        if (req.user.role === 'Student') {
+            const student = await Student.findOne({ user: req.user._id });
+            if (!student) return res.json([]);
+            query.studentId = student._id;
+        } else if (studentId) {
+            query.studentId = studentId;
+        }
+
+        if (status) query.status = status;
+
+        const debts = await Debt.find(query)
+            .populate({
+                path: 'studentId',
+                populate: { path: 'user', select: 'name' }
+            })
+            .sort({ createdAt: -1 });
+        res.json(debts);
+    } catch (error) { res.status(500).json({ message: error.message }); }
+};
+
+export const createDebt = async (req, res) => {
+    try {
+        const debt = await Debt.create(req.body);
+        res.status(201).json(debt);
+    } catch (error) { res.status(400).json({ message: error.message }); }
+};
+
+export const updateDebt = async (req, res) => {
+    try {
+        const debt = await Debt.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(debt);
+    } catch (error) { res.status(400).json({ message: error.message }); }
+};
+
+export const deleteDebt = async (req, res) => {
+    try {
+        await Debt.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Debt deleted' });
+    } catch (error) { res.status(500).json({ message: error.message }); }
 };
 
 // Attendance
@@ -271,7 +363,14 @@ export const getDailyAttendance = async (req, res) => {
         const { classId, date } = req.query;
         if (!classId || !date) return res.status(400).json({ message: 'Class and Date are required' });
 
-        // Teachers can view attendance for any class
+        // Teacher Access Restriction
+        if (req.user.role === 'Teacher') {
+            const teacherRec = await Teacher.findOne({ user: req.user._id });
+            const teacherClassIds = teacherRec?.classIds?.map(id => id.toString()) || [];
+            if (!teacherClassIds.includes(classId)) {
+                return res.status(403).json({ message: 'You are not assigned to this class.' });
+            }
+        }
 
         const searchDate = new Date(date);
         searchDate.setHours(0, 0, 0, 0);
@@ -302,7 +401,14 @@ export const submitDailyAttendance = async (req, res) => {
     try {
         const { classId, date, records } = req.body;
 
-        // Teachers can submit attendance for any class
+        // Teacher Access Restriction
+        if (req.user.role === 'Teacher') {
+            const teacherRec = await Teacher.findOne({ user: req.user._id });
+            const teacherClassIds = teacherRec?.classIds?.map(id => id.toString()) || [];
+            if (!teacherClassIds.includes(classId)) {
+                return res.status(403).json({ message: 'You are not assigned to this class.' });
+            }
+        }
 
         const searchDate = new Date(date);
         searchDate.setHours(0, 0, 0, 0);
