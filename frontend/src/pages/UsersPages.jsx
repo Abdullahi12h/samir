@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import CrudPage from '../components/CrudPage';
 import api from '../utils/api';
-import { GraduationCap, FileText, Eye, EyeOff, Lock, Unlock, Edit3 } from 'lucide-react';
+import { GraduationCap, FileText, Eye, EyeOff, Lock, Unlock, Edit3, Printer } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const EMPTY_ARRAY = [];
@@ -83,6 +83,17 @@ const MarkAction = ({ item }) => {
         </button>
     );
 };
+
+const PrintAction = () => (
+    <button
+        onClick={() => window.print()}
+        className="flex items-center px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 transition-colors shadow-sm font-medium"
+        title="Print Current List"
+    >
+        <Printer className="h-4 w-4 mr-2" />
+        Print Class
+    </button>
+);
 
 const studentCustomActions = [MarkAction, GraduateAction, LockAction];
 
@@ -236,6 +247,7 @@ export const StudentsPage = () => (
         endpoint="/users/students?status=Active"
         roleAccess={['Admin', 'Teacher']}
         customActions={studentCustomActions}
+        extraHeaderActions={[PrintAction]}
         filters={studentFilters}
         columns={studentColumns}
         formFields={studentFields}

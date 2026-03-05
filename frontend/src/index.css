@@ -8,7 +8,15 @@
 }
 
 @media print {
-  .no-print {
+  @page {
+    margin: 0 !important;
+  }
+
+  .no-print,
+  button,
+  .flex-wrap,
+  input,
+  select {
     display: none !important;
   }
 
@@ -16,12 +24,15 @@
     background: white !important;
     padding: 0 !important;
     margin: 0 !important;
+    color: black !important;
   }
 
   main {
-    padding: 0 !important;
+    padding: 0 10mm !important;
+    /* Move away from left/right edges */
     margin: 0 !important;
     overflow: visible !important;
+    width: 100% !important;
   }
 
   .bg-white {
@@ -33,17 +44,41 @@
   table {
     width: 100% !important;
     border-collapse: collapse !important;
+    font-size: 11px !important;
+    margin-top: 0 !important;
+    /* Move table up */
   }
 
   th,
   td {
-    border: 1px solid #e2e8f0 !important;
-    padding: 8px !important;
+    border: 1px solid #000 !important;
+    padding: 6px 10px !important;
+    text-align: left !important;
+    color: #000 !important;
+    /* Solid black text */
+    font-weight: 500 !important;
   }
 
-  /* Hide edit/delete actions during print */
+  th {
+    background-color: #f1f5f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    color: #000 !important;
+  }
+
+  /* Hide edit/delete actions and any other control columns during print */
   td:last-child,
   th:last-child {
     display: none !important;
+  }
+
+  /* Make sure images (like student photos) print */
+  img {
+    max-width: 40px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

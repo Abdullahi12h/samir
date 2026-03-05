@@ -73,7 +73,6 @@ const Sidebar = ({ role, isOpen, toggle }) => {
         { name: 'My Results', path: '/results', icon: ClipboardList },
         { name: 'My Fees', path: '/fees', icon: Wallet },
         { name: 'Orders & Chat', path: '/orders', icon: MessageCircle },
-        { name: 'Profile', path: '/profile', icon: UserSquare },
     ];
 
     return (
@@ -148,7 +147,25 @@ const Sidebar = ({ role, isOpen, toggle }) => {
                         })
                     )}
                 </nav>
-                <div className="p-4 border-t border-blue-700/30 bg-[#0a2f6a] mt-auto">
+
+                {/* Fixed Bottom Profile Link */}
+                <div className="border-t border-blue-700/30">
+                    <NavLink
+                        to="/profile"
+                        onClick={toggle}
+                        className={({ isActive }) =>
+                            `flex items-center px-6 py-3 text-sm font-bold transition-all ${isActive
+                                ? 'bg-emerald-600 text-white'
+                                : 'text-blue-50 hover:bg-blue-800/50'
+                            }`
+                        }
+                    >
+                        <UserSquare className="mr-3 h-5 w-5" />
+                        My Profile
+                    </NavLink>
+                </div>
+
+                <div className="p-4 border-t border-blue-700/30 bg-[#0a2f6a]">
                     <p className="text-[8px] font-bold text-blue-200/50 tracking-widest text-center uppercase">
                         Developed by <br />
                         <span className="text-white text-[9px]">Engr Abdullahi Abdinasir Hussein</span>
