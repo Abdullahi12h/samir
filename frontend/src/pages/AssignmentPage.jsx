@@ -31,7 +31,7 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
     const [link, setLink] = useState('');
     const [loading, setLoading] = useState(false);
     const [msg, setMsg] = useState(null);
-    const [expanded, setExpanded] = useState(false);
+    const [showForm, setShowForm] = useState(false);
 
     const submit = async (e) => {
         e.preventDefault();
@@ -44,6 +44,7 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
             });
             setMsg({ type: 'ok', text: 'Assignment submitted successfully! ✅' });
             setLink('');
+            setShowForm(false);
             onSubmitted?.();
         } catch (err) {
             setMsg({ type: 'err', text: err.response?.data?.message || 'Submission failed.' });
@@ -52,11 +53,42 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
         }
     };
 
-    const mySubmission = alreadySubmitted ? assignment.submissions.find(s => String(s.studentId) === String(user?._id)) : null;
+    const mySubmission = assignment.submissions?.find(s => String(s.studentId) === String(user?._id));
+    const isGraded = mySubmission?.status === 'Graded';
+    const isReviewed = mySubmission?.status === 'Reviewed';
+    const hasTeacherResponse = mySubmission && (mySubmission.grade || mySubmission.feedback || isReviewed || isGraded);
+
+    // Card border color based on state
+    const cardBorder = isGraded
+        ? 'border-emerald-300 ring-1 ring-emerald-200'
+        : isReviewed
+            ? 'border-blue-200'
+            : alreadySubmitted
+                ? 'border-amber-200'
+                : 'border-slate-100';
 
     return (
-        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden animate-fadeIn">
-            {/* Header */}
+        <div className={`bg-white rounded-2xl border shadow-sm overflow-hidden animate-fadeIn ${cardBorder}`}>
+
+            {/* Grade banner — shown prominently at very top if graded */}
+            {isGraded && mySubmission?.grade && (
+                <div className="bg-gradient-to-r from-emerald-500 to-green-500 px-5 py-2.5 flex items-center justify-between">
+                    <span className="text-white text-xs font-bold flex items-center gap-1.5">
+                        <Award className="h-4 w-4" /> Macalinku jawaab buu ku celiyay!
+                    </span>
+                    <span className="bg-white text-emerald-700 font-black text-sm px-3 py-0.5 rounded-lg shadow">
+                        Grade: {mySubmission.grade}
+                    </span>
+                </div>
+            )}
+            {isReviewed && !isGraded && (
+                <div className="bg-blue-500 px-5 py-2 flex items-center gap-2">
+                    <CheckCircle className="h-3.5 w-3.5 text-white" />
+                    <span className="text-white text-xs font-bold">Macalinku wuu eegay gudbintaada</span>
+                </div>
+            )}
+
+            {/* Main card header */}
             <div className="flex items-start justify-between p-5 gap-3">
                 <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
@@ -77,9 +109,9 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
                                 Due: {fmtDate(assignment.dueDate)}
                             </span>
                         )}
-                        {assignment.className && (
-                            <span className="text-[10px] font-bold bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-100">
-                                Class: {assignment.className}
+                        {assignment.teacherName && (
+                            <span className="text-[10px] font-bold bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full border border-violet-100">
+                                👤 {assignment.teacherName}
                             </span>
                         )}
                         {mySubmission && (
@@ -87,93 +119,116 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
                                 {statusIcon(mySubmission.status)}{mySubmission.status}
                             </span>
                         )}
-                        {mySubmission?.grade && (
-                            <span className="text-[10px] font-black bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-200 flex items-center gap-1.5 shadow-sm animate-bounce-subtle">
-                                <Award className="h-3.5 w-3.5 text-emerald-500" /> Marks: {mySubmission.grade}
-                            </span>
-                        )}
                     </div>
                 </div>
+
+                {/* Action button */}
                 <button
-                    onClick={() => setExpanded(!expanded)}
-                    className="shrink-0 flex items-center gap-1 text-xs text-indigo-600 font-semibold hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg transition-colors"
+                    onClick={() => setShowForm(!showForm)}
+                    className={`shrink-0 flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors ${alreadySubmitted
+                        ? 'text-slate-600 bg-slate-50 hover:bg-slate-100 border border-slate-200'
+                        : 'text-indigo-600 bg-indigo-50 hover:bg-indigo-100'
+                        }`}
                 >
-                    {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
-                    {expanded ? 'Xir' : (alreadySubmitted ? 'Faahfaahin' : 'Gudbi')}
+                    {showForm ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+                    {showForm ? 'Xir' : alreadySubmitted ? 'Wax ka beddel' : 'Gudbi'}
                 </button>
             </div>
 
-            {/* Feedback/Info section for submitted assignments */}
-            {alreadySubmitted && !expanded && mySubmission && (mySubmission.grade || mySubmission.feedback) && (
-                <div className="px-5 pb-4">
-                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-xl p-3">
-                        <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-1">
-                                <Award className="h-3 w-3" /> Teacher Feedback
-                            </span>
+            {/* ── TEACHER RESPONSE SECTION — Always visible when there's a response ── */}
+            {hasTeacherResponse && (
+                <div className={`mx-5 mb-4 rounded-2xl border overflow-hidden ${isGraded ? 'border-emerald-200 bg-emerald-50/60' : 'border-blue-100 bg-blue-50/40'
+                    }`}>
+                    {/* Response header */}
+                    <div className={`flex items-center justify-between px-4 py-2.5 border-b ${isGraded ? 'border-emerald-100 bg-emerald-50' : 'border-blue-100 bg-blue-50'
+                        }`}>
+                        <span className={`text-[11px] font-black uppercase tracking-widest flex items-center gap-1.5 ${isGraded ? 'text-emerald-700' : 'text-blue-700'
+                            }`}>
+                            <Award className="h-3.5 w-3.5" />
+                            Jawaabta Macalinka (Teacher's Response)
+                        </span>
+                        <div className="flex items-center gap-2">
                             {mySubmission.grade && (
-                                <span className="text-xs font-black text-emerald-700 bg-white px-2 py-0.5 rounded-lg border border-emerald-200 shadow-sm">
-                                    Grade: {mySubmission.grade}
+                                <span className={`text-xs font-black px-2.5 py-1 rounded-lg shadow-sm ${isGraded
+                                    ? 'bg-emerald-600 text-white'
+                                    : 'bg-blue-600 text-white'
+                                    }`}>
+                                    ✏️ {mySubmission.grade}
                                 </span>
                             )}
+                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${statusColor(mySubmission.status)}`}>
+                                {mySubmission.status}
+                            </span>
                         </div>
-                        {mySubmission.feedback && (
-                            <p className="text-xs text-emerald-800 font-medium italic">"{mySubmission.feedback}"</p>
+                    </div>
+
+                    <div className="p-4 space-y-3">
+                        {/* Grade row */}
+                        {mySubmission.grade && (
+                            <div className="flex items-center gap-3">
+                                <div className="h-10 w-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0">
+                                    <Award className="h-5 w-5 text-emerald-600" />
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Dhibcahaaga (Your Grade)</p>
+                                    <p className="text-xl font-black text-emerald-700">{mySubmission.grade}</p>
+                                </div>
+                            </div>
                         )}
+
+                        {/* Feedback */}
+                        {mySubmission.feedback ? (
+                            <div className="bg-white rounded-xl border border-slate-100 p-3 shadow-sm">
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                                    💬 Faallada Macalinka (Feedback)
+                                </p>
+                                <p className="text-sm text-slate-700 leading-relaxed font-medium italic">
+                                    "{mySubmission.feedback}"
+                                </p>
+                            </div>
+                        ) : (
+                            <p className="text-xs text-slate-400 italic">Macalinku faallo ma bixin wali.</p>
+                        )}
+
+                        {/* Submission info */}
+                        <div className="flex items-center justify-between text-[10px] text-slate-400 pt-1 border-t border-slate-100">
+                            <span>Submitted: {fmtDate(mySubmission.submittedAt)}</span>
+                            {mySubmission.submissionLink && (
+                                <a
+                                    href={mySubmission.submissionLink}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-1 text-blue-500 hover:text-blue-700 font-semibold hover:underline"
+                                >
+                                    <ExternalLink className="h-3 w-3" /> My Submission
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             )}
 
-            {/* Submission form */}
-            {expanded && (
-                <div className="border-t border-slate-100 bg-slate-50 p-5">
-                    {alreadySubmitted && mySubmission && (
-                        <div className="mb-4 space-y-3">
-                            <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs text-emerald-700 font-semibold flex items-center gap-2">
-                                <CheckCircle className="h-4 w-4" /> Aad horay u gudbisay assignment-kan.
-                            </div>
+            {/* Pending submission notice */}
+            {alreadySubmitted && !hasTeacherResponse && (
+                <div className="mx-5 mb-4 flex items-center gap-2.5 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3">
+                    <Clock className="h-4 w-4 text-amber-500 shrink-0" />
+                    <div>
+                        <p className="text-xs font-bold text-amber-700">Gudbintaada waxaa la sugayaa jawaabta macalinka</p>
+                        <p className="text-[10px] text-amber-600 mt-0.5">
+                            Submitted: {fmtDate(mySubmission?.submittedAt)}
+                            {mySubmission?.submissionLink && (
+                                <a href={mySubmission.submissionLink} target="_blank" rel="noreferrer" className="ml-2 text-blue-500 hover:underline inline-flex items-center gap-0.5">
+                                    <ExternalLink className="h-2.5 w-2.5" /> View
+                                </a>
+                            )}
+                        </p>
+                    </div>
+                </div>
+            )}
 
-                            {/* Detailed Student View inside expanded card */}
-                            <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                                <p className="text-[10px] font-bold text-slate-400 uppercase mb-2">Submission Details</p>
-                                <div className="space-y-2.5">
-                                    <div className="flex justify-between items-center text-xs">
-                                        <span className="text-slate-500">Status:</span>
-                                        <span className={`font-bold px-2 py-0.5 rounded-full border ${statusColor(mySubmission.status)}`}>{mySubmission.status}</span>
-                                    </div>
-                                    <div className="flex justify-between items-center text-xs">
-                                        <span className="text-slate-500">Submitted:</span>
-                                        <span className="font-semibold text-slate-700">{fmtDate(mySubmission.submittedAt)}</span>
-                                    </div>
-                                    {mySubmission.grade && (
-                                        <div className="flex justify-between items-center text-xs">
-                                            <span className="text-slate-500">Grade:</span>
-                                            <span className="font-black text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-lg border border-indigo-100">{mySubmission.grade}</span>
-                                        </div>
-                                    )}
-                                    <div className="text-xs">
-                                        <span className="text-slate-500 block mb-1">Link:</span>
-                                        <a href={mySubmission.submissionLink} target="_blank" rel="noreferrer" className="text-blue-600 font-medium flex items-center gap-1 hover:underline truncate">
-                                            <ExternalLink className="h-3 w-3" /> {mySubmission.submissionLink}
-                                        </a>
-                                    </div>
-                                    {mySubmission.grade && (
-                                        <div className="flex items-center justify-between bg-purple-50/50 p-2 rounded-lg border border-purple-100 mb-2">
-                                            <span className="text-[10px] font-bold text-purple-700 uppercase">Assessment Grade</span>
-                                            <span className="text-sm font-black text-purple-800">{mySubmission.grade}</span>
-                                        </div>
-                                    )}
-                                    {mySubmission.feedback && (
-                                        <div className="pt-2 border-t border-slate-100 mt-2">
-                                            <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Teacher Feedback:</span>
-                                            <p className="text-xs text-slate-600 italic bg-slate-50 p-2 rounded-lg border border-slate-100">"{mySubmission.feedback}"</p>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                            <div className="text-[10px] text-center text-slate-400 font-medium">Haddi aad rabto inaad soo update-garayso, hoos ka buuxi mar kale.</div>
-                        </div>
-                    )}
+            {/* Submit / Resubmit Form */}
+            {showForm && (
+                <div className="border-t border-slate-100 bg-slate-50 p-5">
                     <form onSubmit={submit} className="space-y-3">
                         <div>
                             <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-1.5">
@@ -183,7 +238,7 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
                                 value={name}
                                 onChange={e => setName(e.target.value)}
                                 placeholder="Magacaaga buuxa..."
-                                className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
+                                className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             />
                         </div>
                         <div>
@@ -195,7 +250,7 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
                                 onChange={e => setLink(e.target.value)}
                                 placeholder="https://..."
                                 type="url"
-                                className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
+                                className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             />
                         </div>
                         {msg && (
@@ -203,20 +258,31 @@ const StudentSubmitCard = ({ assignment, onSubmitted, alreadySubmitted }) => {
                                 {msg.text}
                             </div>
                         )}
-                        <button
-                            type="submit"
-                            disabled={loading}
-                            className="w-full flex items-center justify-center gap-2 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold rounded-xl transition-colors disabled:opacity-60"
-                        >
-                            <Send className="h-4 w-4" />
-                            {loading ? 'Gudbinaya...' : 'Submit Assignment'}
-                        </button>
+                        <div className="flex gap-2">
+                            <button
+                                type="button"
+                                onClick={() => setShowForm(false)}
+                                className="flex-1 py-2.5 border border-slate-200 text-slate-600 text-sm font-semibold rounded-xl hover:bg-slate-100 transition-colors"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold rounded-xl transition-colors disabled:opacity-60"
+                            >
+                                <Send className="h-4 w-4" />
+                                {loading ? 'Gudbinaya...' : alreadySubmitted ? 'Update Submission' : 'Submit Assignment'}
+                            </button>
+                        </div>
                     </form>
                 </div>
             )}
         </div>
     );
 };
+
+
 
 /** Submission list shown to Admin/Teacher within an assignment card */
 const SubmissionsList = ({ assignment, onGraded }) => {
@@ -433,11 +499,15 @@ const CreateModal = ({ onClose, onCreated }) => {
     const [err, setErr] = useState('');
 
     useEffect(() => {
-        if (isStaff) {
+        // Admin can assign to any teacher; Teacher auto-assigns to themselves
+        if (user?.role === 'Admin') {
             api.get('/users/teachers').then(res => setTeachers(res.data)).catch(console.error);
+        } else if (user?.role === 'Teacher') {
+            // Pre-fill the teacher fields with logged-in teacher's own info
+            setForm(p => ({ ...p, teacherId: user._id, teacherName: user.name || '' }));
         }
         api.get('/core/classes').then(res => setClasses(res.data)).catch(console.error);
-    }, [isStaff]);
+    }, [user]);
 
     const set = (k, v) => setForm(p => ({ ...p, [k]: v }));
 
@@ -491,7 +561,7 @@ const CreateModal = ({ onClose, onCreated }) => {
                             className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
                         />
                     </div>
-                    {isStaff && (
+                    {user?.role === 'Admin' ? (
                         <div>
                             <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-1.5">
                                 Assign to Teacher
@@ -506,6 +576,10 @@ const CreateModal = ({ onClose, onCreated }) => {
                                     <option key={t._id} value={t.user?._id}>{t.user?.name || 'Staff'}</option>
                                 ))}
                             </select>
+                        </div>
+                    ) : (
+                        <div className="px-3 py-2 bg-indigo-50 border border-indigo-100 rounded-xl text-xs text-indigo-700 font-semibold">
+                            👤 Assignment-kan magacaaga ({user?.name}) ayaa ku diiwaan-galinaysa
                         </div>
                     )}
                     <div>

@@ -64,12 +64,20 @@ const StudentPaymentsPage = () => {
 
     const selectedStudent = students.find(s => s._id === selectedStudentId);
 
-    // Accurate balance calculation:
-    const totalFeesOwed = selectedStudentFinances.fees.reduce((sum, f) => sum + (f.amount || 0), 0);
+    // Simplified balance calculation based on registration amount
     const totalDebtsOwed = selectedStudentFinances.debts.reduce((sum, d) => sum + (d.amount || 0), 0);
-    const totalEverOwed = totalFeesOwed + totalDebtsOwed;
+    const totalEverOwed = (selectedStudent?.amount || 0) + totalDebtsOwed;
     const totalPaid = selectedStudent?.totalPaid || 0;
     const remainingBalance = totalEverOwed - totalPaid;
+
+    // Auto-fill amount when totals are calculated
+    useEffect(() => {
+        if (selectedStudentId && remainingBalance > 0) {
+            setAmount(remainingBalance.toString());
+        } else if (!selectedStudentId) {
+            setAmount('');
+        }
+    }, [selectedStudentId, remainingBalance]);
 
 
     const handlePayment = async (e) => {

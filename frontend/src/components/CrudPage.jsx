@@ -83,28 +83,29 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            // Handle file uploads if any
             const dataToSubmit = { ...formData };
             for (const field of formFields) {
-                if (field.type === 'file' && dataToSubmit[field.name] instanceof File) {
+                if (field.type === 'file' && formData[field.name] instanceof File) {
                     const uploadData = new FormData();
-                    uploadData.append('file', dataToSubmit[field.name]);
-                    const res = await api.post('/upload', uploadData, { headers: { 'Content-Type': 'multipart/form-data' } });
+                    uploadData.append('file', formData[field.name]);
+                    const res = await api.post('/core/upload', uploadData);
                     dataToSubmit[field.name] = res.data.file;
                 }
             }
+            const baseEndpoint = endpoint.split('?')[0];
             if (editingId) {
-                const baseEndpoint = endpoint.split('?')[0];
                 await api.put(`${baseEndpoint}/${editingId}`, dataToSubmit);
             } else {
-                await api.post(endpoint, dataToSubmit);
+                await api.post(baseEndpoint, dataToSubmit);
             }
             setShowForm(false);
             setFormData({});
             setEditingId(null);
             fetchData();
         } catch (error) {
-            console.error(`Error creating ${title}`, error);
-            alert(error.response?.data?.message || 'Error occurred');
+            console.error('Error saving:', error);
+            alert(error.response?.data?.message || 'Error saving data');
         }
     };
 
@@ -155,7 +156,20 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                             <ActionComponent key={idx} refresh={fetchData} />
                         ))}
                         {canWrite && (
-                            <button onClick={() => { setShowForm(!showForm); if (!showForm) { setFormData({}); setEditingId(null); } }} className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-sm font-medium">
+                            <button
+                                onClick={() => {
+                                    setShowForm(!showForm);
+                                    if (!showForm) {
+                                        const defaults = {};
+                                        formFields.forEach(f => {
+                                            if (f.default !== undefined) defaults[f.name] = f.default;
+                                        });
+                                        setFormData(defaults);
+                                        setEditingId(null);
+                                    }
+                                }}
+                                className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-sm font-medium"
+                            >
                                 <Plus className="h-4 w-4 mr-2" />
                                 {showForm ? 'Cancel' : 'Add New'}
                             </button>
@@ -174,7 +188,23 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                                     {field.type === 'select' ? (
                                         <select
                                             className="p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none"
-                                            onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
+                                            onChange={(e) => {
+                                                const val = e.target.value;
+                                                let nextData = { ...formData, [field.name]: val };
+                                                if (field.autoFill) {
+                                                    const opt = lookupData[field.name]?.find(o => (o[field.optionsValue] || o._id) === val);
+                                                    if (opt) {
+                                                        field.autoFill.forEach(rule => {
+                                                            if (rule.formula === 'balance') {
+                                                                nextData[rule.target] = (opt.amount || 0) - (opt.totalPaid || 0);
+                                                            } else {
+                                                                nextData[rule.target] = opt[rule.source];
+                                                            }
+                                                        });
+                                                    }
+                                                }
+                                                setFormData(nextData);
+                                            }}
                                             required={field.required}
                                             value={formData[field.name] || ''}
                                         >
@@ -255,7 +285,7 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                 </div>
             )}
 
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden print:overflow-visible print:shadow-none print:border-none">
                 {loading ? (
                     <div className="p-8 text-center text-slate-500 text-sm">Loading data...</div>
                 ) : isLocked ? (
@@ -284,26 +314,26 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                         </div>
                     </div>
                 ) : (
-                    <div className="overflow-x-auto">
+                    <div className="overflow-x-auto print:overflow-visible">
                         <table className="min-w-full divide-y divide-slate-200">
-                            <thead className="bg-slate-50">
+                            <thead className="bg-slate-50 print:bg-transparent">
                                 <tr>
                                     {columns.map((col, i) => (
-                                        <th key={i} className="px-3 sm:px-6 py-3 sm:py-4 text-left text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">{col.header}</th>
+                                        <th key={i} className="px-3 sm:px-6 py-3 sm:py-4 text-left text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider print:text-black print:font-bold">{col.header}</th>
                                     ))}
-                                    {(canWrite || customActions.length > 0) && <th className="px-3 sm:px-6 py-3 sm:py-4 text-right text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">Actions</th>}
+                                    {(canWrite || customActions.length > 0) && <th className="px-3 sm:px-6 py-3 sm:py-4 text-right text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider no-print">Actions</th>}
                                 </tr>
                             </thead>
-                            <tbody className="bg-white divide-y divide-slate-200">
+                            <tbody className="bg-white divide-y divide-slate-200 print:divide-slate-400">
                                 {filteredData.map((item, index) => (
-                                    <tr key={item._id || index} className="hover:bg-slate-50 transition-colors">
+                                    <tr key={item._id || index} className="hover:bg-slate-50 transition-colors print:break-inside-avoid">
                                         {columns.map((col, i) => (
-                                            <td key={i} className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-slate-700">
-                                                {col.render ? col.render(item) : (item[col.accessor] || '-')}
+                                            <td key={i} className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-slate-700 print:text-black">
+                                                {col.render ? col.render(item, index) : (item[col.accessor] || '-')}
                                             </td>
                                         ))}
                                         {(canWrite || customActions.length > 0) && (
-                                            <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-right text-xs sm:text-sm font-medium flex justify-end items-center space-x-1 sm:space-x-2">
+                                            <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-right text-xs sm:text-sm font-medium flex justify-end items-center space-x-1 sm:space-x-2 no-print">
                                                 {customActions.map((ActionComponent, idx) => (
                                                     <ActionComponent key={idx} item={item} refresh={fetchData} />
                                                 ))}

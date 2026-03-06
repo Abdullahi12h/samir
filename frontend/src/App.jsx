@@ -19,6 +19,8 @@ import BackupPage from './pages/BackupPage';
 import ProfilePage from './pages/ProfilePage';
 import OrdersPage from './pages/OrdersPage';
 import AssignmentPage from './pages/AssignmentPage';
+import AllUsersPage from './pages/AllUsersPage';
+import DevelopersPage from './pages/DevelopersPage';
 
 function App() {
   return (
@@ -52,9 +54,11 @@ function App() {
           <Route path="results" element={<ResultsPage />} />
           <Route path="orders" element={<OrdersPage />} />
           <Route path="assignments" element={<AssignmentPage />} />
+          <Route path="all-users" element={<AllUsersPage />} />
           <Route path="reports" element={<ReportsPage />} />
           <Route path="reports/graduated/:batchId" element={<GraduatedStudentsReport />} />
           <Route path="backup" element={<BackupPage />} />
+          <Route path="developers" element={<DevelopersPage />} />
 
           <Route path="unauthorized" element={
             <div className="p-8 text-center text-red-500 text-xl font-bold bg-white rounded-xl shadow border border-slate-100">

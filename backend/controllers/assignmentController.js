@@ -30,22 +30,31 @@ export const getAssignments = async (req, res) => {
 export const createAssignment = async (req, res) => {
     try {
         const { title, description, dueDate, subject, teacherId, teacherName, classId, className } = req.body;
+
+        // Safe fallback for name (in case token user has no name)
+        const creatorName = req.user.name || req.user.username || 'Unknown';
+
+        // If the logged-in user is a Teacher and no teacherId selected, use themselves
+        const resolvedTeacherId = teacherId || (req.user.role === 'Teacher' ? req.user._id : null);
+        const resolvedTeacherName = teacherName || (req.user.role === 'Teacher' ? creatorName : '');
+
         const assignment = new Assignment({
             title,
             description,
             dueDate,
             subject,
-            teacherId: teacherId || req.user._id,
-            teacherName: teacherName || (teacherId ? '' : req.user.name),
+            teacherId: resolvedTeacherId,
+            teacherName: resolvedTeacherName,
             classId: classId || null,
             className: className || '',
             createdBy: req.user._id,
-            createdByName: req.user.name,
+            createdByName: creatorName,
             submissions: [],
         });
         const created = await assignment.save();
         res.status(201).json(created);
     } catch (error) {
+        console.error('[createAssignment] ERROR:', error);
         res.status(500).json({ message: error.message });
     }
 };

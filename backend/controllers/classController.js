@@ -8,12 +8,13 @@ export const getClasses = async (req, res) => {
             const teacher = await Teacher.findOne({ user: req.user._id }).populate('subjectId subjects');
 
             if (teacher) {
-                const assignedClasses = teacher.classIds || [];
+                const assignedClasses = (teacher.classIds || []).map(id => id.toString());
                 // Also include classes from assigned subjects just in case
                 if (teacher.subjects && teacher.subjects.length > 0) {
                     teacher.subjects.forEach(sub => {
-                        if (sub.classId && !assignedClasses.includes(sub.classId.toString())) {
-                            assignedClasses.push(sub.classId);
+                        const cid = sub.classId?.toString() || sub.toString();
+                        if (cid && !assignedClasses.includes(cid)) {
+                            assignedClasses.push(cid);
                         }
                     });
                 }

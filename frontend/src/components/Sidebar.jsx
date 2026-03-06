@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {
     LayoutDashboard, BookOpen, Layers, Users, Building,
     GraduationCap, ClipboardList, Wallet, FileText, CheckSquare,
@@ -28,6 +28,7 @@ const Sidebar = ({ role, isOpen, toggle }) => {
         {
             title: 'Users Management',
             links: [
+                { name: 'All Users', path: '/all-users', icon: Users },
                 { name: 'Teachers', path: '/teachers', icon: UserSquare },
                 { name: 'Students', path: '/students', icon: GraduationCap },
                 { name: 'Graduates', path: '/graduates', icon: GraduationCap },
@@ -165,12 +166,15 @@ const Sidebar = ({ role, isOpen, toggle }) => {
                     </NavLink>
                 </div>
 
-                <div className="p-4 border-t border-blue-700/30 bg-[#0a2f6a]">
-                    <p className="text-[8px] font-bold text-blue-200/50 tracking-widest text-center uppercase">
-                        Developed by <br />
-                        <span className="text-white text-[9px]">Engr Abdullahi Abdinasir Hussein</span>
+                <Link to="/developers" onClick={toggle} className="block p-4 border-t border-blue-700/30 bg-[#0a2f6a] hover:bg-blue-900 transition-colors cursor-pointer text-center">
+                    <p className="text-[8px] font-bold text-blue-200/50 tracking-widest uppercase mb-1">
+                        System Engineers
                     </p>
-                </div>
+                    <div className="flex flex-col space-y-0.5">
+                        <span className="text-white text-[9px] font-medium hover:text-orange-400 transition-colors">Engr Abdullahi Abdinasir</span>
+                        <span className="text-white text-[9px] font-medium hover:text-emerald-400 transition-colors">Engr Samir Badane</span>
+                    </div>
+                </Link>
             </div>
         </>
     );

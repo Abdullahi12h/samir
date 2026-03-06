@@ -7,7 +7,7 @@ export const getSkills = async (req, res) => {
             const { default: Teacher } = await import('../models/Teacher.js');
             const teacher = await Teacher.findOne({ user: req.user._id });
             if (teacher && teacher.skills && teacher.skills.length > 0) {
-                query._id = { $in: teacher.skills };
+                query._id = { $in: teacher.skills.map(s => s.toString()) };
             }
         }
         const skills = await Skill.find(query);

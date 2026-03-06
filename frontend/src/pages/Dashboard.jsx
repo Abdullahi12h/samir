@@ -14,11 +14,13 @@ const Dashboard = () => {
     const user = useAuthStore((state) => state.user);
     const [stats, setStats] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [period, setPeriod] = useState('all');
 
     useEffect(() => {
         const fetchStats = async () => {
+            setLoading(true);
             try {
-                const { data } = await api.get('/management/dashboard');
+                const { data } = await api.get(`/management/dashboard?period=${period}`);
                 setStats(data);
             } catch (error) {
                 console.error('Error fetching dashboard stats', error);
@@ -27,20 +29,22 @@ const Dashboard = () => {
             }
         };
         fetchStats();
-    }, []);
+    }, [period]);
 
-    if (loading) {
-        return <div className="flex justify-center items-center h-full"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div></div>;
+    if (loading && !stats) {
+        return <div className="flex justify-center items-center h-full"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div></div>;
     }
 
+    const periodLabel = period === 'weekly' ? 'Weekly' : period === 'monthly' ? 'Monthly' : period === 'yearly' ? 'Yearly' : 'Total';
+
     const statCards = [
-        { title: 'Total Students', value: stats?.totalStudents || 0, icon: Users, color: 'bg-blue-500' },
-        { title: 'Total Teachers', value: stats?.totalTeachers || 0, icon: UserSquare, color: 'bg-indigo-500' },
-        { title: 'Total Classes', value: stats?.totalClasses || 0, icon: Building, color: 'bg-emerald-500' },
-        { title: 'Total Skills', value: stats?.totalSkills || 0, icon: BookOpen, color: 'bg-amber-500' },
-        { title: 'Total Income', value: `$${stats?.totalIncome || 0}`, icon: TrendingUp, color: 'bg-green-600' },
-        { title: 'Total Salaries', value: `$${stats?.totalSalaries || 0}`, icon: Wallet, color: 'bg-rose-500' },
-        { title: 'General Expenses', value: `$${stats?.totalExpenses || 0}`, icon: TrendingDown, color: 'bg-red-500' },
+        { title: `${periodLabel} Students`, value: stats?.totalStudents || 0, icon: Users, color: 'bg-blue-500' },
+        { title: `${periodLabel} Teachers`, value: stats?.totalTeachers || 0, icon: UserSquare, color: 'bg-indigo-500' },
+        { title: `${periodLabel} Classes`, value: stats?.totalClasses || 0, icon: Building, color: 'bg-emerald-500' },
+        { title: `${periodLabel} Skills`, value: stats?.totalSkills || 0, icon: BookOpen, color: 'bg-amber-500' },
+        { title: `${periodLabel} Income`, value: `$${stats?.totalIncome || 0}`, icon: TrendingUp, color: 'bg-green-600' },
+        { title: `${periodLabel} Salaries`, value: `$${stats?.totalSalaries || 0}`, icon: Wallet, color: 'bg-rose-500' },
+        { title: `${periodLabel} Expenses`, value: `$${stats?.totalExpenses || 0}`, icon: TrendingDown, color: 'bg-red-500' },
     ];
 
     const chartData = [
@@ -51,9 +55,25 @@ const Dashboard = () => {
 
     return (
         <div className="space-y-4 sm:space-y-6">
-            <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-800 text-center sm:text-left">Welcome back, {user?.name}! 👋</h2>
-                <p className="text-slate-500 text-center sm:text-left text-sm sm:text-base">Here is what's happening in your organization today.</p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <h2 className="text-xl sm:text-2xl font-bold text-slate-800 text-center sm:text-left">Welcome back, {user?.name}! 👋</h2>
+                    <p className="text-slate-500 text-center sm:text-left text-sm sm:text-base">Here is what's happening in your organization.</p>
+                </div>
+                {user?.role === 'Admin' && (
+                    <div className="flex items-center justify-center sm:justify-end">
+                        <select
+                            value={period}
+                            onChange={e => setPeriod(e.target.value)}
+                            className="bg-white border border-slate-200 text-slate-700 text-sm font-bold rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block p-2.5 shadow-sm hover:border-indigo-300 transition-colors cursor-pointer outline-none"
+                        >
+                            <option value="all">🕒 Dhammaan (All Time)</option>
+                            <option value="weekly">📅 Isbuucle (Weekly)</option>
+                            <option value="monthly">📆 Bile (Monthly)</option>
+                            <option value="yearly">🗓️ Sanadle (Yearly)</option>
+                        </select>
+                    </div>
+                )}
             </div>
 
             {user?.role === 'Admin' ? (

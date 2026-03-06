@@ -1,0 +1,57 @@
+=== DHAMMAAN USERS-KA DATABASE-KA KU JIRA (48) ===
+
+📌 ADMINS (4):
+   1. Magaca: AK                   | Username: Ak
+   2. Magaca: Abdifitax            | Username: Abdifitax
+   3. Magaca: Abdullahi1230        | Username: Abdullahi
+   4. Magaca: Samir2004            | Username: Ali
+
+📌 TEACHERS (4):
+   1. Magaca: Abdikarin milaaq     | Username: DR
+   2. Magaca: Ahmed Abdinasir Hussein  | Username: Samirbadne
+   3. Magaca: ladan shuute sokorow | Username: ladan
+   4. Magaca: salma mustaf maxamed  | Username: zelma
+
+📌 STUDENTS (40):
+   1. Magaca: 	anfac hassan mohamed | Username: 	anfac2
+   2. Magaca: Aamino maxamed maxamuud | Username: Aamino
+   3. Magaca: Abdikadir yoonis Ali  | Username: Abdikadir
+   4. Magaca: Abdirisakh hassan Abdullahi  | Username: Abdirisakh 
+   5. Magaca: Ayaan salaad Abdulle | Username: Ayaan 
+   6. Magaca: Fartuun maxamed Abdi  | Username: Fartuun1
+   7. Magaca: Hassan Rakhib mohamad  | Username: Hassan 
+   8. Magaca: Nuux Ahmed Abdi      | Username: Nuux
+   9. Magaca: aamino salaad cabdule  | Username: aamino123
+   10. Magaca: alisaid ahmed abdi   | Username: calisaciid
+   11. Magaca: anfac hassan mohamed  | Username: anfac1 
+   12. Magaca: deeqo Abdullahi Hussein  | Username: deeqo
+   13. Magaca: faadumo Abdikhadir Ahmed  | Username: faadum
+   14. Magaca: faadumo Sheekh daahir | Username: faadumo 
+   15. Magaca: faadumo Sheekh daahir  | Username: faadumo
+   16. Magaca: fardowsa Abdullahi saleeban | Username: saleeban
+   17. Magaca: fardowso saciid salaad  | Username: fardowso
+   18. Magaca: fartuun maxamed cabdi | Username: fartuun34
+   19. Magaca: farxiyo c/raxmaan  xasan  | Username: farxiyo123
+   20. Magaca: ikraan c/naasir maxamed  | Username: ikraan
+   21. Magaca: luul cabdulaahi maxamed  | Username: luul
+   22. Magaca: maxamuud Ahmed Adan  | Username: Adan
+   23. Magaca: mumtaaz Abdi haaji   | Username: mumtaaz
+   24. Magaca: muniiro Huusein mohamed  | Username: muniiro
+   25. Magaca: naciimo saciid salaad  | Username: naciimo
+   26. Magaca: nafiso siidow qaasim | Username: nafiso
+   27. Magaca: qaadijo ibraahim aadan  | Username: qadiijo123
+   28. Magaca: qamar aweys mayow    | Username: qamar
+   29. Magaca: ramlo cabdulaahi cali | Username: ramlo
+   30. Magaca: sacdiyo axmed cabdi  | Username: sacdiyoaxmed123
+   31. Magaca: sacdiyo saciid cabdi | Username: sacdiyo 
+   32. Magaca: sagal Ali mohamed    | Username: sagal
+   33. Magaca: sahro  cali maxamuud  | Username: sahro
+   34. Magaca: saynab Hussein nuur  | Username: saynab1
+   35. Magaca: saynab Hussein nuur  | Username: saynab
+   36. Magaca: xaawo cusman aadan   | Username: xaawo
+   37. Magaca: xabiibo isaaq Ahmed  | Username: xabiibo
+   38. Magaca: xafso hussein mohamed  | Username: xafso
+   39. Magaca: xaliimo Ahmed mohamed  | Username: qamarey
+   40. Magaca: xuseen cusmaan mustaf  sagaar | Username: xuseen
+
+======================================================

@@ -4,25 +4,48 @@ import Expense from '../models/Expense.js';
 import Skill from '../models/Skill.js';
 import Class from '../models/Class.js';
 import SkillCategory from '../models/SkillCategory.js';
-import Fee from '../models/Fee.js';
+import StudentPayment from '../models/StudentPayment.js';
+import SalaryPayment from '../models/SalaryPayment.js';
 
 export const getDashboardStats = async (req, res) => {
     try {
-        const totalStudents = await Student.countDocuments({});
-        const totalTeachers = await Teacher.countDocuments({});
+        const { period } = req.query; // 'weekly', 'monthly', 'yearly', or 'all'
 
-        const teachers = await Teacher.find({});
-        const totalSalaries = teachers.reduce((acc, t) => acc + (t.salary || 0), 0);
+        let dateFilter = null;
+        if (period === 'weekly') {
+            const d = new Date(); d.setDate(d.getDate() - 7); dateFilter = { $gte: d };
+        } else if (period === 'monthly') {
+            const d = new Date(); d.setMonth(d.getMonth() - 1); dateFilter = { $gte: d };
+        } else if (period === 'yearly') {
+            const d = new Date(); d.setFullYear(d.getFullYear() - 1); dateFilter = { $gte: d };
+        }
 
-        const expenses = await Expense.find({});
-        const totalExpenses = expenses.reduce((acc, e) => acc + e.amount, 0);
+        const paymentQuery = dateFilter ? { paymentDate: dateFilter } : {};
+        const expenseQuery = dateFilter ? { date: dateFilter } : {};
+        const salaryQuery = dateFilter ? { paymentDate: dateFilter } : {};
+        const creationQuery = dateFilter ? { createdAt: dateFilter } : {}; // Used for general counting of users/objects
 
-        const fees = await Fee.find({ status: 'Paid' });
-        const totalIncome = fees.reduce((acc, f) => acc + f.amount, 0);
+        const totalStudents = await Student.countDocuments(creationQuery);
+        const totalTeachers = await Teacher.countDocuments(creationQuery);
 
-        const totalSkills = await Skill.countDocuments({});
-        const totalClasses = await Class.countDocuments({});
-        const totalSkillCategories = await SkillCategory.countDocuments({});
+        // Use actual salary payments for totalSalaries if they exist or if filtering by date, else fall back to theoretical for all.
+        const salaryPayments = await SalaryPayment.find(salaryQuery);
+        const totalSalaries = salaryPayments.length > 0 || dateFilter
+            ? salaryPayments.reduce((acc, p) => acc + (p.amount || 0), 0)
+            : (await Teacher.find({})).reduce((acc, t) => acc + (t.salary || 0), 0);
+
+        const expenses = await Expense.find(expenseQuery);
+        const totalExpenses = expenses.reduce((acc, e) => acc + (e.amount || 0), 0);
+
+        // Total Income = sum of all actual StudentPayment records
+        const studentPayments = await StudentPayment.find(paymentQuery);
+        const totalIncome = studentPayments.reduce((acc, p) => acc + (p.amount || 0), 0);
+
+        console.log(`[Dashboard] Period: ${period || 'all'}, Income: ${totalIncome}, Salaries: ${totalSalaries}, Expenses: ${totalExpenses}`);
+
+        const totalSkills = await Skill.countDocuments(creationQuery);
+        const totalClasses = await Class.countDocuments(creationQuery);
+        const totalSkillCategories = await SkillCategory.countDocuments(creationQuery);
 
         res.json({
             totalStudents,

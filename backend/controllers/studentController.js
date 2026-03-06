@@ -42,9 +42,28 @@ export const createStudent = async (req, res) => {
         console.log('[createStudent] User created:', user._id);
 
         console.log('[createStudent] Creating student record...');
+
+        // Find the last student to determine the next actual sequential number
+        const lastStudent = await Student.findOne().sort({ createdAt: -1 });
+        let nextNumber = 1;
+
+        if (lastStudent && lastStudent.enrollmentNo && lastStudent.enrollmentNo.startsWith('STU-')) {
+            const lastNumStr = lastStudent.enrollmentNo.replace('STU-', '');
+            const parsedNum = parseInt(lastNumStr, 10);
+            if (!isNaN(parsedNum)) {
+                nextNumber = parsedNum + 1;
+            }
+        } else {
+            // Fallback in case there are only old formats or no students
+            const studentCount = await Student.countDocuments();
+            if (studentCount > 0) nextNumber = studentCount + 1;
+        }
+
+        const autoEnrollmentNo = `STU-${nextNumber.toString().padStart(4, '0')}`; // E.g., STU-0001
+
         const student = await Student.create({
             user: user._id,
-            enrollmentNo: `EN-${Date.now().toString().slice(-4)}${Math.floor(Math.random() * 100)}`, // Auto generated
+            enrollmentNo: autoEnrollmentNo,
             classId,
             batchId,
             skillId,

@@ -99,6 +99,9 @@ export const getFees = async (req, res) => {
                 { path: 'classId', select: 'name' }
             ]
         }).sort({ createdAt: -1 });
+
+        fs.appendFileSync('results_debug.log', `[${new Date().toISOString()}] [getFees] Found ${fees.length} fees. First ID: ${fees[0]?._id}\n`);
+
         res.json(fees);
     } catch (error) { res.status(500).json({ message: error.message }); }
 };
@@ -482,8 +485,12 @@ export const getExams = async (req, res) => {
         if (req.user.role === 'Teacher') {
             const teacherData = await Teacher.findOne({ user: req.user._id });
             if (teacherData) {
+                const assignedSubjects = [...(teacherData.subjects || [])];
+                if (teacherData.subjectId && !assignedSubjects.map(s => s.toString()).includes(teacherData.subjectId.toString())) {
+                    assignedSubjects.push(teacherData.subjectId);
+                }
                 query.classId = { $in: teacherData.classIds || [] };
-                query.subjectId = { $in: teacherData.subjects || [] };
+                query.subjectId = { $in: assignedSubjects };
             } else {
                 return res.json([]);
             }
@@ -700,10 +707,19 @@ export const getResults = async (req, res) => {
         if (req.user.role === 'Teacher') {
             const teacherData = await Teacher.findOne({ user: req.user._id });
 
-            // REQUIRE subjectId for teachers
+            // REQUIRE subjectId for teachers and verify they teach it
             if (!req.query.subjectId || req.query.subjectId === '') {
                 log(`[getResults] Teacher requested results without subjectId filter - returning empty`);
-                return res.json([]);
+                return res.json({ results: [] });
+            }
+
+            const teacherSubjects = teacherData?.subjects || [];
+            if (teacherData?.subjectId) teacherSubjects.push(teacherData.subjectId);
+            const teacherSubjectIds = teacherSubjects.map(s => s.toString());
+
+            if (!teacherSubjectIds.includes(req.query.subjectId.toString())) {
+                log(`[getResults] Teacher ${req.user._id} attempted to access unauthorized subject ${req.query.subjectId}`);
+                return res.status(403).json({ message: 'Ma lihid ogolaansho inaad aragto maadadan.' });
             }
 
             if (teacherData && teacherData.classIds && teacherData.classIds.length > 0) {

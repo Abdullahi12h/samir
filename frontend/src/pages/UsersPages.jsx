@@ -124,6 +124,7 @@ const teacherTransformEditData = (item) => ({
 
 // --- Teachers Page Config ---
 const teacherColumns = [
+    { header: '#', render: (item, index) => <span className="font-bold text-slate-500">{index + 1}</span> },
     { header: 'Photo', render: (item) => item.photo ? <img src={`http://localhost:5001${item.photo}`} alt="Teacher" className="w-10 h-10 rounded-full object-cover border border-slate-200" /> : '-' },
     { header: 'Name', render: (item) => item.user?.name },
     {
@@ -192,10 +193,11 @@ const studentFilters = [
 ];
 
 const studentColumns = [
+    { header: '#', render: (item, index) => <span className="font-bold text-slate-500">{index + 1}</span> },
     { header: 'Photo', render: (item) => item.photo ? <img src={`http://localhost:5001${item.photo}`} alt="Profile" className="w-10 h-10 rounded-full object-cover border border-slate-200" /> : '-' },
     { header: 'Name', render: (item) => item.user?.name },
     { header: 'Phone', render: (item) => item.user?.phone || '-' },
-    { header: 'Enrollment No', accessor: 'enrollmentNo' },
+    { header: 'Student ID (Tiro)', accessor: 'enrollmentNo' },
     { header: 'Mother Name', accessor: 'motherName' },
     { header: 'Age', accessor: 'age' },
     { header: 'Username', render: (item) => item.user?.username },
@@ -256,6 +258,7 @@ export const StudentsPage = () => (
 );
 
 const graduateColumns = [
+    { header: '#', render: (item, index) => <span className="font-bold text-slate-500">{index + 1}</span> },
     { header: 'Photo', render: (item) => item.photo ? <img src={`http://localhost:5001${item.photo}`} alt="Profile" className="w-10 h-10 rounded-full object-cover border border-slate-200" /> : '-' },
     { header: 'Name', render: (item) => item.user?.name },
     { header: 'Phone', render: (item) => item.user?.phone || '-' },

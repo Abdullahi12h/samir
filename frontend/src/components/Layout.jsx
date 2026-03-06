@@ -1,4 +1,4 @@
-import { Outlet, Navigate } from 'react-router-dom';
+import { Outlet, Navigate, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import useAuthStore from '../store/useAuthStore';
 import { LogOut, User as UserIcon, Menu } from 'lucide-react';
@@ -14,12 +14,12 @@ const Layout = () => {
     }
 
     return (
-        <div className="flex h-screen bg-slate-50 overflow-hidden relative">
+        <div className="flex h-screen bg-slate-50 overflow-hidden relative print:h-auto print:bg-white print:overflow-visible">
             <div className="no-print">
                 <Sidebar role={user.role} isOpen={sidebarOpen} toggle={() => setSidebarOpen(!sidebarOpen)} />
             </div>
 
-            <div className="flex-1 flex flex-col overflow-hidden">
+            <div className="flex-1 flex flex-col overflow-hidden print:overflow-visible">
                 <header className="bg-white shadow-sm z-10 no-print">
                     <div className="mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                         <div className="flex items-center">
@@ -49,13 +49,18 @@ const Layout = () => {
                     </div>
                 </header>
 
-                <main className="flex-1 overflow-x-hidden overflow-y-auto bg-slate-50 p-6">
+                <main className="flex-1 overflow-x-hidden overflow-y-auto bg-slate-50 p-6 print:overflow-visible print:bg-white print:p-0">
                     <Outlet />
                 </main>
-                <footer className="bg-white border-t border-slate-100 py-1.5 px-6 text-center no-print">
-                    <p className="text-[9px] text-slate-400 tracking-wide">
-                        Developed by <span className="text-orange-500 font-bold">Abdullahi Abdinasir Hussein</span>
+                <footer className="bg-white border-t border-slate-100 py-2.5 px-6 text-center no-print flex flex-col items-center justify-center">
+                    <p className="text-[10px] text-slate-400 font-medium mb-1">
+                        Designed & Developed With ♥ By
                     </p>
+                    <Link to="/developers" className="text-[11px] font-bold text-slate-700 hover:text-blue-600 transition-colors flex items-center space-x-2">
+                        <span>Engr Abdullahi Abdinasir</span>
+                        <span className="text-slate-300">&amp;</span>
+                        <span>Engr Samir Badane</span>
+                    </Link>
                 </footer>
             </div>
         </div>

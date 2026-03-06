@@ -5,14 +5,13 @@ export const getSubjects = async (req, res) => {
         const reqClassId = req.query.classId;
         let query = reqClassId ? { classId: reqClassId } : {};
 
-        // If Teacher is logged in, restrict to subjects they teach
         if (req.user && req.user.role === 'Teacher') {
             const { default: Teacher } = await import('../models/Teacher.js');
             const teacher = await Teacher.findOne({ user: req.user._id });
             if (teacher) {
-                const assignedSubjects = teacher.subjects || [];
+                const assignedSubjects = (teacher.subjects || []).map(s => s.toString());
                 if (teacher.subjectId && !assignedSubjects.includes(teacher.subjectId.toString())) {
-                    assignedSubjects.push(teacher.subjectId);
+                    assignedSubjects.push(teacher.subjectId.toString());
                 }
                 query._id = { $in: assignedSubjects };
             }

@@ -40,37 +40,42 @@ export const ExpensesPage = () => (
 // --- Fees Page Config ---
 const feesColumns = [
     {
-        header: 'Student',
+        header: 'Magaca & ID-ga',
         render: (item) => (
             <div>
-                <div className="font-semibold text-slate-800">
-                    {item.studentId?.user?.name || (typeof item.studentId === 'string' ? item.studentId : (item.studentId?._id || 'Unknown'))}
+                <div className="font-bold text-slate-800">
+                    {item.studentId?.user?.name || 'Unknown'}
                 </div>
-                <div className="flex flex-wrap gap-2 mt-0.5">
-                    {item.studentId?.enrollmentNo && (
-                        <span className="text-[10px] text-slate-500 font-mono bg-slate-100 px-1 rounded">{item.studentId.enrollmentNo}</span>
-                    )}
-                    {item.studentId?.user?.phone && (
-                        <span className="text-[10px] text-blue-600 font-medium bg-blue-50 px-1 rounded">{item.studentId.user.phone}</span>
-                    )}
-                    {item.studentId?.classId?.name && (
-                        <span className="text-[10px] text-indigo-500 font-bold bg-indigo-50 px-1 rounded uppercase tracking-tighter">{item.studentId.classId.name}</span>
-                    )}
+                <div className="text-[10px] text-slate-500 font-mono font-bold mt-0.5">
+                    ID: {item.studentId?.enrollmentNo || '-'}
                 </div>
             </div>
         )
     },
-    { header: 'Course Fee', render: (item) => `$${item.studentId?.amount || '-'}` },
-    { header: 'Paid', render: (item) => <span className="text-green-600 font-bold">${item.studentId?.totalPaid || 0}</span> },
     {
-        header: 'Balance',
+        header: 'Fasalka (Class)',
+        render: (item) => <span className="text-xs font-bold text-slate-600">{item.studentId?.classId?.name || '-'}</span>
+    },
+    {
+        header: 'Xisaabta bixinta',
         render: (item) => {
-            const balance = (item.studentId?.amount || 0) - (item.studentId?.totalPaid || 0);
-            return <span className={`font-bold ${balance > 0 ? 'text-red-500' : 'text-slate-500'}`}>${balance}</span>;
+            const total = item.studentId?.amount || 0;
+            const paid = item.studentId?.totalPaid || 0;
+            const balance = total - paid;
+            return (
+                <div className="flex flex-col">
+                    <span className="text-[11px] text-emerald-600 font-bold tracking-tighter">
+                        Wuxuu Bixiyay: ${paid}
+                    </span>
+                    <span className={`font-black text-[11px] ${balance > 0 ? 'text-red-500' : 'text-slate-400'}`}>
+                        Wuxuu Harsan yahay: ${balance}
+                    </span>
+                </div>
+            );
         }
     },
     {
-        header: 'Status',
+        header: 'Xaaladda',
         render: (item) => (
             <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${item.status === 'Paid' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
                 {item.status || 'Pending'}
@@ -78,7 +83,7 @@ const feesColumns = [
         )
     },
     {
-        header: 'Period',
+        header: 'Bisha / Sanadka',
         render: (item) => {
             const m = monthsList.find(ml => ml.value === String(item.month))?.label || '';
             return <span className="text-[11px] font-bold text-slate-500 uppercase">{m} {item.year}</span>;
@@ -87,11 +92,45 @@ const feesColumns = [
 ];
 
 const feesFields = [
-    { name: 'studentId', label: 'Ardayga', type: 'select', required: true, optionsEndpoint: '/users/students', optionsLabel: 'user.name', optionsValue: '_id' },
-    { name: 'month', label: 'Bisha', type: 'select', options: monthsList, required: true },
-    { name: 'year', label: 'Sannadka', type: 'number', required: true },
-    { name: 'amount', label: 'Cash (Fee Amount)', type: 'number', required: true },
-    { name: 'status', label: 'Status', type: 'select', options: [{ label: 'Paid', value: 'Paid' }, { label: 'Pending', value: 'Pending' }] }
+    {
+        name: 'studentId',
+        label: 'Ardayga',
+        type: 'select',
+        required: true,
+        optionsEndpoint: '/users/students',
+        optionsLabel: 'user.name',
+        optionsValue: '_id',
+        autoFill: [{ target: 'amount', formula: 'balance' }]
+    },
+    {
+        name: 'month',
+        label: 'Bisha',
+        type: 'select',
+        options: monthsList,
+        required: true,
+        default: (new Date().getMonth() + 1).toString()
+    },
+    {
+        name: 'year',
+        label: 'Sannadka',
+        type: 'select',
+        options: [
+            { label: '2024', value: '2024' },
+            { label: '2025', value: '2025' },
+            { label: '2026', value: '2026' },
+            { label: '2027', value: '2027' }
+        ],
+        required: true,
+        default: new Date().getFullYear().toString()
+    },
+    { name: 'amount', label: 'Haraaga (Payment Amount)', type: 'number', required: true },
+    {
+        name: 'status',
+        label: 'Status',
+        type: 'select',
+        options: [{ label: 'Paid', value: 'Paid' }, { label: 'Pending', value: 'Pending' }],
+        default: 'Pending'
+    }
 ];
 
 const feesRoleAccess = ['Admin', 'Student'];
@@ -395,8 +434,8 @@ const QuickPayPanel = ({ feeItem, onClose, onPaid }) => {
 // ─── Admin Fees View ──────────────────────────────────────────
 const AdminFeesView = () => {
     const [selectedClass, setSelectedClass] = useState('');
-    const [selectedMonth, setSelectedMonth] = useState((new Date().getMonth() + 1).toString());
-    const [selectedYear, setSelectedYear] = useState(new Date().getFullYear().toString());
+    const [selectedMonth, setSelectedMonth] = useState('');
+    const [selectedYear, setSelectedYear] = useState('');
     const [selectedStatus, setSelectedStatus] = useState('');
     const [classes, setClasses] = useState([]);
     const [payFeeItem, setPayFeeItem] = useState(null); // the fee row being paid
@@ -415,8 +454,8 @@ const AdminFeesView = () => {
 
     const handleClearFilters = () => {
         setSelectedClass('');
-        setSelectedMonth((new Date().getMonth() + 1).toString());
-        setSelectedYear(new Date().getFullYear().toString());
+        setSelectedMonth('');
+        setSelectedYear('');
         setSelectedStatus('');
     };
 
@@ -433,6 +472,9 @@ const AdminFeesView = () => {
 
     return (
         <div className="space-y-6">
+            <div className="text-[10px] text-blue-500 font-bold bg-blue-50 p-2 rounded-lg border border-blue-100">
+                SYSTEM DEBUG: {endpoint}
+            </div>
             {/* Filters */}
             <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-wrap gap-4 items-end no-print">
                 <div className="flex flex-col flex-1 min-w-[150px]">
@@ -453,6 +495,7 @@ const AdminFeesView = () => {
                         value={selectedMonth}
                         onChange={(e) => setSelectedMonth(e.target.value)}
                     >
+                        <option value="">All Months</option>
                         {monthsList.map(m => <option key={m.value} value={m.value}>{m.label}</option>)}
                     </select>
                 </div>
@@ -463,6 +506,7 @@ const AdminFeesView = () => {
                         value={selectedYear}
                         onChange={(e) => setSelectedYear(e.target.value)}
                     >
+                        <option value="">All Years</option>
                         {[2024, 2025, 2026, 2027].map(y => <option key={y} value={y}>{y}</option>)}
                     </select>
                 </div>
@@ -488,7 +532,7 @@ const AdminFeesView = () => {
 
             <CrudPage
                 key={refreshKey}
-                title="Fee Management"
+                title="Fee Management - SHAASHADDA CUSBOONEYSII"
                 endpoint={endpoint}
                 roleAccess={feesRoleAccess}
                 writeAccessRoles={feesWriteAccess}
