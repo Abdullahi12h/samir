@@ -2540,3 +2540,42 @@
 [2026-03-06T21:09:18.284Z] [getFees] Query: {}
 [2026-03-06T21:09:18.289Z] [getFees] DB Query: {}
 [2026-03-06T21:09:18.516Z] [getFees] Found 0 fees. First ID: undefined
+[2026-03-07T08:04:45.515Z] [getFees] Query: {}
+[2026-03-07T08:04:45.519Z] [getFees] DB Query: {}
+[2026-03-07T08:04:46.485Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:05:43.700Z] [getFees] Query: {}
+[2026-03-07T08:05:43.701Z] [getFees] DB Query: {}
+[2026-03-07T08:05:44.521Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:05:57.968Z] [getFees] Query: {}
+[2026-03-07T08:05:57.981Z] [getFees] DB Query: {}
+[2026-03-07T08:05:58.774Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:06:22.613Z] [getFees] Query: {}
+[2026-03-07T08:06:22.614Z] [getFees] DB Query: {}
+[2026-03-07T08:06:23.503Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:06:40.229Z] [getFees] Query: {"studentId":"69aa8c6cd9c7b7571c7ecc6a"}
+[2026-03-07T08:06:40.230Z] [getFees] DB Query: {}
+[2026-03-07T08:06:41.252Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:06:47.295Z] [getFees] Query: {"studentId":"69aa8c6cd9c7b7571c7ecc6a"}
+[2026-03-07T08:06:47.296Z] [getFees] DB Query: {}
+[2026-03-07T08:06:48.732Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:06:56.667Z] [getFees] Query: {}
+[2026-03-07T08:06:56.668Z] [getFees] DB Query: {}
+[2026-03-07T08:06:57.597Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:07:28.356Z] [getFees] Query: {}
+[2026-03-07T08:07:28.357Z] [getFees] DB Query: {}
+[2026-03-07T08:07:29.886Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:07:39.618Z] [getFees] Query: {"classId":"69aa676dd9c7b7571c7ead0b"}
+[2026-03-07T08:07:39.620Z] [getFees] DB Query: {}
+[2026-03-07T08:07:40.903Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
+[2026-03-07T08:07:45.454Z] [getFees] Query: {"classId":"69aa6177d9c7b7571c7ea0d8"}
+[2026-03-07T08:07:45.456Z] [getFees] DB Query: {}
+[2026-03-07T08:07:45.968Z] [getFees] Found 0 fees. First ID: undefined
+[2026-03-07T08:07:47.914Z] [getFees] Query: {"classId":"69aa6177d9c7b7571c7ea0d8","month":"3"}
+[2026-03-07T08:07:47.915Z] [getFees] DB Query: {"month":3}
+[2026-03-07T08:07:48.449Z] [getFees] Found 0 fees. First ID: undefined
+[2026-03-07T08:07:51.906Z] [getFees] Query: {"classId":"69aa6177d9c7b7571c7ea0d8","month":"3","status":"Paid"}
+[2026-03-07T08:07:51.907Z] [getFees] DB Query: {"month":3,"status":"Paid"}
+[2026-03-07T08:07:52.634Z] [getFees] Found 0 fees. First ID: undefined
+[2026-03-07T08:08:26.723Z] [getFees] Query: {}
+[2026-03-07T08:08:26.724Z] [getFees] DB Query: {}
+[2026-03-07T08:08:27.545Z] [getFees] Found 1 fees. First ID: 69abda99d9c7b7571c7ef3f1
