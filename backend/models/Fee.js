@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const feeSchema = new mongoose.Schema({
     studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'Student', required: true },
     amount: { type: Number, required: true },
+    paidAmount: { type: Number, default: 0 },
     status: { type: String, enum: ['Paid', 'Pending'], default: 'Pending' },
     month: { type: Number, required: true },
     year: { type: Number, required: true },

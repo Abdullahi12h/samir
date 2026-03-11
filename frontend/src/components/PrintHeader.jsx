@@ -16,7 +16,7 @@ const PrintHeader = ({ title, subtitle }) => {
                 </div>
             </div>
             {title && (
-                <div className="mt-[-30px] mb-6 text-center">
+                <div className="mt-4 mb-6 text-center">
                     <h3 className="text-3xl font-black text-slate-950 uppercase underline decoration-4 underline-offset-8 m-0">{title}</h3>
                     {subtitle && <p className="text-sm font-bold text-slate-700 mt-4 bg-slate-50 inline-block px-4 py-1 rounded-full border border-slate-200">{subtitle}</p>}
                 </div>

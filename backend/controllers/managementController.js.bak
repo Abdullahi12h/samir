@@ -41,115 +41,74 @@ export const deleteExpense = async (req, res) => {
 };
 
 // Fees
-// Fees
 export const getFees = async (req, res) => {
     try {
-        const { classId, month, year, status, studentId } = req.query;
-        console.log(`[getFees] Request Query:`, req.query);
-        
-        // Robust cleanup of inputs
-        const cleanClassId = (!classId || classId === 'null' || classId === 'undefined') ? null : classId;
-        const cleanStudentId = (!studentId || studentId === 'null' || studentId === 'undefined') ? null : studentId;
-        
-        // If studentId is provided, we want THEIR records (usually all time), 
-        // otherwise we want specific month/year for the list view.
-        const m = month && month !== 'null' ? Number(month) : (cleanStudentId ? null : (new Date().getMonth() + 1));
-        const y = year && year !== 'null' ? Number(year) : (cleanStudentId ? null : new Date().getFullYear());
+        let query = {};
+        const { classId, month, year, status } = req.query;
 
-        // 1. Identify Students for potential Sync (Proactive creation for current month)
-        if (m && y) {
-            let studentSyncQuery = { status: 'Active' };
-            if (cleanStudentId) studentSyncQuery._id = cleanStudentId;
-            else if (cleanClassId) studentSyncQuery.classId = cleanClassId;
-            
-            if (req.user.role === 'Student') {
-                const s = await Student.findOne({ user: req.user._id });
-                if (s) studentSyncQuery = { _id: s._id };
-            } else if (req.user.role === 'Teacher') {
-                const t = await Teacher.findOne({ user: req.user._id });
-                if (t?.classIds?.length > 0) {
-                    if (cleanClassId) {
-                        if (!t.classIds.includes(cleanClassId)) return res.status(403).json({ message: 'No access' });
-                    } else {
-                        studentSyncQuery.classId = { $in: t.classIds };
-                    }
-                }
-            }
+        try {
+            fs.appendFileSync('results_debug.log', `[${new Date().toISOString()}] [getFees] Query: ${JSON.stringify(req.query)}\n`);
+        } catch (e) { }
 
-            const targetStudents = await Student.find(studentSyncQuery);
-            const existingFees = await Fee.find({
-                studentId: { $in: targetStudents.map(s => s._id) },
-                month: m,
-                year: y
-            });
-
-            const studentFeeMap = existingFees.reduce((acc, f) => {
-                acc[f.studentId.toString()] = f;
-                return acc;
-            }, {});
-
-            for (const s of targetStudents) {
-                const fee = studentFeeMap[s._id.toString()];
-                if (!fee) {
-                    await Fee.create({
-                        studentId: s._id,
-                        amount: s.amount || 0,
-                        paidAmount: 0,
-                        status: 'Pending',
-                        month: m,
-                        year: y
-                    });
-                } else if (fee.status === 'Pending' && fee.amount !== s.amount) {
-                    fee.amount = s.amount || 0;
-                    await fee.save();
-                }
-            }
-        }
-
-        // 2. Final Return Query Filter Construction
-        let finalQuery = {};
-        if (m) finalQuery.month = m;
-        if (y) finalQuery.year = y;
-        
-        if (cleanStudentId) {
-            finalQuery.studentId = cleanStudentId;
-        } else {
-            if (cleanClassId) {
-                const studentsInClass = await Student.find({ classId: cleanClassId }).select('_id');
-                finalQuery.studentId = { $in: studentsInClass.map(s => s._id) };
-            } else if (req.user.role === 'Teacher') {
-                 const t = await Teacher.findOne({ user: req.user._id });
-                 const studentsInMyClasses = await Student.find({ classId: { $in: t?.classIds || [] } }).select('_id');
-                 finalQuery.studentId = { $in: studentsInMyClasses.map(s => s._id) };
-            }
-            // If Admin results without studentId, it will filter by m/y if present, else empty (all fees).
-        }
-
-        if (status && status !== 'null' && status !== '') {
-            finalQuery.status = status;
-        }
-
+        // Base Student Role Filter
         if (req.user.role === 'Student') {
-            const s = await Student.findOne({ user: req.user._id });
-            if (s) finalQuery.studentId = s._id;
+            const student = await Student.findOne({ user: req.user._id });
+            if (!student) return res.json([]);
+            query.studentId = student._id;
         }
 
-        console.log(`[getFees] Final Mongo Query:`, finalQuery);
-        const fees = await Fee.find(finalQuery).populate({
+        // Strict Filter by Month/Year (Educational Billing Style)
+        if (month && month !== 'null' && month !== '') {
+            query.month = Number(month);
+        }
+        if (year && year !== 'null' && year !== '') {
+            query.year = Number(year);
+        }
+
+        // Filter by Status (Paid/Pending)
+        if (status && status !== 'null' && status !== '') {
+            query.status = status;
+        }
+
+        try {
+            fs.appendFileSync('results_debug.log', `[${new Date().toISOString()}] [getFees] DB Query: ${JSON.stringify(query)}\n`);
+        } catch (e) { }
+
+        // Filter by Class (Only if Admin/Teacher)
+        if (req.user.role === 'Teacher') {
+            const teacherRec = await Teacher.findOne({ user: req.user._id });
+            const teacherClassIds = teacherRec?.classIds || [];
+
+            if (classId && classId !== 'null') {
+                if (!teacherClassIds.map(id => id.toString()).includes(classId)) {
+                    return res.status(403).json({ message: 'You are not assigned to this class.' });
+                }
+                const studentsInClass = await Student.find({ classId }).select('_id');
+                query.studentId = { $in: studentsInClass.map(s => s._id) };
+            } else {
+                // Default to all assigned classes
+                const studentsInAssignedClasses = await Student.find({ classId: { $in: teacherClassIds } }).select('_id');
+                query.studentId = { $in: studentsInAssignedClasses.map(s => s._id) };
+            }
+        } else if (classId && classId !== 'null') {
+            const studentsInClass = await Student.find({ classId }).select('_id');
+            const studentIds = studentsInClass.map(s => s._id);
+            query.studentId = { $in: studentIds };
+        }
+
+        const fees = await Fee.find(query).populate({
             path: 'studentId',
             populate: [
-                { path: 'user', select: 'name phone email' },
+                { path: 'user', select: 'name phone' },
                 { path: 'classId', select: 'name' }
             ]
         }).sort({ createdAt: -1 });
 
-        res.json(fees);
-    } catch (error) {
-        console.error(`[getFees] ERROR:`, error);
-        res.status(500).json({ message: error.message });
-    }
-};
+        fs.appendFileSync('results_debug.log', `[${new Date().toISOString()}] [getFees] Found ${fees.length} fees. First ID: ${fees[0]?._id}\n`);
 
+        res.json(fees);
+    } catch (error) { res.status(500).json({ message: error.message }); }
+};
 export const createFee = async (req, res) => {
     try {
         const fee = await Fee.create(req.body);
@@ -283,7 +242,6 @@ export const getStudentPayments = async (req, res) => {
 export const createStudentPayment = async (req, res) => {
     try {
         const { studentId, amount, paymentDate, description, feeId, debtId } = req.body;
-        let remainingAmount = Number(amount);
         const receiptNumber = `RCPT-${Date.now().toString().slice(-6)}${Math.floor(Math.random() * 100)}`;
 
         const payment = await StudentPayment.create({
@@ -301,45 +259,24 @@ export const createStudentPayment = async (req, res) => {
             await student.save();
         }
 
-        // --- Precise Fee/Debt Distribution ---
-        
-        // Helper to apply payment to a record (Fee or Debt)
-        const applyPayment = async (record) => {
-            if (remainingAmount <= 0) return;
-            const owed = record.amount - (record.paidAmount || 0);
-            if (owed <= 0) return;
-
-            const toPay = Math.min(remainingAmount, owed);
-            record.paidAmount = (record.paidAmount || 0) + toPay;
-            if (record.paidAmount >= record.amount) record.status = 'Paid';
-            await record.save();
-            remainingAmount -= toPay;
-        };
-
-        // 1. Priority: Specific Fee/Debt if ID provided
+        // --- Fee/Debt Status Automation ---
         if (feeId) {
-            const f = await Fee.findById(feeId);
-            if (f) await applyPayment(f);
+            await Fee.findByIdAndUpdate(feeId, { status: 'Paid' });
         } else if (debtId) {
-            const d = await Debt.findById(debtId);
-            if (d) await applyPayment(d);
-        }
-
-        // 2. Priority: Oldest Pending Debt
-        if (remainingAmount > 0) {
-            const pendingDebts = await Debt.find({ studentId, status: 'Pending' }).sort({ createdAt: 1 });
-            for (const d of pendingDebts) {
-                if (remainingAmount <= 0) break;
-                await applyPayment(d);
-            }
-        }
-
-        // 3. Priority: Oldest Pending Fees
-        if (remainingAmount > 0) {
-            const pendingFees = await Fee.find({ studentId, status: 'Pending' }).sort({ year: 1, month: 1 });
-            for (const f of pendingFees) {
-                if (remainingAmount <= 0) break;
-                await applyPayment(f);
+            await Debt.findByIdAndUpdate(debtId, { status: 'Paid' });
+        } else {
+            // Priority 1: Oldest Pending Debt (e.g. Books)
+            const oldestPendingDebt = await Debt.findOne({ studentId, status: 'Pending' }).sort({ createdAt: 1 });
+            if (oldestPendingDebt) {
+                oldestPendingDebt.status = 'Paid';
+                await oldestPendingDebt.save();
+            } else {
+                // Priority 2: Oldest Pending Fee (Monthly)
+                const oldestPendingFee = await Fee.findOne({ studentId, status: 'Pending' }).sort({ year: 1, month: 1 });
+                if (oldestPendingFee) {
+                    oldestPendingFee.status = 'Paid';
+                    await oldestPendingFee.save();
+                }
             }
         }
 
@@ -356,7 +293,6 @@ export const deleteStudentPayment = async (req, res) => {
         if (!payment) return res.status(404).json({ message: 'Payment not found' });
 
         const { studentId, amount } = payment;
-        let amountToRevert = amount;
 
         // 1. Decrease Student totalPaid
         const student = await Student.findById(studentId);
@@ -365,27 +301,22 @@ export const deleteStudentPayment = async (req, res) => {
             await student.save();
         }
 
-        // 2. Revert paidAmount on records (LIFO - revert most recently paid items)
-        // Find all records that have a paidAmount > 0 for this student
-        const fees = await Fee.find({ studentId, paidAmount: { $gt: 0 } }).sort({ updatedAt: -1 });
-        const debts = await Debt.find({ studentId, paidAmount: { $gt: 0 } }).sort({ updatedAt: -1 });
-        
-        const allRecords = [...fees, ...debts].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+        // 2. Revert Status logic: Find the latest 'Paid' item and make it 'Pending'
+        // We try to find a recently paid Fee or Debt for this student.
+        // Usually, the system marks the oldest one as Paid, so for deletion, we revert one.
+        const latestPaidFee = await Fee.findOne({ studentId, status: 'Paid' }).sort({ updatedAt: -1 });
+        const latestPaidDebt = await Debt.findOne({ studentId, status: 'Paid' }).sort({ updatedAt: -1 });
 
-        for (const record of allRecords) {
-            if (amountToRevert <= 0) break;
-            const canRevert = record.paidAmount || 0;
-            const rev = Math.min(amountToRevert, canRevert);
-            
-            record.paidAmount -= rev;
-            amountToRevert -= rev;
-            // Always set back to Pending if not fully paid
-            if (record.paidAmount < record.amount) record.status = 'Pending';
-            await record.save();
+        if (latestPaidFee && (!latestPaidDebt || latestPaidFee.updatedAt > latestPaidDebt.updatedAt)) {
+            latestPaidFee.status = 'Pending';
+            await latestPaidFee.save();
+        } else if (latestPaidDebt) {
+            latestPaidDebt.status = 'Pending';
+            await latestPaidDebt.save();
         }
 
         await StudentPayment.findByIdAndDelete(req.params.id);
-        res.json({ message: 'Payment deleted and fee balances reverted' });
+        res.json({ message: 'Payment deleted, balance decreased, and fee status reverted' });
     } catch (error) {
         console.error(`[deleteStudentPayment] ERROR:`, error);
         res.status(500).json({ message: error.message });
@@ -970,93 +901,37 @@ export const getResults = async (req, res) => {
         }
 
 
-        log(`[getResults] Calculating ranks for ${filteredResults.length} filtered results`);
+        log(`[getResults] Returning ${filteredResults.length} results`);
 
-        // Group filtered results by (classId, skillId) to minimize DB queries
-        const pairKeys = new Set();
-        filteredResults.forEach(r => {
-            const sid = (r.skillId?._id || r.skillId || r.examId?.skillId?._id || r.examId?.skillId)?.toString();
-            const cid = (r.classId?._id || r.classId || r.studentId?.classId?._id || r.studentId?.classId)?.toString();
-            if (sid && cid) {
-                pairKeys.add(`${cid}|${sid}`);
-            }
-        });
+        // Final Filter: Hide results for CLOSED exams from students
+        if (req.user.role === 'Student') {
+            const finalResults = [];
+            for (const r of filteredResults) {
+                // Determine IDs safely, accounting for legacy examId structure
+                const sid = r.skillId?._id || r.skillId || r.examId?.skillId?._id || r.examId?.skillId;
+                const cid = r.classId?._id || r.classId || r.studentId?.classId;
+                const subid = r.subjectId?._id || r.subjectId || r.examId?.subjectId?._id || r.examId?.subjectId;
 
-        const rankMap = {}; // "cid|sid" -> { studentId: rank }
-        const countMap = {}; // "cid|sid" -> totalStudents
-
-        for (const keyString of pairKeys) {
-            const [cid, sid] = keyString.split('|');
-            log(`[getResults] Group Ranking for: class=${cid}, skill=${sid}`);
-            
-            // Fetch all results for this class and skill to compute global ranks
-            const allResultsInGroup = await Result.find({ classId: cid, skillId: sid });
-            
-            const studentTotals = {};
-            allResultsInGroup.forEach(res => {
-                const sId = res.studentId ? res.studentId.toString() : null;
-                if (sId) {
-                    studentTotals[sId] = (studentTotals[sId] || 0) + (res.total || res.marksObtained || 0);
-                }
-            });
-            
-            const sortedByTotal = Object.entries(studentTotals).sort((a, b) => b[1] - a[1]);
-            const ranks = {};
-            sortedByTotal.forEach(([sId, total], index) => {
-                ranks[sId] = index + 1;
-            });
-
-            // Get total students in this class for context
-            const classStudentCount = await Student.countDocuments({ classId: cid });
-            
-            rankMap[keyString] = ranks;
-            countMap[keyString] = classStudentCount || sortedByTotal.length;
-            log(`[getResults] Ranked ${sortedByTotal.length} students. Top score: ${sortedByTotal[0]?.[1]}`);
-        }
-
-        // Map computed ranks back to the results being returned
-        const finalResultsWithRank = [];
-        for (let r of filteredResults) {
-            const sid = (r.skillId?._id || r.skillId || r.examId?.skillId?._id || r.examId?.skillId)?.toString();
-            const cid = (r.classId?._id || r.classId || r.studentId?.classId?._id || r.studentId?.classId)?.toString();
-            const studentId = (r.studentId?._id || r.studentId)?.toString();
-
-            const obj = r.toObject ? r.toObject() : r;
-            const key = `${cid}|${sid}`;
-            
-            if (rankMap[key] && rankMap[key][studentId]) {
-                obj.rank = rankMap[key][studentId];
-                obj.totalInClass = countMap[key];
-            } else {
-                obj.rank = '-';
-                obj.totalInClass = '-';
-                log(`[getResults] Rank not found student=${studentId} key=${key}`);
-            }
-
-            // Student specific visibility filter (already in filteredResults but 
-            // verifying again for safety and handling populated objects)
-            if (req.user.role === 'Student') {
-                const sidActual = r.skillId?._id || r.skillId || r.examId?.skillId?._id || r.examId?.skillId;
-                const cidActual = r.classId?._id || r.classId || r.studentId?.classId;
-                const subidActual = r.subjectId?._id || r.subjectId || r.examId?.subjectId?._id || r.examId?.subjectId;
-
+                // Check for ANY closed exam matching this result's context
                 const examCheck = await Exam.findOne({
-                    skillId: sidActual,
-                    classId: cidActual,
-                    subjectId: subidActual,
+                    skillId: sid,
+                    classId: cid,
+                    subjectId: subid,
                     status: 'Closed'
                 });
 
-                if (examCheck) continue; 
+                if (examCheck) continue; // Hide if a matching closed exam exist
+
+                // Also check if the specific linked exam or the result itself is closed/locked
                 if (r.examId && r.examId.status === 'Closed') continue;
                 if (r.isLocked === true) continue;
-            }
 
-            finalResultsWithRank.push(obj);
+                finalResults.push(r);
+            }
+            return res.json({ results: finalResults });
         }
 
-        log(`[getResults] Returning ${finalResultsWithRank.length} results with ranks`);
-        res.json({ results: finalResultsWithRank });
+        res.json({ results: filteredResults });
     } catch (error) {
         console.error('[getResults] ERROR:', error);
         res.status(500).json({ message: error.message });

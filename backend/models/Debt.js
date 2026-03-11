@@ -14,6 +14,10 @@ const debtSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    paidAmount: {
+        type: Number,
+        default: 0
+    },
     status: {
         type: String,
         enum: ['Pending', 'Paid'],

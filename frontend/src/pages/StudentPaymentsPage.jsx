@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { CreditCard, History, Search, Printer, Trash2 } from 'lucide-react';
 import api from '../utils/api';
 
 const StudentPaymentsPage = () => {
+    const location = useLocation();
+    const urlStudentId = new URLSearchParams(location.search).get('studentId');
     const [students, setStudents] = useState([]);
     const [payments, setPayments] = useState([]);
     const [classes, setClasses] = useState([]);
@@ -14,13 +17,29 @@ const StudentPaymentsPage = () => {
     const [description, setDescription] = useState('');
     const [selectedStudentFinances, setSelectedStudentFinances] = useState({ fees: [], debts: [] });
     const [loading, setLoading] = useState(false);
+    const [editPayment, setEditPayment] = useState(null);
+    const [editAmount, setEditAmount] = useState('');
+    const [editDescription, setEditDescription] = useState('');
+    const [editDate, setEditDate] = useState('');
 
     useEffect(() => {
         Promise.all([
             api.get('/core/classes').then(res => setClasses(res.data)),
-            api.get('/users/students?status=Active').then(res => setStudents(res.data))
+            api.get('/users/students?status=Active').then(res => {
+                const data = res.data;
+                setStudents(data);
+                // Auto-select student from URL param
+                if (urlStudentId) {
+                    const found = data.find(s => s._id === urlStudentId);
+                    if (found) {
+                        setSelectedStudentId(found._id);
+                        const classId = found.classId?._id || found.classId || '';
+                        if (classId) setSelectedClassId(classId);
+                    }
+                }
+            })
         ]).catch(console.error);
-    }, []);
+    }, [urlStudentId]);
 
     useEffect(() => {
         const fetchStudentFinances = async () => {
@@ -64,10 +83,16 @@ const StudentPaymentsPage = () => {
 
     const selectedStudent = students.find(s => s._id === selectedStudentId);
 
-    // Simplified balance calculation based on registration amount
-    const totalDebtsOwed = selectedStudentFinances.debts.reduce((sum, d) => sum + (d.amount || 0), 0);
-    const totalEverOwed = (selectedStudent?.amount || 0) + totalDebtsOwed;
-    const totalPaid = selectedStudent?.totalPaid || 0;
+    // Accurate balance calculation based on records
+    const totalFeesOwed = selectedStudentFinances.fees.reduce((sum, f) => sum + (Number(f.amount) || 0), 0);
+    const totalDebtsOwed = selectedStudentFinances.debts.reduce((sum, d) => sum + (Number(d.amount) || 0), 0);
+    
+    // Total Ever Owed = sum of all historical fees + any current debts. 
+    // If no fees records exist yet (new student), assume baseline monthly rate.
+    const baseAmount = Number(selectedStudent?.amount) || 0;
+    const totalEverOwed = Math.max(totalFeesOwed, baseAmount) + totalDebtsOwed;
+    
+    const totalPaid = Number(selectedStudent?.totalPaid) || 0;
     const remainingBalance = totalEverOwed - totalPaid;
 
     // Auto-fill amount when totals are calculated
@@ -141,6 +166,37 @@ const StudentPaymentsPage = () => {
         } catch (error) {
             console.error('Delete error:', error);
             alert(error.response?.data?.message || error.message || 'Error deleting payment');
+        }
+    };
+
+    const handleEditPayment = (payment) => {
+        setEditPayment(payment);
+        setEditAmount(payment.amount.toString());
+        setEditDescription(payment.description || '');
+        setEditDate(new Date(payment.paymentDate).toISOString().split('T')[0]);
+    };
+
+    const submitEdit = async (e) => {
+        e.preventDefault();
+        if (!editAmount || editAmount <= 0) return alert('Enter a valid amount.');
+        setLoading(true);
+        try {
+            await api.put(`/management/student-payments/${editPayment._id}`, {
+                amount: Number(editAmount),
+                description: editDescription.trim(),
+                paymentDate: editDate
+            });
+            setEditPayment(null);
+            fetchPayments();
+            if (selectedStudentId) {
+                const studentsRes = await api.get('/users/students?status=Active');
+                setStudents(studentsRes.data);
+            }
+            alert('Payment updated successfully');
+        } catch (error) {
+            alert(error.response?.data?.message || 'Error updating payment');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -291,7 +347,7 @@ const StudentPaymentsPage = () => {
                                     </div>
                                     <div className="flex justify-between items-center text-sm border-t border-slate-50 pt-3 mt-1">
                                         <span className="text-slate-700 font-black uppercase tracking-tight text-[11px]">
-                                            {remainingBalance > 0 ? 'Remaining Debt' : 'Advance / Credit'}
+                                            {remainingBalance > 0 ? 'Remaining Debt' : 'Balances'}
                                         </span>
                                         <span className={`font-black text-lg px-3 py-1 rounded-xl shadow-sm border ${remainingBalance > 0 ? 'text-red-600 bg-red-50 border-red-100' : 'text-emerald-700 bg-emerald-50 border-emerald-100'}`}>
                                             ${Math.abs(remainingBalance)}
@@ -453,6 +509,13 @@ const StudentPaymentsPage = () => {
                                                     <Printer className="h-4 w-4" />
                                                 </button>
                                                 <button
+                                                    onClick={() => handleEditPayment(payment)}
+                                                    className="p-2 text-amber-600 hover:bg-amber-50 rounded-lg transition-colors border border-amber-100 bg-white shadow-sm"
+                                                    title="Edit Payment"
+                                                >
+                                                    <Search className="h-4 w-4" />
+                                                </button>
+                                                <button
                                                     onClick={() => {
                                                         const pId = payment._id || payment.id;
                                                         if (!pId) return alert('Error: Payment ID missing!');
@@ -472,6 +535,35 @@ const StudentPaymentsPage = () => {
                     </div>
                 </div>
             </div>
+            {/* Edit Modal */}
+            {editPayment && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
+                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+                        <div className="bg-amber-600 px-6 py-4 flex items-center justify-between text-white">
+                            <h2 className="font-bold">Edit Payment</h2>
+                            <button onClick={() => setEditPayment(null)} className="hover:bg-white/10 p-1 rounded-lg"><Trash2 className="h-5 w-5 rotate-45" /></button>
+                        </div>
+                        <form onSubmit={submitEdit} className="p-6 space-y-4">
+                            <div>
+                                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Amount ($)</label>
+                                <input type="number" value={editAmount} onChange={e => setEditAmount(e.target.value)} className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none" />
+                            </div>
+                            <div>
+                                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Date</label>
+                                <input type="date" value={editDate} onChange={e => setEditDate(e.target.value)} className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none" />
+                            </div>
+                            <div>
+                                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Description</label>
+                                <input type="text" value={editDescription} onChange={e => setEditDescription(e.target.value)} className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none" />
+                            </div>
+                            <div className="flex gap-3 pt-2">
+                                <button type="button" onClick={() => setEditPayment(null)} className="flex-1 py-2 border rounded-xl hover:bg-slate-50 font-semibold">Cancel</button>
+                                <button type="submit" disabled={loading} className="flex-1 py-2 bg-amber-600 text-white rounded-xl font-bold hover:bg-amber-700">{loading ? 'Updating...' : 'Save Changes'}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

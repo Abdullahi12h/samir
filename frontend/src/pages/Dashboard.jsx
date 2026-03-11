@@ -4,7 +4,7 @@ import api from '../utils/api';
 import {
     Users, UserSquare, Wallet,
     TrendingDown, TrendingUp, BookOpen,
-    Building, Layers
+    Building, Layers, AlertCircle
 } from 'lucide-react';
 import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
@@ -43,14 +43,17 @@ const Dashboard = () => {
         { title: `${periodLabel} Classes`, value: stats?.totalClasses || 0, icon: Building, color: 'bg-emerald-500' },
         { title: `${periodLabel} Skills`, value: stats?.totalSkills || 0, icon: BookOpen, color: 'bg-amber-500' },
         { title: `${periodLabel} Income`, value: `$${stats?.totalIncome || 0}`, icon: TrendingUp, color: 'bg-green-600' },
+        { title: `Lacagta la Filayo (Expected)`, value: `$${stats?.totalExpectedAmount || 0}`, icon: Layers, color: 'bg-indigo-600' },
+        { title: `${periodLabel} Exam Fees`, value: `$${stats?.totalExamFees || 0}`, icon: TrendingUp, color: 'bg-emerald-600' },
         { title: `${periodLabel} Salaries`, value: `$${stats?.totalSalaries || 0}`, icon: Wallet, color: 'bg-rose-500' },
         { title: `${periodLabel} Expenses`, value: `$${stats?.totalExpenses || 0}`, icon: TrendingDown, color: 'bg-red-500' },
     ];
 
     const chartData = [
-        { name: 'Income', amount: stats?.totalIncome || 0 },
-        { name: 'Salaries', amount: stats?.totalSalaries || 0 },
-        { name: 'Expenses', amount: stats?.totalExpenses || 0 },
+        { name: 'Income', amount: Number(stats?.totalIncome) || 0 },
+        { name: 'Exam Fees', amount: Number(stats?.totalExamFees) || 0 },
+        { name: 'Salaries', amount: Number(stats?.totalSalaries) || 0 },
+        { name: 'Expenses', amount: Number(stats?.totalExpenses) || 0 },
     ];
 
     return (

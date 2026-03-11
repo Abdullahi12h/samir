@@ -77,10 +77,17 @@ export const createStudent = async (req, res) => {
         });
         console.log('[createStudent] Student created:', student._id);
 
-        // Let's also create a Fee record automatically for the student
+        // Create a Pending Fee record automatically for the student's first month
         if (amount) {
             console.log('[createStudent] Creating fee record...');
-            await Fee.create({ studentId: student._id, amount: Number(amount), status: 'Paid' });
+            const now = new Date();
+            await Fee.create({ 
+                studentId: student._id, 
+                amount: Number(amount), 
+                status: 'Pending',
+                month: now.getMonth() + 1,
+                year: now.getFullYear()
+            });
             console.log('[createStudent] Fee record created.');
         }
 
@@ -100,6 +107,8 @@ export const updateStudent = async (req, res) => {
         }
 
         const { name, username, password, phone, whatsapp, classId, batchId, skillId, registrationFee, amount, photo, motherName, dateOfBirth, age, isLocked } = req.body;
+
+        const oldAmount = student.amount;
 
         const user = await User.findById(student.user);
         if (user) {
@@ -124,6 +133,17 @@ export const updateStudent = async (req, res) => {
         if (password) student.plainPassword = password;
 
         const updatedStudent = await student.save();
+
+        // Sync Amount change with Fee record if it changed
+        if (amount !== undefined && Number(amount) !== oldAmount) {
+            // Update the oldest Pending fee or the first fee if none pending
+            const firstFee = await Fee.findOne({ studentId: student._id }).sort({ createdAt: 1 });
+            if (firstFee) {
+                firstFee.amount = Number(amount);
+                await firstFee.save();
+            }
+        }
+
         console.log('[updateStudent] Student updated:', updatedStudent._id);
         res.json(updatedStudent);
     } catch (error) {

@@ -4,7 +4,7 @@ import useAuthStore from '../store/useAuthStore';
 import { Plus, Trash2, Edit, Lock } from 'lucide-react';
 import PrintHeader from './PrintHeader';
 
-const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin'], writeAccessRoles = ['Admin'], customActions = [], transformEditData, filters = [], extraHeaderActions = [] }) => {
+const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin'], writeAccessRoles = ['Admin'], customActions = [], transformEditData, filters = [], extraHeaderActions = [], footerContent, showAddButton = true, hidePrintHeader = false }) => {
     const [data, setData] = useState([]);
     const [isLocked, setIsLocked] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -132,7 +132,7 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
 
     return (
         <div className="space-y-4 sm:space-y-6">
-            <PrintHeader title={title} />
+            {!hidePrintHeader && <PrintHeader title={title} />}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0 no-print">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                     <h2 className="text-xl sm:text-2xl font-bold text-slate-800">{title}</h2>
@@ -155,7 +155,7 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                         {extraHeaderActions.map((ActionComponent, idx) => (
                             <ActionComponent key={idx} refresh={fetchData} />
                         ))}
-                        {canWrite && (
+                        {canWrite && showAddButton && (
                             <button
                                 onClick={() => {
                                     setShowForm(!showForm);
@@ -300,35 +300,38 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                             Fadlan la xariir xafiiska examination ustaad Abdallahi Abdinasir Hussein , tell 613213138.
                         </p>
                     </div>
-                ) : filteredData.length === 0 ? (
-                    <div className="p-12 text-center flex flex-col items-center justify-center space-y-4">
-                        {title === 'Exam Results' && user?.role === 'Student' && (
-                            <div className="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center">
-                                <Lock className="h-8 w-8" />
-                            </div>
-                        )}
-                        <div className={`p-8 text-center text-sm font-bold uppercase tracking-wider ${title === 'Exam Results' ? 'text-red-600' : 'text-slate-500'}`}>
-                            {title === 'Exam Results'
-                                ? (user?.role === 'Student' ? 'Fadlan iska bixi lacagta.' : 'Wali lama gaari natiijada fasalkan.')
-                                : `No ${title.toLowerCase()} found.`}
-                        </div>
-                    </div>
                 ) : (
                     <div className="overflow-x-auto print:overflow-visible">
-                        <table className="min-w-full divide-y divide-slate-200">
-                            <thead className="bg-slate-50 print:bg-transparent">
+                    <table className="min-w-full divide-y divide-slate-200">
+                        <thead className="bg-slate-50 print:bg-transparent">
+                            <tr>
+                                {columns.map((col, i) => (
+                                    <th key={i} className={`px-3 sm:px-6 py-3 sm:py-4 text-left text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider print:text-black print:font-bold ${col.className || ''}`}>{col.header}</th>
+                                ))}
+                                {(canWrite || customActions.length > 0) && <th className="px-3 sm:px-6 py-3 sm:py-4 text-right text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider no-print">Actions</th>}
+                            </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-slate-200 print:divide-slate-400">
+                            {filteredData.length === 0 ? (
                                 <tr>
-                                    {columns.map((col, i) => (
-                                        <th key={i} className="px-3 sm:px-6 py-3 sm:py-4 text-left text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider print:text-black print:font-bold">{col.header}</th>
-                                    ))}
-                                    {(canWrite || customActions.length > 0) && <th className="px-3 sm:px-6 py-3 sm:py-4 text-right text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider no-print">Actions</th>}
+                                    <td colSpan={columns.length + ((canWrite || customActions.length > 0) ? 1 : 0)} className="p-12 text-center text-slate-400 italic text-sm font-medium">
+                                        {title === 'Exam Results' && user?.role === 'Student' ? (
+                                            <div className="flex flex-col items-center gap-3">
+                                                <div className="w-12 h-12 bg-red-50 text-red-500 rounded-full flex items-center justify-center">
+                                                    <Lock className="h-6 w-6" />
+                                                </div>
+                                                <span className="text-red-600 font-bold uppercase tracking-wider">Fadlan iska bixi lacagta.</span>
+                                            </div>
+                                        ) : (
+                                            `No ${title.toLowerCase()} found for this filter.`
+                                        )}
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody className="bg-white divide-y divide-slate-200 print:divide-slate-400">
-                                {filteredData.map((item, index) => (
+                            ) : (
+                                filteredData.map((item, index) => (
                                     <tr key={item._id || index} className="hover:bg-slate-50 transition-colors print:break-inside-avoid">
                                         {columns.map((col, i) => (
-                                            <td key={i} className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-slate-700 print:text-black">
+                                            <td key={i} className={`px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-xs sm:text-sm text-slate-700 print:text-black ${col.className || ''}`}>
                                                 {col.render ? col.render(item, index) : (item[col.accessor] || '-')}
                                             </td>
                                         ))}
@@ -350,13 +353,19 @@ const CrudPage = ({ title, endpoint, columns, formFields, roleAccess = ['Admin']
                                             </td>
                                         )}
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                )}
-            </div>
+                                ))
+                            )}
+                        </tbody>
+                    </table>
+                </div>
+            )}
         </div>
+        {footerContent && (
+            <div className="mt-0">
+                {footerContent}
+            </div>
+        )}
+    </div>
     );
 };
 

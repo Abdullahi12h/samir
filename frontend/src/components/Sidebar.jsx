@@ -52,6 +52,7 @@ const Sidebar = ({ role, isOpen, toggle }) => {
                 { name: 'Fee Management', path: '/fees', icon: Wallet },
                 { name: 'Debt Management', path: '/debts', icon: Wallet },
                 { name: 'Student Payments', path: '/student-payments', icon: Wallet },
+                { name: 'Exam Fees', path: '/exam-fees', icon: Wallet },
                 { name: 'Salaries', path: '/salaries', icon: Wallet },
             ]
         }

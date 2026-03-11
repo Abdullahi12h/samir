@@ -194,14 +194,27 @@ const studentFilters = [
 
 const studentColumns = [
     { header: '#', render: (item, index) => <span className="font-bold text-slate-500">{index + 1}</span> },
-    { header: 'Photo', render: (item) => item.photo ? <img src={`http://localhost:5001${item.photo}`} alt="Profile" className="w-10 h-10 rounded-full object-cover border border-slate-200" /> : '-' },
+    { header: 'Photo', className: 'print:hidden', render: (item) => item.photo ? <img src={`http://localhost:5001${item.photo}`} alt="Profile" className="w-10 h-10 rounded-full object-cover border border-slate-200" /> : '-' },
     { header: 'Name', render: (item) => item.user?.name },
-    { header: 'Phone', render: (item) => item.user?.phone || '-' },
+    {
+        header: 'Phone/WA', render: (item) => (
+            <div className="flex flex-col text-[11px] font-medium text-slate-600">
+                <span className="flex items-center gap-1">
+                    <span className="text-[9px] bg-blue-100 text-blue-600 px-1 rounded font-bold">P</span>
+                    {item.user?.phone || '-'}
+                </span>
+                <span className="flex items-center gap-1 mt-0.5">
+                    <span className="text-[9px] bg-emerald-100 text-emerald-600 px-1 rounded font-bold">W</span>
+                    {item.user?.whatsapp || '-'}
+                </span>
+            </div>
+        )
+    },
     { header: 'Student ID (Tiro)', accessor: 'enrollmentNo' },
     { header: 'Mother Name', accessor: 'motherName' },
     { header: 'Age', accessor: 'age' },
-    { header: 'Username', render: (item) => item.user?.username },
-    { header: 'Password', render: (item) => <PasswordCell password={item.plainPassword} /> },
+    { header: 'Username', className: 'print:hidden', render: (item) => item.user?.username },
+    { header: 'Password', className: 'print:hidden', render: (item) => <PasswordCell password={item.plainPassword} /> },
     { header: 'Class', render: (item) => item.classId?.name },
     { header: 'Batch', render: (item) => item.batchId?.name },
     { header: 'Skill', render: (item) => item.skillId?.name },

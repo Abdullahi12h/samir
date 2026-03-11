@@ -14,6 +14,7 @@ import ReportsPage from './pages/ReportsPage';
 import GraduatedStudentsReport from './pages/GraduatedStudentsReport';
 import SalariesPage from './pages/SalariesPage';
 import StudentPaymentsPage from './pages/StudentPaymentsPage';
+import ExamFeesPage from './pages/ExamFeesPage';
 import BackupPage from './pages/BackupPage';
 import ProfilePage from './pages/ProfilePage';
 import OrdersPage from './pages/OrdersPage';
@@ -44,6 +45,7 @@ function App() {
           <Route path="fees" element={<FeesPage />} />
           <Route path="debts" element={<DebtsPage />} />
           <Route path="student-payments" element={<StudentPaymentsPage />} />
+          <Route path="exam-fees" element={<ExamFeesPage />} />
           <Route path="salaries" element={<SalariesPage />} />
           <Route path="attendances" element={<AttendancesPage />} />
           <Route path="attendance-entry" element={<DailyAttendancePage />} />

@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CrudPage from '../components/CrudPage';
-import { Lock, Unlock, Edit3, Printer, AlertCircle, CheckCircle2, Wallet as WalletIcon, X } from 'lucide-react';
+import { Lock, Unlock, Edit3, Printer as PrinterIcon, AlertCircle, CheckCircle2, Wallet as WalletIcon, X, History as HistoryIcon, Plus as PlusIcon } from 'lucide-react';
 import api from '../utils/api';
 import useAuthStore from '../store/useAuthStore';
+import PrintHeader from '../components/PrintHeader';
 
 const EMPTY_ARRAY = [];
 
@@ -40,53 +41,77 @@ export const ExpensesPage = () => (
 // --- Fees Page Config ---
 const feesColumns = [
     {
-        header: 'Magaca & ID-ga',
+        header: 'TR',
+        render: (_, index) => <span className="text-[10px] font-bold text-slate-400">#{index + 1}</span>
+    },
+    {
+        header: 'MAGACA & ID-GA',
         render: (item) => (
-            <div>
-                <div className="font-bold text-slate-800">
+            <div className="flex flex-col">
+                <div className="font-bold text-slate-800 text-sm">
                     {item.studentId?.user?.name || 'Unknown'}
                 </div>
-                <div className="text-[10px] text-slate-500 font-mono font-bold mt-0.5">
+                <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
                     ID: {item.studentId?.enrollmentNo || '-'}
                 </div>
             </div>
         )
     },
     {
-        header: 'Fasalka (Class)',
-        render: (item) => <span className="text-xs font-bold text-slate-600">{item.studentId?.classId?.name || '-'}</span>
+        header: 'FASALKA',
+        render: (item) => <span className="text-[10px] font-black text-slate-500 uppercase">{item.studentId?.classId?.name || '-'}</span>
     },
     {
-        header: 'Xisaabta bixinta',
+        header: 'LACAGTA (FEE)',
+        render: (item) => <span className="font-black text-slate-700 text-sm"> ${item.amount || 0}</span>
+    },
+    {
+        header: 'LA BIXIYEY (PAID)',
         render: (item) => {
-            const total = item.studentId?.amount || 0;
-            const paid = item.studentId?.totalPaid || 0;
-            const balance = total - paid;
+            const paid = item.paidAmount || 0;
             return (
-                <div className="flex flex-col">
-                    <span className="text-[11px] text-emerald-600 font-bold tracking-tighter">
-                        Wuxuu Bixiyay: ${paid}
-                    </span>
-                    <span className={`font-black text-[11px] ${balance > 0 ? 'text-red-500' : 'text-slate-400'}`}>
-                        Wuxuu Harsan yahay: ${balance}
-                    </span>
+                <div className="text-sm font-black text-emerald-600">
+                    ${paid}
                 </div>
             );
         }
     },
     {
-        header: 'Xaaladda',
+        header: 'HARAAGA (BALANCE)',
+        render: (item) => {
+            const bal = (item.amount || 0) - (item.paidAmount || 0);
+            return (
+                <div className={`text-sm font-black ${bal > 0 ? 'text-red-500' : 'text-slate-300'}`}>
+                    ${bal}
+                </div>
+            );
+        }
+    },
+    {
+        header: 'XAALADDA',
+        render: (item) => {
+            const bal = (item.amount || 0) - (item.paidAmount || 0);
+            const statusLabel = bal <= 0 ? 'Paid' : item.paidAmount > 0 ? 'Partial' : 'Pending';
+            return (
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-black tracking-tight ${bal <= 0 ? 'bg-emerald-100 text-emerald-700' : item.paidAmount > 0 ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-800'}`}>
+                    {statusLabel}
+                </span>
+            );
+        }
+    },
+    {
+        header: 'DHAMAAN (ALL-TIME)',
         render: (item) => (
-            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${item.status === 'Paid' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
-                {item.status || 'Pending'}
-            </span>
+            <div className="text-[10px] font-black text-blue-600 bg-blue-50 px-2 py-1 rounded-lg">
+                ${item.studentId?.totalPaid || 0}
+            </div>
         )
     },
     {
-        header: 'Bisha / Sanadka',
+        header: 'BISHA / SANADKA',
         render: (item) => {
             const m = monthsList.find(ml => ml.value === String(item.month))?.label || '';
-            return <span className="text-[11px] font-bold text-slate-500 uppercase">{m} {item.year}</span>;
+            return <span className="text-[10px] font-bold text-slate-500 uppercase tracking-tight">{m} {item.year}</span>;
         }
     }
 ];
@@ -142,7 +167,7 @@ const PrintFeesAction = () => (
         className="flex items-center px-3 py-2 bg-indigo-50 text-indigo-700 border border-indigo-100 rounded-lg hover:bg-indigo-100 transition-colors text-[10px] font-bold shadow-sm no-print"
         title="Print this list"
     >
-        <Printer className="h-3 w-3 mr-1" /> Print List
+        <PrinterIcon className="h-3 w-3 mr-1" /> Print List
     </button>
 );
 
@@ -169,14 +194,18 @@ const StudentFeesView = () => {
             .finally(() => setLoading(false));
     }, []);
 
-    // Calulate totals:
-    const totalFeesOwed = fees.reduce((sum, f) => sum + (f.amount || f.studentId?.amount || 0), 0);
-    const totalDebtsOwed = debts.reduce((sum, d) => sum + (d.amount || 0), 0);
-    const totalEverOwed = totalFeesOwed + totalDebtsOwed;
-
     const studentInfo = (fees[0]?.studentId || debts[0]?.studentId || payments[0]?.studentId) || {};
     const finalTotalPaid = typeof studentInfo === 'object' ? studentInfo.totalPaid || 0 : 0;
 
+    // Calulate totals:
+    const totalFeesOwed = fees.reduce((sum, f) => sum + (f.amount || f.studentId?.amount || 0), 0);
+    const totalDebtsOwed = debts.reduce((sum, d) => sum + (d.amount || 0), 0);
+    
+    const totalEverOwed = Math.max(
+        (fees.length === 0 ? (Number(studentInfo?.amount) || 0) : totalFeesOwed),
+        (Number(studentInfo?.amount) || 0)
+    ) + (Number(totalDebtsOwed) || 0);
+    
     const balance = totalEverOwed - finalTotalPaid;
     const allPaid = balance <= 0 && totalEverOwed > 0;
 
@@ -195,109 +224,67 @@ const StudentFeesView = () => {
         <div className="max-w-2xl mx-auto space-y-8">
             <div>
                 <h1 className="text-2xl font-black text-slate-800 flex items-center gap-2">
-                    <WalletIcon className="h-7 w-7 text-blue-500" /> My Fees & Payments
+                    <WalletIcon className="h-7 w-7 text-blue-500" /> My Payments
                 </h1>
-                <p className="text-sm text-slate-500 mt-0.5">Xogta lacagaha aad bixisay iyo kuwa kugu dhiman</p>
+                <p className="text-sm text-slate-500 mt-0.5">Taariikhda lacagaha aad bixisay iyo risiidhadaada</p>
             </div>
-
-            {/* Summary banner */}
-            <div className={`rounded-2xl p-5 border flex flex-col sm:flex-row sm:items-center gap-4 ${allPaid ? 'bg-emerald-50 border-emerald-200' : balance > 0 ? 'bg-amber-50 border-amber-200' : 'bg-blue-50 border-blue-200'}`}>
-                <div className={`h-12 w-12 rounded-2xl flex items-center justify-center shrink-0 ${allPaid ? 'bg-emerald-100' : balance > 0 ? 'bg-amber-100' : 'bg-blue-100'}`}>
-                    {allPaid
-                        ? <CheckCircle2 className="h-7 w-7 text-emerald-600" />
-                        : balance > 0 ? <AlertCircle className="h-7 w-7 text-amber-600" /> : <WalletIcon className="h-7 w-7 text-blue-600" />
-                    }
-                </div>
-                <div className="flex-1">
-                    <p className={`font-black text-lg ${allPaid ? 'text-emerald-700' : balance > 0 ? 'text-amber-700' : 'text-blue-700'}`}>
-                        {allPaid ? 'Dhammaan lacagaha waad bixisay ✅' : balance > 0 ? `Waxaad hadhsan tahay: $${balance}` : `Waxaad u horraysay (Credit): $${Math.abs(balance)}`}
-                    </p>
-                    <p className={`text-xs mt-0.5 ${allPaid ? 'text-emerald-600' : balance > 0 ? 'text-amber-600' : 'text-blue-600'}`}>
-                        Wadarta Lagu weydiiyo: ${totalEverOwed} &nbsp;|&nbsp; Wadarta aad bixisay: ${finalTotalPaid}
-                    </p>
-                </div>
-            </div>
-
-            {/* Extra Debts (Books, etc.) */}
-            {debts.length > 0 && (
-                <div>
-                    <h2 className="text-lg font-black text-slate-800 mb-3 ml-1">Other Debts (Deyn Kale)</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {debts.map(debt => (
-                            <div key={debt._id} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4 flex items-center justify-between">
-                                <div>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{debt.description}</p>
-                                    <p className="font-bold text-slate-800">${debt.amount}</p>
-                                </div>
-                                <span className={`text-[9px] font-black px-2 py-1 rounded border ${debt.status === 'Paid' ? 'bg-emerald-50 text-emerald-600 border-emerald-100' : 'bg-red-50 text-red-600 border-red-100'}`}>
-                                    {debt.status}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            {/* Monthly Fee records */}
-            <h2 className="text-lg font-black text-slate-800 mb-3 ml-1">Monthly Fees (Bileedka)</h2>
-            {fees.length === 0 ? (
-                <div className="bg-slate-50 rounded-2xl p-8 text-center border border-dashed border-slate-200">
-                    <p className="text-slate-400 text-sm font-medium">No monthly fees records found.</p>
-                </div>
-            ) : (
-                <div className="space-y-3">
-                    {fees.map(fee => {
-                        const m = monthsList.find(ml => ml.value === String(fee.month))?.label || fee.month;
-                        const isPaid = fee.status === 'Paid';
-                        return (
-                            <div key={fee._id} className="bg-white rounded-2xl border border-slate-100 shadow-sm px-5 py-4 flex items-center justify-between gap-4">
-                                <div>
-                                    <p className="font-bold text-slate-800 text-sm">{m} {fee.year}</p>
-                                    <p className="text-xs text-slate-400 mt-0.5">
-                                        Fee: <span className="font-semibold text-slate-600">${fee.amount || fee.studentId?.amount || '—'}</span>
-                                    </p>
-                                </div>
-                                <span className={`flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded-full border ${isPaid ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-red-50 text-red-600 border-red-200'}`}>
-                                    {isPaid ? <CheckCircle2 className="h-3.5 w-3.5" /> : <AlertCircle className="h-3.5 w-3.5" />}
-                                    {isPaid ? 'Paid' : 'Pending'}
-                                </span>
-                            </div>
-                        );
-                    })}
-                </div>
-            )}
 
             {/* Payment History Section */}
-            <div>
-                <h2 className="text-lg font-black text-slate-800 mb-3 ml-1">Payment History (Taariikhda Bixinta)</h2>
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                <div className="p-5 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
+                    <h2 className="text-lg font-black text-slate-800">Payment History (Taariikhda Bixinta)</h2>
+                </div>
                 {payments.length === 0 ? (
-                    <div className="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center text-slate-500 text-sm">
+                    <div className="p-8 text-center text-slate-500 text-sm">
                         No payments found.
                     </div>
                 ) : (
-                    <div className="space-y-3">
-                        {payments.slice().map(payment => (
-                            <div key={payment._id} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4">
-                                <div className="flex justify-between items-start mb-2">
-                                    <div>
-                                        <p className="font-bold text-slate-800 text-sm">${payment.amount}</p>
-                                        <p className="text-[11px] font-bold text-slate-400 mt-0.5">{new Date(payment.paymentDate).toLocaleDateString()}</p>
-                                    </div>
-                                    <span className="text-[10px] font-bold px-2 py-1 rounded bg-slate-50 text-slate-500 border border-slate-200">
-                                        {payment.receiptNumber}
-                                    </span>
-                                </div>
-                                <div className="bg-slate-50 rounded-lg p-3 border border-slate-100">
-                                    <p className="text-xs text-slate-500 font-medium">
-                                        <span className="font-bold text-slate-700">Sharaxaad: </span>
-                                        {payment.description || 'Wax sharaxaad ah laguma darin'}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="bg-slate-50 text-slate-500 text-[11px] uppercase tracking-wider border-b border-slate-200">
+                                    <th className="p-4 font-bold">Nuuca Lacagta (Description)</th>
+                                    <th className="p-4 font-bold">Meesha (Class)</th>
+                                    <th className="p-4 font-bold text-right">Inta uu bixiyay (Paid)</th>
+                                    <th className="p-4 font-bold text-center">Lacagta Diiwaangashan</th>
+                                    <th className="p-4 font-bold text-center">Taariikh (Date)</th>
+                                    <th className="p-4 font-bold text-right">Haraaga (Balances)</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100">
+                                {(() => {
+                                    const sorted = [...payments].sort((a, b) => new Date(b.paymentDate) - new Date(a.paymentDate));
+                                    let runBal = balance;
+                                    return sorted.map((payment) => {
+                                        const balAfter = runBal;
+                                        runBal += payment.amount;
+                                        return (
+                                            <tr key={payment._id} className="hover:bg-slate-50 transition-colors text-sm">
+                                                <td className="p-4 font-medium text-slate-700">
+                                                    {payment.description || 'Lacag bixin'}
+                                                    <div className="text-[10px] text-slate-400 font-mono mt-0.5">Receipt: {payment.receiptNumber}</div>
+                                                </td>
+                                                <td className="p-4 text-slate-600 font-medium text-xs">
+                                                    {payment.studentId?.classId?.name || studentInfo?.classId?.name || payment.classId?.name || '-'}
+                                                </td>
+                                                <td className="p-4 font-bold text-emerald-600 text-right">+${payment.amount}</td>
+                                                <td className="p-4 text-center font-bold text-slate-700">${studentInfo.amount || '-'}</td>
+                                                <td className="p-4 text-slate-500 text-xs text-center">{new Date(payment.paymentDate).toLocaleDateString()}</td>
+                                                <td className="p-4 font-black text-right">
+                                                    <span className={`px-2 py-1 rounded-lg ${balAfter > 0 ? 'bg-red-50 text-red-600' : 'bg-emerald-50 text-emerald-600'}`}>
+                                                        ${Math.abs(balAfter)}
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        );
+                                    });
+                                })()}
+                            </tbody>
+                        </table>
                     </div>
                 )}
             </div>
+
         </div>
     );
 };
@@ -359,7 +346,7 @@ const QuickPayPanel = ({ feeItem, onClose, onPaid }) => {
                         { label: 'Total Fee', value: `$${totalFee}`, color: 'text-slate-700' },
                         { label: 'Total Paid', value: `$${totalPaid}`, color: 'text-emerald-600' },
                         {
-                            label: remaining > 0 ? 'Remaining' : 'Advance / Credit',
+                            label: remaining > 0 ? 'Remaining' : 'Balances',
                             value: `$${Math.abs(remaining)}`,
                             color: remaining > 0 ? 'text-red-500' : 'text-emerald-500'
                         },
@@ -433,17 +420,17 @@ const QuickPayPanel = ({ feeItem, onClose, onPaid }) => {
 
 // ─── Admin Fees View ──────────────────────────────────────────
 const AdminFeesView = () => {
+    const navigate = useNavigate();
     const [selectedClass, setSelectedClass] = useState('');
     const [selectedMonth, setSelectedMonth] = useState('');
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedStatus, setSelectedStatus] = useState('');
     const [classes, setClasses] = useState([]);
-    const [payFeeItem, setPayFeeItem] = useState(null); // the fee row being paid
+    const [payFeeItem, setPayFeeItem] = useState(null); 
     const [refreshKey, setRefreshKey] = useState(0);
-
-    useEffect(() => {
-        api.get('/core/classes').then(res => setClasses(res.data)).catch(console.error);
-    }, []);
+    const [summary, setSummary] = useState({ total: 0, paid: 0, pending: 0 });
+    const [recentPayments, setRecentPayments] = useState([]);
+    const [paymentsSummary, setPaymentsSummary] = useState(0);
 
     const endpoint = `/management/fees?${new URLSearchParams({
         ...(selectedClass && { classId: selectedClass }),
@@ -452,11 +439,44 @@ const AdminFeesView = () => {
         ...(selectedStatus && { status: selectedStatus }),
     }).toString()}`;
 
+    useEffect(() => {
+        api.get('/core/classes').then(res => setClasses(res.data)).catch(console.error);
+    }, []);
+
+    useEffect(() => {
+        api.get(endpoint).then(res => {
+            const data = Array.isArray(res.data) ? res.data : [];
+            const s = data.reduce((acc, curr) => {
+                const total = Number(curr.amount) || 0;
+                const paid = Number(curr.paidAmount) || 0;
+                acc.total += total;
+                acc.paid += paid;
+                acc.pending += (total - paid);
+                return acc;
+            }, { total: 0, paid: 0, pending: 0 });
+            setSummary(s);
+        }).catch(console.error);
+
+        // Fetch Recent Student Payments (from Student Payments page)
+        const paymentsQuery = new URLSearchParams({
+            ...(selectedClass && { classId: selectedClass }),
+        }).toString();
+        api.get(`/management/student-payments?${paymentsQuery}`).then(res => {
+            const data = Array.isArray(res.data) ? res.data : [];
+            // Sort newest first and take at most 10
+            const sorted = [...data].sort((a, b) => new Date(b.paymentDate) - new Date(a.paymentDate)).slice(0, 10);
+            setRecentPayments(sorted);
+            const total = data.reduce((sum, p) => sum + (Number(p.amount) || 0), 0);
+            setPaymentsSummary(total);
+        }).catch(console.error);
+    }, [endpoint, refreshKey, selectedClass]);
+
     const handleClearFilters = () => {
         setSelectedClass('');
         setSelectedMonth('');
         setSelectedYear('');
         setSelectedStatus('');
+        setRefreshKey(prev => prev + 1);
     };
 
     // Custom action button shown on each fee row — opens Quick Pay panel
@@ -470,69 +490,100 @@ const AdminFeesView = () => {
         </button>
     );
 
+    const selectedClassLabel = classes.find(c => c._id === selectedClass)?.name;
+
+    const summaryBlock = (
+        <div className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden mt-6 print:mt-10 print:border-slate-200 print:shadow-none">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 print:grid-cols-4 print:divide-slate-200">
+                <div className="p-5 flex flex-col items-center justify-center bg-white">
+                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1 text-center">Biilka Furan (Owed)</span>
+                    <span className="text-xl font-black text-red-600">${summary.pending}</span>
+                </div>
+                <div className="p-5 flex flex-col items-center justify-center bg-white">
+                    <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-1 text-center">Biilka la bixiyay</span>
+                    <span className="text-xl font-black text-emerald-700">${summary.paid}</span>
+                </div>
+                <div className="p-5 flex flex-col items-center justify-center bg-white">
+                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1 text-center">Lacagta Qabatay</span>
+                    <span className="text-xl font-black text-blue-700">${paymentsSummary}</span>
+                </div>
+                <div className="p-5 flex flex-col items-center justify-center bg-white">
+                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1 text-center">Wadarta Guud</span>
+                    <span className="text-xl font-black text-slate-800">${summary.total}</span>
+                </div>
+            </div>
+        </div>
+    );
+
     return (
         <div className="space-y-6">
-            <div className="text-[10px] text-blue-500 font-bold bg-blue-50 p-2 rounded-lg border border-blue-100">
-                SYSTEM DEBUG: {endpoint}
+            <PrintHeader title={`Fee Management ${selectedClassLabel ? `- ${selectedClassLabel}` : ''}`} />
+            
+            {/* Filters Row (Top, Hidden in print) */}
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden no-print">
+                <div className="p-5 bg-slate-50/30 flex flex-wrap gap-4 items-end">
+                    <div className="flex flex-col flex-1 min-w-[150px]">
+                        <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Filter by Class:</label>
+                        <select
+                            className="p-2.5 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm font-semibold"
+                            value={selectedClass}
+                            onChange={(e) => setSelectedClass(e.target.value)}
+                        >
+                            <option value="">All Classes</option>
+                            {classes.map(c => <option key={c._id} value={c._id}>{c.name}</option>)}
+                        </select>
+                    </div>
+                    <div className="flex flex-col flex-1 min-w-[150px]">
+                        <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Choose Month:</label>
+                        <select
+                            className="p-2.5 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm font-semibold"
+                            value={selectedMonth}
+                            onChange={(e) => setSelectedMonth(e.target.value)}
+                        >
+                            <option value="">All Months</option>
+                            {monthsList.map(m => <option key={m.value} value={m.value}>{m.label}</option>)}
+                        </select>
+                    </div>
+                    <div className="flex flex-col w-[100px]">
+                        <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Year:</label>
+                        <select
+                            className="p-2.5 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm font-semibold"
+                            value={selectedYear}
+                            onChange={(e) => setSelectedYear(e.target.value)}
+                        >
+                            <option value="">All Years</option>
+                            {[2024, 2025, 2026, 2027].map(y => <option key={y} value={y}>{y}</option>)}
+                        </select>
+                    </div>
+                    <div className="flex flex-col flex-1 min-w-[150px]">
+                        <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Status:</label>
+                        <select
+                            className={`p-2.5 border border-slate-200 rounded-xl focus:ring-2 outline-none text-sm font-bold ${selectedStatus === 'Paid' ? 'bg-emerald-50 text-emerald-700' : 'bg-white'}`}
+                            value={selectedStatus}
+                            onChange={(e) => setSelectedStatus(e.target.value)}
+                        >
+                            <option value="">All Statuses</option>
+                            <option value="Paid">Paid (Wixii dhiibay)</option>
+                            <option value="Pending">Pending (Wixii dhiman)</option>
+                        </select>
+                    </div>
+                    <button
+                        onClick={handleClearFilters}
+                        className="p-3 text-slate-400 hover:text-red-500 text-xs font-black uppercase tracking-widest transition-colors"
+                    >
+                        Reset
+                    </button>
+                </div>
             </div>
-            {/* Filters */}
-            <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-wrap gap-4 items-end no-print">
-                <div className="flex flex-col flex-1 min-w-[150px]">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Filter by Class:</label>
-                    <select
-                        className="p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium"
-                        value={selectedClass}
-                        onChange={(e) => setSelectedClass(e.target.value)}
-                    >
-                        <option value="">All Classes</option>
-                        {classes.map(c => <option key={c._id} value={c._id}>{c.name}</option>)}
-                    </select>
-                </div>
-                <div className="flex flex-col flex-1 min-w-[150px]">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Choose Month:</label>
-                    <select
-                        className="p-2 border border-slate-300 rounded-lg bg-amber-50 border-amber-200 focus:ring-2 focus:ring-amber-500 outline-none text-sm font-bold text-amber-900"
-                        value={selectedMonth}
-                        onChange={(e) => setSelectedMonth(e.target.value)}
-                    >
-                        <option value="">All Months</option>
-                        {monthsList.map(m => <option key={m.value} value={m.value}>{m.label}</option>)}
-                    </select>
-                </div>
-                <div className="flex flex-col w-[100px]">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Year:</label>
-                    <select
-                        className="p-2 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium"
-                        value={selectedYear}
-                        onChange={(e) => setSelectedYear(e.target.value)}
-                    >
-                        <option value="">All Years</option>
-                        {[2024, 2025, 2026, 2027].map(y => <option key={y} value={y}>{y}</option>)}
-                    </select>
-                </div>
-                <div className="flex flex-col flex-1 min-w-[150px]">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase mb-1 ml-1">Status:</label>
-                    <select
-                        className={`p-2 border border-slate-300 rounded-lg focus:ring-2 outline-none text-sm font-bold ${selectedStatus === 'Paid' ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-slate-50'}`}
-                        value={selectedStatus}
-                        onChange={(e) => setSelectedStatus(e.target.value)}
-                    >
-                        <option value="">All Statuses</option>
-                        <option value="Paid">Paid (Wixii dhiibay)</option>
-                        <option value="Pending">Pending (Wixii dhiman)</option>
-                    </select>
-                </div>
-                <button
-                    onClick={handleClearFilters}
-                    className="p-2 text-slate-400 hover:text-slate-600 text-xs font-bold hover:bg-slate-50 rounded-lg transition-colors border border-transparent hover:border-slate-100"
-                >
-                    Reset
-                </button>
+
+            {/* Summary at TOP for Screen View only */}
+            <div className="no-print">
+                {summaryBlock}
             </div>
 
             <CrudPage
                 key={refreshKey}
-                title="Fee Management - SHAASHADDA CUSBOONEYSII"
+                title={`Fee Management ${selectedClassLabel ? `- ${selectedClassLabel}` : ''}`}
                 endpoint={endpoint}
                 roleAccess={feesRoleAccess}
                 writeAccessRoles={feesWriteAccess}
@@ -546,6 +597,10 @@ const AdminFeesView = () => {
                 })}
                 columns={feesColumns}
                 formFields={feesFields}
+                showAddButton={false}
+                hidePrintHeader={true}
+                // Summary at BOTTOM for Printer only
+                footerContent={<div className="hidden print:block">{summaryBlock}</div>}
             />
 
             {/* Quick Pay Modal */}
@@ -553,15 +608,17 @@ const AdminFeesView = () => {
                 <QuickPayPanel
                     feeItem={payFeeItem}
                     onClose={() => setPayFeeItem(null)}
-                    onPaid={() => {
+                    onSuccess={() => {
                         setPayFeeItem(null);
-                        setRefreshKey(k => k + 1); // force CrudPage refetch
+                        setRefreshKey(k => k + 1);
                     }}
                 />
             )}
         </div>
     );
 };
+
+
 
 
 // ─── FeesPage: router between Student view and Admin view ──────
@@ -816,6 +873,21 @@ export const ResultsPage = () => {
                         </span>
                     );
                 }
+            },
+            {
+                header: 'Kaalinta (Rank)',
+                render: (item) => (
+                    <div className="flex flex-col items-center justify-center">
+                        <div className={`px-2 py-1 rounded-lg font-black text-xs ${item.rank <= 3 ? 'bg-amber-100 text-amber-700 border border-amber-200' : 'bg-slate-100 text-slate-600'}`}>
+                            {item.rank && item.rank !== '-' ? item.rank : '-'}
+                        </div>
+                        {item.totalInClass && item.totalInClass !== '-' && (
+                            <div className="text-[9px] text-slate-400 font-bold mt-0.5 uppercase tracking-tighter">
+                                {item.totalInClass} Arday
+                            </div>
+                        )}
+                    </div>
+                )
             }
         ];
 
