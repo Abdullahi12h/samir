@@ -3190,3 +3190,68 @@
 [2026-03-11T20:20:43.732Z] [getFees] Query: {"studentId":"69aa6880d9c7b7571c7eae6e"}
 [2026-03-11T20:20:43.733Z] [getFees] DB Query: {}
 [2026-03-11T20:20:44.664Z] [getFees] Found 43 fees. First ID: 69b1b17d08f550b5c7610bdc
+[2026-03-26T04:39:14.203Z] [getResults] START - User: 69c4b850c5c0818a85daaa12, Role: Admin
+[2026-03-26T04:39:15.510Z] [getResults] Found 14 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:39:15.513Z] [getResults] Filtered to 12 results after strict subject validation
+[2026-03-26T04:39:15.515Z] [getResults] Calculating ranks for 12 filtered results
+[2026-03-26T04:39:15.517Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:39:16.116Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:39:16.120Z] [getResults] Returning 12 results with ranks
+[2026-03-26T04:44:36.528Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:44:36.740Z] [getResults] Student 69aa5f8ed9c7b7571c7e9db8 IS LOCKED. Returning empty results.
+[2026-03-26T04:44:53.085Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:44:57.132Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:44:57.134Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-26T04:44:57.135Z] [getResults] Calculating ranks for 1 filtered results
+[2026-03-26T04:44:57.137Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:44:57.700Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:44:58.031Z] [getResults] Returning 0 results with ranks
+[2026-03-26T04:46:01.054Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:46:02.249Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:02.251Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-26T04:46:02.253Z] [getResults] Calculating ranks for 1 filtered results
+[2026-03-26T04:46:02.254Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:02.749Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:03.056Z] [getResults] Returning 0 results with ranks
+[2026-03-26T04:46:05.287Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:46:05.518Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:46:06.335Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:06.338Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-26T04:46:06.339Z] [getResults] Calculating ranks for 1 filtered results
+[2026-03-26T04:46:06.341Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:06.846Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:07.071Z] [getResults] Returning 0 results with ranks
+[2026-03-26T04:46:08.791Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:08.793Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-26T04:46:08.795Z] [getResults] Calculating ranks for 1 filtered results
+[2026-03-26T04:46:08.797Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:09.362Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:09.714Z] [getResults] Returning 0 results with ranks
+[2026-03-26T04:46:21.671Z] [getResults] START - User: 69c4b924c5c0818a85daaa91, Role: Admin
+[2026-03-26T04:46:22.422Z] [getResults] Found 14 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:22.424Z] [getResults] Filtered to 12 results after strict subject validation
+[2026-03-26T04:46:22.426Z] [getResults] Calculating ranks for 12 filtered results
+[2026-03-26T04:46:22.428Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:22.921Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:22.924Z] [getResults] Returning 12 results with ranks
+[2026-03-26T04:46:34.391Z] [getResults] START - User: 69c4b924c5c0818a85daaa91, Role: Admin
+[2026-03-26T04:46:35.283Z] [getResults] Found 14 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:35.284Z] [getResults] Filtered to 12 results after strict subject validation
+[2026-03-26T04:46:35.286Z] [getResults] Calculating ranks for 12 filtered results
+[2026-03-26T04:46:35.287Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:36.029Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:36.032Z] [getResults] Returning 12 results with ranks
+[2026-03-26T04:46:40.741Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:46:41.175Z] [getResults] START - User: 69aa5f8dd9c7b7571c7e9db4, Role: Student
+[2026-03-26T04:46:41.974Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:41.976Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-26T04:46:41.978Z] [getResults] Calculating ranks for 1 filtered results
+[2026-03-26T04:46:41.980Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:42.295Z] [getResults] Found 1 total results. Pre-filtering for valid subjects...
+[2026-03-26T04:46:42.296Z] [getResults] Filtered to 1 results after strict subject validation
+[2026-03-26T04:46:42.297Z] [getResults] Calculating ranks for 1 filtered results
+[2026-03-26T04:46:42.299Z] [getResults] Group Ranking for: class=69aa5dc4d9c7b7571c7e9a1b, skill=69aa5d5bd9c7b7571c7e9958
+[2026-03-26T04:46:42.553Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:42.786Z] [getResults] Ranked 12 students. Top score: 81
+[2026-03-26T04:46:42.791Z] [getResults] Returning 1 results with ranks
+[2026-03-26T04:46:43.010Z] [getResults] Returning 1 results with ranks

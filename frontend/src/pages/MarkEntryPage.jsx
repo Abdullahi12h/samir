@@ -123,7 +123,7 @@ const MarkEntryPage = () => {
                 skillId: selectedSkill,
                 classId: selectedClass,
                 subjectId: selectedSubject,
-                results: students.filter(s => !s.hasUnpaidFees).map(s => ({
+                results: students.map(s => ({
                     studentId: s._id,
                     midterm: s.midterm,
                     test: s.test,
@@ -210,17 +210,12 @@ const MarkEntryPage = () => {
                                                     <div className="text-[10px] text-slate-400 font-mono">{student.enrollmentNo}</div>
                                                 </td>
                                                 <td className="px-6 py-4 whitespace-nowrap text-center">
-                                                    {student.hasUnpaidFees ? (
-                                                        <span className="px-2.5 py-1 text-[10px] font-bold rounded-full bg-rose-50 text-rose-600 border border-rose-100">BLOCK</span>
-                                                    ) : (
-                                                        <span className="px-2.5 py-1 text-[10px] font-bold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">CLEAR</span>
-                                                    )}
+                                                    <span className="px-2.5 py-1 text-[10px] font-bold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">CLEAR</span>
                                                 </td>
                                                 <td className="px-3 py-4 whitespace-nowrap text-center">
                                                     <input
                                                         type="number"
-                                                        disabled={student.hasUnpaidFees}
-                                                        className="w-16 p-2 text-center text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 disabled:bg-slate-50 disabled:text-slate-300 font-bold bg-white"
+                                                        className="w-16 p-2 text-center text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 font-bold bg-white"
                                                         value={student.midterm || 0}
                                                         onChange={(e) => handleMarkChange(student._id, 'midterm', e.target.value)}
                                                         min="0" max="40"
@@ -229,8 +224,7 @@ const MarkEntryPage = () => {
                                                 <td className="px-3 py-4 whitespace-nowrap text-center">
                                                     <input
                                                         type="number"
-                                                        disabled={student.hasUnpaidFees}
-                                                        className="w-16 p-2 text-center text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 disabled:bg-slate-50 disabled:text-slate-300 font-bold bg-white"
+                                                        className="w-16 p-2 text-center text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 font-bold bg-white"
                                                         value={student.test || 0}
                                                         onChange={(e) => handleMarkChange(student._id, 'test', e.target.value)}
                                                         min="0" max="20"
@@ -239,8 +233,7 @@ const MarkEntryPage = () => {
                                                 <td className="px-3 py-4 whitespace-nowrap text-center">
                                                     <input
                                                         type="number"
-                                                        disabled={student.hasUnpaidFees}
-                                                        className="w-16 p-2 text-center text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 disabled:bg-slate-50 disabled:text-slate-300 font-bold bg-white"
+                                                        className="w-16 p-2 text-center text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 font-bold bg-white"
                                                         value={student.final || 0}
                                                         onChange={(e) => handleMarkChange(student._id, 'final', e.target.value)}
                                                         min="0" max="40"
@@ -256,8 +249,7 @@ const MarkEntryPage = () => {
                                     </tbody>
                                 </table>
                             </div>
-                            <div className="p-6 bg-slate-50/50 border-t border-slate-100 flex justify-between items-center">
-                                <p className="text-xs text-slate-400 font-medium italic">* Only students with cleared fees can have marks entered.</p>
+                            <div className="p-6 bg-slate-50/50 border-t border-slate-100 flex justify-end items-center">
                                 <button
                                     onClick={handleSaveResults}
                                     className="flex items-center px-8 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all font-bold shadow-md shadow-indigo-100 active:scale-95"
