@@ -9,10 +9,11 @@ export const authUser = async (req, res) => {
 
     try {
         console.log(`[authUser] Login attempt for: ${username}`);
-        const user = await User.findOne({ username });
+        // Case-insensitive find
+        const user = await User.findOne({ username: { $regex: new RegExp(`^${username}$`, 'i') } });
 
         if (user && (await user.matchPassword(password))) {
-            console.log(`[authUser] Login successful for: ${username}, role: ${user.role}`);
+            console.log(`[authUser] Login successful for: ${user.username}, role: ${user.role}`);
 
             let classIds = [];
             let skills = [];
@@ -58,16 +59,34 @@ export const registerUser = async (req, res) => {
 
     try {
         const userExists = await User.findOne({ username });
-
         if (userExists) {
             return res.status(400).json({ message: 'User already exists' });
+        }
+
+        // --- SECURITY FIX: Prevent unauthorized Admin/Teacher registration ---
+        let finalRole = role || 'Student';
+        const adminCount = await User.countDocuments({ role: 'Admin' });
+
+        if (adminCount > 0) {
+            // If someone is trying to create a non-student account, 
+            // check if THEY are an admin.
+            if (finalRole !== 'Student') {
+                if (!req.user || req.user.role !== 'Admin') {
+                    return res.status(403).json({ 
+                        message: 'Unauthorized: Only an existing Admin can create Admin or Teacher accounts. Please register as a Student or login as Admin.' 
+                    });
+                }
+            }
+        } else {
+            // No admin exists? First user must be Admin
+            finalRole = 'Admin';
         }
 
         const user = await User.create({
             name,
             username,
             password,
-            role: role || 'Student',
+            role: finalRole,
             phone,
             whatsapp
         });

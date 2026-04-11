@@ -6,7 +6,9 @@ const BackupPage = () => {
     const [downloading, setDownloading] = useState(false);
     const [exporting, setExporting] = useState(false);
     const [restoring, setRestoring] = useState(false);
+    const [importing, setImporting] = useState(false);
     const [file, setFile] = useState(null);
+    const [excelFile, setExcelFile] = useState(null);
 
     const handleDownload = async () => {
         setDownloading(true);
@@ -61,7 +63,8 @@ const BackupPage = () => {
 
         try {
             const res = await api.post('/backup/restore', formData, {
-                headers: { 'Content-Type': 'multipart/form-data' }
+                headers: { 'Content-Type': 'multipart/form-data' },
+                timeout: 300000 // 5 minutes
             });
             alert(res.data.message || 'Restore successful!');
             setFile(null);
@@ -70,6 +73,52 @@ const BackupPage = () => {
         } catch (error) {
             console.error('Restore error:', error);
             alert(error.response?.data?.message || 'Restore failed');
+        } finally {
+            setRestoring(false);
+        }
+    };
+
+    const handleExcelImport = async (e) => {
+        e.preventDefault();
+        if (!excelFile) return alert('Please select an Excel file');
+
+        setImporting(true);
+        const formData = new FormData();
+        formData.append('excelFile', excelFile);
+
+        try {
+            const res = await api.post('/backup/import-students', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' },
+                timeout: 300000 
+            });
+            alert(res.data.message);
+            if (res.data.errors) {
+                console.error('Import errors:', res.data.errors);
+                alert('Some rows had errors. Check console for details.');
+            }
+            setExcelFile(null);
+            window.location.reload();
+        } catch (error) {
+            console.error('Import error:', error);
+            alert(error.response?.data?.message || 'Import failed');
+        } finally {
+            setImporting(false);
+        }
+    };
+
+    const handleClearData = async () => {
+        if (!window.confirm('CRITICAL WARNING: This will permanently delete ALL data (Students, Teachers, Finances, Exams, etc.). Only the current Admin account will be kept. Are you SURE?')) return;
+        const confirmText = window.prompt('Type "DELETE EVERYTHING" to confirm:');
+        if (confirmText !== 'DELETE EVERYTHING') return alert('Reset cancelled.');
+
+        setRestoring(true);
+        try {
+            const res = await api.delete('/backup/clear');
+            alert(res.data.message);
+            window.location.reload();
+        } catch (error) {
+            console.error('Clear error:', error);
+            alert('Failed to clear data');
         } finally {
             setRestoring(false);
         }
@@ -237,6 +286,70 @@ const BackupPage = () => {
                             {restoring ? 'Restoring System...' : 'Start Restoration'}
                         </button>
                     </form>
+                </div>
+
+                {/* Excel Import Card */}
+                <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col border-t-4 border-t-emerald-500">
+                    <div className="p-5 border-b border-slate-100 bg-slate-50">
+                        <h2 className="font-bold text-slate-700 flex items-center">
+                            <FileSpreadsheet className="w-5 h-5 mr-2 text-emerald-500" />
+                            Import Students (Excel)
+                        </h2>
+                    </div>
+                    <form onSubmit={handleExcelImport} className="p-6 flex-1 flex flex-col space-y-4">
+                        <p className="text-[11px] text-slate-500 mb-1 leading-relaxed">
+                            <strong>Sheet Format:</strong> Name, Username, Password, Phone, Class Name, Batch Name, Skill Name, Mother Name
+                        </p>
+                        <div className="flex-1 border-2 border-dashed border-slate-200 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-slate-50 transition-colors">
+                            <input
+                                type="file"
+                                id="excel-file"
+                                accept=".xlsx, .xls"
+                                className="hidden"
+                                onChange={(e) => setExcelFile(e.target.files[0])}
+                            />
+                            <label htmlFor="excel-file" className="cursor-pointer flex flex-col items-center space-y-2">
+                                <FileSpreadsheet className="w-8 h-8 text-slate-400" />
+                                <span className="text-sm font-medium text-emerald-600 hover:text-emerald-500">
+                                    {excelFile ? excelFile.name : 'Select Excel File (.xlsx)'}
+                                </span>
+                            </label>
+                        </div>
+                        <button
+                            type="submit"
+                            disabled={importing || !excelFile}
+                            className="w-full px-4 py-2.5 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 transition-colors shadow-sm font-medium"
+                        >
+                            {importing ? 'Importing...' : 'Start Excel Import'}
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            {/* Danger Zone */}
+            <div className="bg-red-50 rounded-xl border border-red-200 p-6 mt-8">
+                <div className="flex items-center space-x-3 mb-4">
+                    <div className="p-2 bg-red-100 rounded-lg text-red-600">
+                        <AlertTriangle className="w-5 h-5" />
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-bold text-red-800">Danger Zone</h2>
+                        <p className="text-sm text-red-600">Actions here are permanent and cannot be undone</p>
+                    </div>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg border border-red-100 flex items-center justify-between">
+                    <div>
+                        <p className="font-bold text-slate-700">Clear All System Data</p>
+                        <p className="text-xs text-slate-500">Remove all records from the database. Current admin account will be preserved.</p>
+                    </div>
+                    <button
+                        onClick={handleClearData}
+                        disabled={restoring}
+                        className="px-6 py-2.5 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 transition-colors shadow-sm font-bold text-sm"
+                    >
+                        {restoring ? 'Clearing...' : 'Reset System Now'}
+                    </button>
                 </div>
             </div>
         </div>

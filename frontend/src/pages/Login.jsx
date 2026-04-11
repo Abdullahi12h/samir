@@ -106,6 +106,8 @@ const Login = () => {
                                 {loading ? 'Logging in...' : attempts >= 4 ? 'Blocked' : 'Log in'}
                             </button>
                         </div>
+
+                        {/* Registration disabled from UI */}
                     </form>
 
 

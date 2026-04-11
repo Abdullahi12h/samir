@@ -3255,3 +3255,5 @@
 [2026-03-26T04:46:42.786Z] [getResults] Ranked 12 students. Top score: 81
 [2026-03-26T04:46:42.791Z] [getResults] Returning 1 results with ranks
 [2026-03-26T04:46:43.010Z] [getResults] Returning 1 results with ranks
+[2026-04-11T06:58:35.491Z] [getResults] START - User: 69d9f09663285755286118e9, Role: Student
+[2026-04-11T06:58:35.834Z] [getResults] Student NOT FOUND for user 69d9f09663285755286118e9
