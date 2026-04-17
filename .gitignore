@@ -1,0 +1,62 @@
+# =========================
+# NODE / BACKEND
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (VERY IMPORTANT)
+.env
+.env.*
+
+# Logs
+logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# =========================
+# FRONTEND (React / Vite)
+# =========================
+frontend/node_modules/
+frontend/dist/
+
+# Build files
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# =========================
+# BACKEND
+# =========================
+backend/node_modules/
+
+# Local DB / temp files
+local-db-data/
+
+# Uploads (optional depending on your case)
+uploads/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# PM2
+# =========================
+.pm2/
+
+# =========================
+# Misc
+# =========================
+coverage/
+*.pid
+*.seed
+*.pid.lock
