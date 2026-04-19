@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # 1. Ku hagi dhamaan waxyaabaha ku bilaabata /api port-ka uu ka shaqaynayo Node.js (5001)
+  RewriteRule ^api/(.*) http://localhost:5001/api/$1 [P,L]
+
+  # 2. Wixii kale oo dhan u hagi React/Frontend (Haddii faylku uusan jirin)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
