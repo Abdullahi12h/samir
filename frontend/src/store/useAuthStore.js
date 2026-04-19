@@ -13,11 +13,13 @@ const useAuthStore = create((set) => ({
             return { success: false, message: error.response?.data?.message || 'Login failed' };
         }
     },
-    register: async (userData) => {
+    register: async (userData, autoLogin = true) => {
         try {
             const { data } = await api.post('/auth/register', userData);
-            localStorage.setItem('user', JSON.stringify(data));
-            set({ user: data });
+            if (autoLogin) {
+                localStorage.setItem('user', JSON.stringify(data));
+                set({ user: data });
+            }
             return { success: true };
         } catch (error) {
             return { success: false, message: error.response?.data?.message || 'Registration failed' };

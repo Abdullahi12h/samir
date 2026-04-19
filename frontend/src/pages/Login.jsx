@@ -107,11 +107,15 @@ const Login = () => {
                             </button>
                         </div>
 
-                        {/* Registration disabled from UI */}
+                        <div className="text-center mt-6">
+                            <p className="text-sm text-gray-600">
+                                Ma haysataa Account?{' '}
+                                <Link to="/register" className="text-[#1e88e5] font-bold hover:underline">
+                                    Isku qor halkan
+                                </Link>
+                            </p>
+                        </div>
                     </form>
-
-
-
                 </div>
             </div>
         </div>
